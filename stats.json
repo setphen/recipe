@@ -1,0 +1,70 @@
+{
+  "assetsByChunkName": {
+    "component---src-pages-index-js": [
+      "component---src-pages-index-js-3ac1074db51589a32417.js",
+      "component---src-pages-index-js-3ac1074db51589a32417.js.map"
+    ],
+    "component---src-pages-components-js": [
+      "component---src-pages-components-js-4746236706d2b3902862.js",
+      "component---src-pages-components-js-4746236706d2b3902862.js.map"
+    ],
+    "path---": [
+      "path----84e573eb260be3548336.js",
+      "path----84e573eb260be3548336.js.map"
+    ],
+    "path---styles-colors": [
+      "path---styles-colors-727650e9df36dfc9973f.js",
+      "path---styles-colors-727650e9df36dfc9973f.js.map"
+    ],
+    "path---components": [
+      "path---components-f05554a176f06ad6358a.js",
+      "path---components-f05554a176f06ad6358a.js.map"
+    ],
+    "component---src-layouts-index-js": [
+      "component---src-layouts-index-js-0451b37c2e51a8e2b53e.js",
+      "component---src-layouts-index-js-0451b37c2e51a8e2b53e.js.map"
+    ],
+    "path---patterns-overview": [
+      "path---patterns-overview-a3e672af3f1c173fa7a6.js",
+      "path---patterns-overview-a3e672af3f1c173fa7a6.js.map"
+    ],
+    "path---components-ez-button": [
+      "path---components-ez-button-f69099b92594339e8607.js",
+      "path---components-ez-button-f69099b92594339e8607.js.map"
+    ],
+    "path---index": [
+      "path---index-a0e39f21c11f6a62c5ab.js",
+      "path---index-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---guides-principles": [
+      "path---guides-principles-e01919817f28ef4a5f6e.js",
+      "path---guides-principles-e01919817f28ef4a5f6e.js.map"
+    ],
+    "component---src-pages-404-js": [
+      "component---src-pages-404-js-4503918ea3a16cfcdb75.js",
+      "component---src-pages-404-js-4503918ea3a16cfcdb75.js.map"
+    ],
+    "commons": [
+      "commons-f35de85cab798c00915d.js",
+      "commons-f35de85cab798c00915d.js.map"
+    ],
+    "component---src-components-markdown-js": [
+      "component---src-components-markdown-js-9bb8df2d6663aac6966a.js",
+      "component---src-components-markdown-js-9bb8df2d6663aac6966a.js.map"
+    ],
+    "path---404-html": [
+      "path---404-html-a0e39f21c11f6a62c5ab.js",
+      "path---404-html-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "app": [
+      "app-46ba7db5754338ac8ed9.js",
+      "build-js-styles.css",
+      "app-46ba7db5754338ac8ed9.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---404": [
+      "path---404-a0e39f21c11f6a62c5ab.js",
+      "path---404-a0e39f21c11f6a62c5ab.js.map"
+    ]
+  }
+}
