@@ -17,12 +17,12 @@
       "path---styles-colors-727650e9df36dfc9973f.js.map"
     ],
     "path---components": [
-      "path---components-f05554a176f06ad6358a.js",
-      "path---components-f05554a176f06ad6358a.js.map"
+      "path---components-31c3024caf9f15c113cd.js",
+      "path---components-31c3024caf9f15c113cd.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-0451b37c2e51a8e2b53e.js",
-      "component---src-layouts-index-js-0451b37c2e51a8e2b53e.js.map"
+      "component---src-layouts-index-js-f13be4eb07280712012e.js",
+      "component---src-layouts-index-js-f13be4eb07280712012e.js.map"
     ],
     "path---patterns-overview": [
       "path---patterns-overview-a3e672af3f1c173fa7a6.js",
@@ -49,17 +49,25 @@
       "commons-f35de85cab798c00915d.js.map"
     ],
     "component---src-components-markdown-js": [
-      "component---src-components-markdown-js-9bb8df2d6663aac6966a.js",
-      "component---src-components-markdown-js-9bb8df2d6663aac6966a.js.map"
+      "component---src-components-markdown-js-8546916d14788fb7a7fd.js",
+      "component---src-components-markdown-js-8546916d14788fb7a7fd.js.map"
     ],
     "path---404-html": [
       "path---404-html-a0e39f21c11f6a62c5ab.js",
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
+    "path---components-ez-labelled-item": [
+      "path---components-ez-labelled-item-6230f338e7596a244b3e.js",
+      "path---components-ez-labelled-item-6230f338e7596a244b3e.js.map"
+    ],
+    "path---components-ez-segmented-control": [
+      "path---components-ez-segmented-control-fada72712d848b808fad.js",
+      "path---components-ez-segmented-control-fada72712d848b808fad.js.map"
+    ],
     "app": [
-      "app-e8a7f97a0de1c733220d.js",
+      "app-7901c2754513c1fadad2.js",
       "build-js-styles.css",
-      "app-e8a7f97a0de1c733220d.js.map",
+      "app-7901c2754513c1fadad2.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [
