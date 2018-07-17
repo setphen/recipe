@@ -17,20 +17,24 @@
       "path---styles-colors-727650e9df36dfc9973f.js.map"
     ],
     "path---components": [
-      "path---components-31c3024caf9f15c113cd.js",
-      "path---components-31c3024caf9f15c113cd.js.map"
+      "path---components-f8f4a3bbbd5295f932bf.js",
+      "path---components-f8f4a3bbbd5295f932bf.js.map"
+    ],
+    "path---components-ez-text-style": [
+      "path---components-ez-text-style-b5c2eb29a12c14e47d9c.js",
+      "path---components-ez-text-style-b5c2eb29a12c14e47d9c.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-f13be4eb07280712012e.js",
-      "component---src-layouts-index-js-f13be4eb07280712012e.js.map"
+      "component---src-layouts-index-js-288631c26da402c471a6.js",
+      "component---src-layouts-index-js-288631c26da402c471a6.js.map"
     ],
     "path---patterns-overview": [
       "path---patterns-overview-a3e672af3f1c173fa7a6.js",
       "path---patterns-overview-a3e672af3f1c173fa7a6.js.map"
     ],
     "path---components-ez-button": [
-      "path---components-ez-button-f69099b92594339e8607.js",
-      "path---components-ez-button-f69099b92594339e8607.js.map"
+      "path---components-ez-button-5557604fa9a89a47e867.js",
+      "path---components-ez-button-5557604fa9a89a47e867.js.map"
     ],
     "path---index": [
       "path---index-a0e39f21c11f6a62c5ab.js",
@@ -45,12 +49,12 @@
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js.map"
     ],
     "commons": [
-      "commons-f35de85cab798c00915d.js",
-      "commons-f35de85cab798c00915d.js.map"
+      "commons-20df9c4df9f0c6b1ce4d.js",
+      "commons-20df9c4df9f0c6b1ce4d.js.map"
     ],
     "component---src-components-markdown-js": [
-      "component---src-components-markdown-js-8546916d14788fb7a7fd.js",
-      "component---src-components-markdown-js-8546916d14788fb7a7fd.js.map"
+      "component---src-components-markdown-js-c31c7b9a32e0dd6b1882.js",
+      "component---src-components-markdown-js-c31c7b9a32e0dd6b1882.js.map"
     ],
     "path---404-html": [
       "path---404-html-a0e39f21c11f6a62c5ab.js",
@@ -65,9 +69,9 @@
       "path---components-ez-segmented-control-fada72712d848b808fad.js.map"
     ],
     "app": [
-      "app-7901c2754513c1fadad2.js",
+      "app-9b330b46d0fb52ff9508.js",
       "build-js-styles.css",
-      "app-7901c2754513c1fadad2.js.map",
+      "app-9b330b46d0fb52ff9508.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [
