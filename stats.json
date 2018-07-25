@@ -17,16 +17,20 @@
       "path---styles-colors-727650e9df36dfc9973f.js.map"
     ],
     "path---components": [
-      "path---components-f8f4a3bbbd5295f932bf.js",
-      "path---components-f8f4a3bbbd5295f932bf.js.map"
+      "path---components-e3bafcbfb50e23c9a511.js",
+      "path---components-e3bafcbfb50e23c9a511.js.map"
+    ],
+    "path---components-ez-card": [
+      "path---components-ez-card-4f413b07f82ad18a7f62.js",
+      "path---components-ez-card-4f413b07f82ad18a7f62.js.map"
     ],
     "path---components-ez-text-style": [
       "path---components-ez-text-style-bf20be7cea0109deae34.js",
       "path---components-ez-text-style-bf20be7cea0109deae34.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-9dc7c32c19e89f6c94e9.js",
-      "component---src-layouts-index-js-9dc7c32c19e89f6c94e9.js.map"
+      "component---src-layouts-index-js-0726db9e5454484da32e.js",
+      "component---src-layouts-index-js-0726db9e5454484da32e.js.map"
     ],
     "path---patterns-overview": [
       "path---patterns-overview-a3e672af3f1c173fa7a6.js",
@@ -53,8 +57,8 @@
       "commons-20df9c4df9f0c6b1ce4d.js.map"
     ],
     "component---src-components-markdown-js": [
-      "component---src-components-markdown-js-a8efdf52e011bfff1b26.js",
-      "component---src-components-markdown-js-a8efdf52e011bfff1b26.js.map"
+      "component---src-components-markdown-js-c9560029e037c3ca673e.js",
+      "component---src-components-markdown-js-c9560029e037c3ca673e.js.map"
     ],
     "path---404-html": [
       "path---404-html-a0e39f21c11f6a62c5ab.js",
@@ -64,19 +68,27 @@
       "path---components-ez-labelled-item-6230f338e7596a244b3e.js",
       "path---components-ez-labelled-item-6230f338e7596a244b3e.js.map"
     ],
+    "path---components-ez-layout": [
+      "path---components-ez-layout-b3893a8fca933bcffc25.js",
+      "path---components-ez-layout-b3893a8fca933bcffc25.js.map"
+    ],
     "path---components-ez-segmented-control": [
       "path---components-ez-segmented-control-fada72712d848b808fad.js",
       "path---components-ez-segmented-control-fada72712d848b808fad.js.map"
     ],
     "app": [
-      "app-9b330b46d0fb52ff9508.js",
+      "app-686824ddf3753903aed4.js",
       "build-js-styles.css",
-      "app-9b330b46d0fb52ff9508.js.map",
+      "app-686824ddf3753903aed4.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [
       "path---404-a0e39f21c11f6a62c5ab.js",
       "path---404-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---components-ez-page-content": [
+      "path---components-ez-page-content-3604be0a8f89743e186c.js",
+      "path---components-ez-page-content-3604be0a8f89743e186c.js.map"
     ]
   }
 }
