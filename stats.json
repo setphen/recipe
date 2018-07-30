@@ -1,8 +1,8 @@
 {
   "assetsByChunkName": {
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-7a2c339687b7e518c826.js",
-      "component---src-pages-index-js-7a2c339687b7e518c826.js.map"
+      "component---src-pages-index-js-82cf6482c98fca8f8b1a.js",
+      "component---src-pages-index-js-82cf6482c98fca8f8b1a.js.map"
     ],
     "component---src-pages-components-js": [
       "component---src-pages-components-js-4746236706d2b3902862.js",
@@ -21,8 +21,8 @@
       "path---components-e3bafcbfb50e23c9a511.js.map"
     ],
     "path---components-ez-card": [
-      "path---components-ez-card-4f413b07f82ad18a7f62.js",
-      "path---components-ez-card-4f413b07f82ad18a7f62.js.map"
+      "path---components-ez-card-db42bc55a771f4904ce6.js",
+      "path---components-ez-card-db42bc55a771f4904ce6.js.map"
     ],
     "path---components-ez-text-style": [
       "path---components-ez-text-style-bf20be7cea0109deae34.js",
@@ -73,21 +73,21 @@
       "path---components-ez-labelled-item-6230f338e7596a244b3e.js.map"
     ],
     "path---components-ez-layout": [
-      "path---components-ez-layout-731d5704cd1c7611e334.js",
-      "path---components-ez-layout-731d5704cd1c7611e334.js.map"
+      "path---components-ez-layout-0fbf34400a4a907df7fb.js",
+      "path---components-ez-layout-0fbf34400a4a907df7fb.js.map"
     ],
     "path---components-ez-segmented-control": [
-      "path---components-ez-segmented-control-fada72712d848b808fad.js",
-      "path---components-ez-segmented-control-fada72712d848b808fad.js.map"
+      "path---components-ez-segmented-control-7c6c702a0fc1dae4d073.js",
+      "path---components-ez-segmented-control-7c6c702a0fc1dae4d073.js.map"
     ],
     "path---changelog": [
       "path---changelog-eff14876cf09bf88a1d9.js",
       "path---changelog-eff14876cf09bf88a1d9.js.map"
     ],
     "app": [
-      "app-480572661c567a55ea04.js",
+      "app-38f8cca025af58ce4c0d.js",
       "build-js-styles.css",
-      "app-480572661c567a55ea04.js.map",
+      "app-38f8cca025af58ce4c0d.js.map",
       "build-js-styles.css.map"
     ],
     "path---guides-getting-started": [
@@ -99,8 +99,8 @@
       "path---404-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---components-ez-page-content": [
-      "path---components-ez-page-content-3604be0a8f89743e186c.js",
-      "path---components-ez-page-content-3604be0a8f89743e186c.js.map"
+      "path---components-ez-page-content-bbbe3e944dc147245466.js",
+      "path---components-ez-page-content-bbbe3e944dc147245466.js.map"
     ],
     "path---guides-versioning-and-changelog": [
       "path---guides-versioning-and-changelog-3165a276a1b01a3f5446.js",
