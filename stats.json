@@ -1,8 +1,8 @@
 {
   "assetsByChunkName": {
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-a05ab593d52fd5ca95e5.js",
-      "component---src-pages-index-js-a05ab593d52fd5ca95e5.js.map"
+      "component---src-pages-index-js-ab683944027c16e9c031.js",
+      "component---src-pages-index-js-ab683944027c16e9c031.js.map"
     ],
     "component---src-pages-components-js": [
       "component---src-pages-components-js-4746236706d2b3902862.js",
@@ -17,16 +17,16 @@
       "path---components-e3bafcbfb50e23c9a511.js.map"
     ],
     "path---components-ez-card": [
-      "path---components-ez-card-281dd764cc1a7d06b3f7.js",
-      "path---components-ez-card-281dd764cc1a7d06b3f7.js.map"
+      "path---components-ez-card-41fbee3d4288d9c09764.js",
+      "path---components-ez-card-41fbee3d4288d9c09764.js.map"
     ],
     "path---components-ez-text-style": [
       "path---components-ez-text-style-bf20be7cea0109deae34.js",
       "path---components-ez-text-style-bf20be7cea0109deae34.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-6efc4dd2c2b61795842b.js",
-      "component---src-layouts-index-js-6efc4dd2c2b61795842b.js.map"
+      "component---src-layouts-index-js-cc975c58b3ddbe7d4a7b.js",
+      "component---src-layouts-index-js-cc975c58b3ddbe7d4a7b.js.map"
     ],
     "path---patterns-overview": [
       "path---patterns-overview-a3e672af3f1c173fa7a6.js",
@@ -57,8 +57,8 @@
       "commons-20df9c4df9f0c6b1ce4d.js.map"
     ],
     "component---src-components-markdown-js": [
-      "component---src-components-markdown-js-0e35ccef4f955f81a913.js",
-      "component---src-components-markdown-js-0e35ccef4f955f81a913.js.map"
+      "component---src-components-markdown-js-77bcffd5d3a224d61f75.js",
+      "component---src-components-markdown-js-77bcffd5d3a224d61f75.js.map"
     ],
     "path---404-html": [
       "path---404-html-a0e39f21c11f6a62c5ab.js",
@@ -77,13 +77,13 @@
       "path---components-ez-segmented-control-b1c3434098607d920a67.js.map"
     ],
     "path---changelog": [
-      "path---changelog-7bbf7a68730fe341be86.js",
-      "path---changelog-7bbf7a68730fe341be86.js.map"
+      "path---changelog-3dc344556c0a9ea6a6aa.js",
+      "path---changelog-3dc344556c0a9ea6a6aa.js.map"
     ],
     "app": [
-      "app-681b7d73001b1e3a342e.js",
+      "app-9b58e8bffa8af5eec65b.js",
       "build-js-styles.css",
-      "app-681b7d73001b1e3a342e.js.map",
+      "app-9b58e8bffa8af5eec65b.js.map",
       "build-js-styles.css.map"
     ],
     "path---guides-getting-started": [
