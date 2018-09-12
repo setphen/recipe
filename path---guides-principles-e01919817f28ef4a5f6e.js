@@ -1,0 +1,2 @@
+webpackJsonp([0x8ddcb589d791],{372:function(e,t){e.exports={data:{markdownRemark:{html:"<p>At ezcater, blah blah, our mission, blah blah, component library, blah blah, design system.</p>",htmlAst:{type:"root",children:[{type:"element",tagName:"p",properties:{},children:[{type:"text",value:"At ezcater, blah blah, our mission, blah blah, component library, blah blah, design system."}]}],data:{quirksMode:!1}},frontmatter:{path:"/guides/principles",title:"Principles"}}},pathContext:{}}}});
+//# sourceMappingURL=path---guides-principles-e01919817f28ef4a5f6e.js.map
