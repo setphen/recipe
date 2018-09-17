@@ -1,8 +1,8 @@
 {
   "assetsByChunkName": {
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-d25b6e8aad0808a6c257.js",
-      "component---src-pages-index-js-d25b6e8aad0808a6c257.js.map"
+      "component---src-pages-index-js-d575aee48e8997371b19.js",
+      "component---src-pages-index-js-d575aee48e8997371b19.js.map"
     ],
     "component---src-pages-components-js": [
       "component---src-pages-components-js-4746236706d2b3902862.js",
@@ -25,8 +25,8 @@
       "path---components-ez-text-style-bf20be7cea0109deae34.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-d48d98e55215b5974c12.js",
-      "component---src-layouts-index-js-d48d98e55215b5974c12.js.map"
+      "component---src-layouts-index-js-8b361a5d8ed69a279dca.js",
+      "component---src-layouts-index-js-8b361a5d8ed69a279dca.js.map"
     ],
     "path---patterns-overview": [
       "path---patterns-overview-a3e672af3f1c173fa7a6.js",
@@ -57,8 +57,8 @@
       "commons-20df9c4df9f0c6b1ce4d.js.map"
     ],
     "component---src-components-markdown-js": [
-      "component---src-components-markdown-js-0db3c2108101cae02b3f.js",
-      "component---src-components-markdown-js-0db3c2108101cae02b3f.js.map"
+      "component---src-components-markdown-js-72337c855069ad39347b.js",
+      "component---src-components-markdown-js-72337c855069ad39347b.js.map"
     ],
     "path---404-html": [
       "path---404-html-a0e39f21c11f6a62c5ab.js",
@@ -81,13 +81,13 @@
       "path---components-ez-segmented-control-b1c3434098607d920a67.js.map"
     ],
     "path---changelog": [
-      "path---changelog-778834b65ba5d27182c6.js",
-      "path---changelog-778834b65ba5d27182c6.js.map"
+      "path---changelog-b214ea7638863faaedcd.js",
+      "path---changelog-b214ea7638863faaedcd.js.map"
     ],
     "app": [
-      "app-9d278ca195648720feb3.js",
+      "app-2297f646e3929b775dd8.js",
       "build-js-styles.css",
-      "app-9d278ca195648720feb3.js.map",
+      "app-2297f646e3929b775dd8.js.map",
       "build-js-styles.css.map"
     ],
     "path---guides-getting-started": [
