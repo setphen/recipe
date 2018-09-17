@@ -1,8 +1,8 @@
 {
   "assetsByChunkName": {
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-ea234ccc29eb54b2f610.js",
-      "component---src-pages-index-js-ea234ccc29eb54b2f610.js.map"
+      "component---src-pages-index-js-ee8f4de79e0dc83dd7ed.js",
+      "component---src-pages-index-js-ee8f4de79e0dc83dd7ed.js.map"
     ],
     "path---components-ez-heading": [
       "path---components-ez-heading-d726bc8c6ddfda51da20.js",
@@ -29,8 +29,8 @@
       "path---components-ez-text-style-bf20be7cea0109deae34.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-1252a09d2a8250305038.js",
-      "component---src-layouts-index-js-1252a09d2a8250305038.js.map"
+      "component---src-layouts-index-js-fc28101024d5fe7aa64c.js",
+      "component---src-layouts-index-js-fc28101024d5fe7aa64c.js.map"
     ],
     "path---patterns-overview": [
       "path---patterns-overview-a3e672af3f1c173fa7a6.js",
@@ -61,8 +61,8 @@
       "commons-20df9c4df9f0c6b1ce4d.js.map"
     ],
     "component---src-components-markdown-js": [
-      "component---src-components-markdown-js-5952fdedbaa512171cd3.js",
-      "component---src-components-markdown-js-5952fdedbaa512171cd3.js.map"
+      "component---src-components-markdown-js-7a216c58f7d781195c85.js",
+      "component---src-components-markdown-js-7a216c58f7d781195c85.js.map"
     ],
     "path---404-html": [
       "path---404-html-a0e39f21c11f6a62c5ab.js",
@@ -85,13 +85,13 @@
       "path---components-ez-segmented-control-b1c3434098607d920a67.js.map"
     ],
     "path---changelog": [
-      "path---changelog-231f2511c5b4b8477a61.js",
-      "path---changelog-231f2511c5b4b8477a61.js.map"
+      "path---changelog-ff88ff979ee8d3dba9df.js",
+      "path---changelog-ff88ff979ee8d3dba9df.js.map"
     ],
     "app": [
-      "app-191c1491bf6fda4677ba.js",
+      "app-8fb3c06405dac83dccf6.js",
       "build-js-styles.css",
-      "app-191c1491bf6fda4677ba.js.map",
+      "app-8fb3c06405dac83dccf6.js.map",
       "build-js-styles.css.map"
     ],
     "path---guides-getting-started": [
