@@ -1,8 +1,12 @@
 {
   "assetsByChunkName": {
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-d575aee48e8997371b19.js",
-      "component---src-pages-index-js-d575aee48e8997371b19.js.map"
+      "component---src-pages-index-js-ea234ccc29eb54b2f610.js",
+      "component---src-pages-index-js-ea234ccc29eb54b2f610.js.map"
+    ],
+    "path---components-ez-heading": [
+      "path---components-ez-heading-d726bc8c6ddfda51da20.js",
+      "path---components-ez-heading-d726bc8c6ddfda51da20.js.map"
     ],
     "component---src-pages-components-js": [
       "component---src-pages-components-js-4746236706d2b3902862.js",
@@ -13,8 +17,8 @@
       "path----84e573eb260be3548336.js.map"
     ],
     "path---components": [
-      "path---components-85b9fd481f726e82ca91.js",
-      "path---components-85b9fd481f726e82ca91.js.map"
+      "path---components-3d2918bcf60b0b91c080.js",
+      "path---components-3d2918bcf60b0b91c080.js.map"
     ],
     "path---components-ez-card": [
       "path---components-ez-card-41fbee3d4288d9c09764.js",
@@ -25,8 +29,8 @@
       "path---components-ez-text-style-bf20be7cea0109deae34.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-8b361a5d8ed69a279dca.js",
-      "component---src-layouts-index-js-8b361a5d8ed69a279dca.js.map"
+      "component---src-layouts-index-js-1252a09d2a8250305038.js",
+      "component---src-layouts-index-js-1252a09d2a8250305038.js.map"
     ],
     "path---patterns-overview": [
       "path---patterns-overview-a3e672af3f1c173fa7a6.js",
@@ -57,8 +61,8 @@
       "commons-20df9c4df9f0c6b1ce4d.js.map"
     ],
     "component---src-components-markdown-js": [
-      "component---src-components-markdown-js-72337c855069ad39347b.js",
-      "component---src-components-markdown-js-72337c855069ad39347b.js.map"
+      "component---src-components-markdown-js-5952fdedbaa512171cd3.js",
+      "component---src-components-markdown-js-5952fdedbaa512171cd3.js.map"
     ],
     "path---404-html": [
       "path---404-html-a0e39f21c11f6a62c5ab.js",
@@ -81,13 +85,13 @@
       "path---components-ez-segmented-control-b1c3434098607d920a67.js.map"
     ],
     "path---changelog": [
-      "path---changelog-b214ea7638863faaedcd.js",
-      "path---changelog-b214ea7638863faaedcd.js.map"
+      "path---changelog-231f2511c5b4b8477a61.js",
+      "path---changelog-231f2511c5b4b8477a61.js.map"
     ],
     "app": [
-      "app-2297f646e3929b775dd8.js",
+      "app-191c1491bf6fda4677ba.js",
       "build-js-styles.css",
-      "app-2297f646e3929b775dd8.js.map",
+      "app-191c1491bf6fda4677ba.js.map",
       "build-js-styles.css.map"
     ],
     "path---guides-getting-started": [
