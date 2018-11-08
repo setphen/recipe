@@ -1,0 +1,461 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link rel="preload" href="/recipe/component---src-layouts-index-js-3c6e6b471c7feefdbb16.js" as="script"/><link rel="preload" href="/recipe/component---src-components-markdown-js-37eafda61112d676c4c4.js" as="script"/><link rel="preload" href="/recipe/path---components-ez-table-7c9c6a98168632b90892.js" as="script"/><link rel="preload" href="/recipe/app-c3761c80d3a18fede6b8.js" as="script"/><link rel="preload" href="/recipe/commons-ea921e2936ef740e466e.js" as="script"/><title data-react-helmet="true">recipe - Table</title><meta data-react-helmet="true" name="description" content="Sample"/><meta data-react-helmet="true" name="keywords" content="sample, something"/><style type="text/css">
+    .anchor {
+      float: left;
+      padding-right: 4px;
+      margin-left: -20px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var offset = element.offsetTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><style id="gatsby-inlined-css">@import url(https://fonts.googleapis.com/css?family=Lato:400,
+  700,
+  400italic,
+  700italic&subset=latin
+);html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body,html{font-size:14px}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{box-sizing:border-box;overflow-y:scroll}*,:after,:before{box-sizing:inherit}body{color:rgba(0,0,0,.8);font-family:Lato,Helvetica Neue,Arial,Helvetica,sans-serif;font-weight:400;word-wrap:break-word;-webkit-font-kerning:normal;font-kerning:normal;-ms-font-feature-settings:"kern","liga","clig","calt";-webkit-font-feature-settings:"kern","liga","clig","calt";font-feature-settings:"kern","liga","clig","calt","kern"}img{max-width:100%;margin:0 0 1.45rem;padding:0}h1{font-size:2.25rem}h1,h2{margin:0 0 1.45rem;padding:0;color:inherit;font-weight:700;text-rendering:optimizeLegibility;line-height:1.1}h2{font-size:1.62671rem}h3{font-size:1.38316rem}h3,h4{margin:0 0 1.45rem;padding:0;color:inherit;font-weight:700;text-rendering:optimizeLegibility;line-height:1.1}h4{font-size:1rem}h5{font-size:.85028rem}h5,h6{margin:0 0 1.45rem;padding:0;color:inherit;font-weight:700;text-rendering:optimizeLegibility;line-height:1.1}h6{font-size:.78405rem}hgroup{margin:0 0 1.45rem;padding:0}ol,ul{margin:0 0 1.45rem 1.45rem;padding:0;list-style-position:outside;list-style-image:none}dd,dl,figure,p{margin:0 0 1.45rem;padding:0}pre{padding:0;font-size:.85rem;line-height:1.42;background:rgba(0,0,0,.04);border-radius:3px;overflow:auto;word-wrap:normal;padding:1.45rem}pre,table{margin:0 0 1.45rem}table{padding:0;font-size:1rem;line-height:1.45rem;border-collapse:collapse;width:100%}fieldset{margin:0 0 1.45rem;padding:0}blockquote{margin:0 1.45rem 1.45rem;padding:0}form,iframe,noscript{margin:0 0 1.45rem;padding:0}hr{margin:0 0 calc(1.45rem - 1px);padding:0;background:rgba(0,0,0,.2);border:none;height:1px}address{margin:0 0 1.45rem;padding:0}b,dt,strong,th{font-weight:700}li{margin-bottom:.725rem}ol li,ul li{padding-left:0}li>ol,li>ul{margin-left:1.45rem;margin-bottom:.725rem;margin-top:.725rem}blockquote :last-child,li :last-child,p :last-child{margin-bottom:0}li>p{margin-bottom:.725rem}code,kbd,samp{font-size:.85rem;line-height:1.45rem}abbr,abbr[title],acronym{border-bottom:1px dotted rgba(0,0,0,.5);cursor:help}abbr[title]{text-decoration:none}td,th,thead{text-align:left}td,th{border-bottom:1px solid rgba(0,0,0,.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding:.725rem .96667rem calc(.725rem - 1px)}td:first-child,th:first-child{padding-left:0}td:last-child,th:last-child{padding-right:0}code,tt{background-color:rgba(0,0,0,.04);border-radius:3px;font-family:SFMono-Regular,Consolas,Roboto Mono,Droid Sans Mono,Liberation Mono,Menlo,Courier,monospace;padding:0;padding-top:.2em;padding-bottom:.2em}pre code{background:none;line-height:1.42}@media only screen and (max-width:480px){html{font-size:100%}}button{font-weight:400;font-family:Helvetica}</style></head><body><div id="___gatsby"><div data-reactroot=""><div style="background:rebeccapurple;margin-bottom:1.45rem"><div style="margin:0 auto;max-width:960px;padding:1.45rem 1.0875rem"><h1 style="margin:0"><a style="color:white;text-decoration:none" href="/recipe/">Recipe</a></h1></div></div><div style="margin:0 auto;max-width:960px;padding:0px 1.0875rem 1.45rem;padding-top:0"><div><div><h1>Table</h1><p>Tables are used to display information from a data set in a way that&#x27;s easy to scan. Tables allow users to compare and analyze the data to look for patterns and insights. Tables will often be the primary content within a <a href="/recipe/components/ez-card">Card</a>.</p>
+<hr/>
+<div class="css-172mc2b eco3y3w0"><svg height="17px" version="1.1" viewBox="0 0 14 14" width="14px"><title>warning-icon</title><g id="warning-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M13.3686039,10.9424748 C13.4890502,11.1833678 13.5266898,11.4280244 13.4815224,11.6764452 C13.436355,11.9248659 13.3159087,12.135647 13.1201832,12.3087888 C12.9244577,12.4819306 12.6910929,12.5685014 12.4200885,12.5685014 L1.57991154,12.5685014 C1.30890712,12.5685014 1.07554232,12.4819306 0.879816786,12.3087888 C0.684091255,12.135647 0.563644959,11.9248659 0.518477556,11.6764452 C0.473310152,11.4280244 0.51094977,11.1833678 0.631396065,10.9424748 L6.05148452,1.54765486 C6.18698673,1.30676192 6.3789482,1.14491229 6.62736892,1.06210527 C6.87578964,0.979298245 7.12421036,0.979298245 7.37263108,1.06210527 C7.6210518,1.14491229 7.81301327,1.30676192 7.94851548,1.54765486 L13.3686039,10.9424748 Z M7,9.00027648 C6.71393966,9.00027648 6.46928301,9.10190314 6.26602969,9.30515646 C6.06277637,9.50840978 5.96114971,9.75306643 5.96114971,10.0391268 C5.96114971,10.3251871 6.06277637,10.5698438 6.26602969,10.7730971 C6.46928301,10.9763504 6.71393966,11.0779771 7,11.0779771 C7.28606034,11.0779771 7.53071699,10.9763504 7.73397031,10.7730971 C7.93722363,10.5698438 8.03885029,10.3251871 8.03885029,10.0391268 C8.03885029,9.75306643 7.93722363,9.50840978 7.73397031,9.30515646 C7.53071699,9.10190314 7.28606034,9.00027648 7,9.00027648 Z M6.00631712,5.27396567 L6.18698673,8.34534913 C6.18698673,8.40557245 6.2133345,8.4620317 6.26602969,8.51472689 C6.31872488,8.56742208 6.38271226,8.59376985 6.45799115,8.59376985 L7.54200885,8.59376985 C7.61728774,8.59376985 7.68127512,8.56742208 7.73397031,8.51472689 C7.7866655,8.4620317 7.81301327,8.40557245 7.81301327,8.34534913 L7.99368288,5.27396567 C7.99368288,5.18363086 7.96733512,5.11211569 7.91463993,5.0594205 C7.86194474,5.00672531 7.79795735,4.98037755 7.72267846,4.98037755 L6.27732154,4.98037755 C6.20204265,4.98037755 6.13805526,5.00672531 6.08536007,5.0594205 C6.03266488,5.11211569 6.00631712,5.18363086 6.00631712,5.27396567 Z" id="exclamation-triangle" fill="currentColor"></path></g></svg><div class="css-h474ap eco3y3w1"><span class="css-g90fw7 e1343rtc0">This component is under development</span><div>There will likely be breaking changes to the API. Proceeed with caution.</div></div></div>
+<h2 id=""><a href="#" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p>Features still in consideration include:</p>
+<ul>
+<li>Responsive variants (cards with repeated labels, transpose table)</li>
+<li>Column pinning to support horizontal scrolling</li>
+<li>Headerless table</li>
+<li>Sorting</li>
+<li>Filtering</li>
+<li>Row hover styles (interactive)</li>
+<li>Zebra Striping</li>
+<li>Pagination</li>
+<li>Table Actions (print, download etc)</li>
+<li>Bulk Actions (multi-select)</li>
+<li>Column width options (fixed, grow, auto, ellipsis, tooltip)</li>
+<li>Headerless columns (content between columns, e.g. formula operators)</li>
+<li>Sticky headers</li>
+</ul>
+<hr/>
+<h2 id="best-practices"><a href="#best-practices" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Best Practices</h2>
+<p>Tables should:</p>
+<ul>
+<li>Be used to show homogeneous content.</li>
+<li>Help users visualize values from a data set.</li>
+<li>Only display values supporting the data&#x27;s purpose.</li>
+<li>Include a heading to help identify the contents of the table at-a-glance.</li>
+</ul>
+<h2 id="alignment"><a href="#alignment" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Alignment</h2>
+<p>Column content types can be varied using component props to enable the following alignment rules:</p>
+<ul>
+<li>Numerical values should be right aligned</li>
+<li>Textual values should be left aligned</li>
+<li>Headers (where present) should align with their data</li>
+</ul>
+<hr/>
+<h2 id="content-guidelines"><a href="#content-guidelines" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Content guidelines</h2>
+<p>Tables should:</p>
+<ul>
+<li>Include concise but descriptive headers</li>
+<li>Avoid truncating content where possible</li>
+</ul>
+<p>Tables can also:</p>
+<ul>
+<li>Support items that perform an action when clicked. For example, navigating to the item&#x27;s details page or provide more detail about the item.</li>
+<li>Provide bulk actions for tasks that are applicable to many items at once.</li>
+</ul>
+<h2 id="examples"><a href="#examples" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h2>
+<h3 id="simple-table"><a href="#simple-table" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Simple table</h3>
+<p>Used whenever the tablular data is directly related to the preceeding or subsequent content. Simple tables should be used as a direct child of a <a href="/recipe/components/ez-card">Card</a> component.</p>
+<div class="react-live css-1mxt9av ei5i0ad0"><style>
+.prism-code {
+  display: block;
+  white-space: pre;
+
+  background-color: #1D1F21;
+  color: #C5C8C6;
+
+  padding: 0.5rem;
+  margin: 0;
+
+  box-sizing: border-box;
+  vertical-align: baseline;
+  outline: none;
+  text-shadow: none;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  word-wrap: normal;
+  word-break: normal;
+  text-align: left;
+  word-spacing: normal;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: hsl(30, 20%, 50%);
+}
+
+.token.punctuation {
+  opacity: .7;
+}
+
+.namespace {
+  opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+  color: hsl(350, 40%, 70%);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: hsl(75, 70%, 60%);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: hsl(40, 90%, 60%);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: hsl(350, 40%, 70%);
+}
+
+.token.regex,
+.token.important {
+  color: #e90;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.deleted {
+  color: red;
+}
+</style><div class="css-1bl5ph9 ei5i0ad5"><button class="css-ickmbf e2m0pgn0">Copy Code</button><div><div class="css-1rrg8l1 e2gh440"><div class="css-1txwdqa e1jx45ez0"><div class="css-i91q4u e53wloi0"><div class="css-1n70up5 e53wloi4"><div class="css-1200coh eaz6o1f0"><h3 class="e1mn1gux1 css-1iiws2e e1mn1gux0" size="3">Card Title</h3><div class="css-1u5g90a eco3y3w0"><svg height="17px" version="1.1" viewBox="0 0 14 14" width="14px"><title>info-icon</title><g id="info-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M5.85937295,10.6093533 L5.85937295,7.51561066 L5.42968648,7.51561066 C5.31510352,7.51561066 5.21484324,7.47264201 5.12890594,7.38670471 C5.04296865,7.30076742 5,7.20050713 5,7.08592418 L5,6.05467664 C5,5.94009369 5.04296865,5.8398334 5.12890594,5.75389611 C5.21484324,5.66795881 5.31510352,5.62499017 5.42968648,5.62499017 L7.83593074,5.62499017 C7.95051369,5.62499017 8.05077398,5.66795881 8.13671127,5.75389611 C8.22264857,5.8398334 8.26561721,5.94009369 8.26561721,6.05467664 L8.26561721,10.6093533 L8.69530369,10.6093533 C8.80988664,10.6093533 8.91014693,10.6523219 8.99608422,10.7382592 C9.08202152,10.8241965 9.12499017,10.9244568 9.12499017,11.0390398 L9.12499017,12.0702873 C9.12499017,12.1848702 9.08202152,12.2851305 8.99608422,12.3710678 C8.91014693,12.4570051 8.80988664,12.4999738 8.69530369,12.4999738 L5.42968648,12.4999738 C5.31510352,12.4999738 5.21484324,12.4570051 5.12890594,12.3710678 C5.04296865,12.2851305 5,12.1848702 5,12.0702873 L5,11.0390398 C5,10.9244568 5.04296865,10.8241965 5.12890594,10.7382592 C5.21484324,10.6523219 5.31510352,10.6093533 5.42968648,10.6093533 L5.85937295,10.6093533 Z M7.06249508,1.5 C7.49218156,1.5 7.85741506,1.65039027 8.1581956,1.9511708 C8.45897613,2.25195133 8.60936639,2.61718484 8.60936639,3.04687131 C8.60936639,3.47655779 8.45897613,3.84179129 8.1581956,4.14257182 C7.85741506,4.44335236 7.49218156,4.59374262 7.06249508,4.59374262 C6.63280861,4.59374262 6.2675751,4.44335236 5.96679457,4.14257182 C5.66601404,3.84179129 5.51562377,3.47655779 5.51562377,3.04687131 C5.51562377,2.61718484 5.66601404,2.25195133 5.96679457,1.9511708 C6.2675751,1.65039027 6.63280861,1.5 7.06249508,1.5 Z" id="info" fill="currentColor"></path></g></svg><div class="css-h474ap eco3y3w1"><span class="css-g90fw7 e1343rtc0">Info message</span><div>An example of content that is a sibling of the table.</div></div></div><table class="css-1ylu2ol e1wwcsct3"><thead><tr><th class="css-4xbjey e1wwcsct0">From</th><th class="css-4xbjey e1wwcsct0">Through</th><th class="css-4xbjey e1wwcsct0">Total time closed</th></tr></thead><tbody><tr><td class="css-0 e1wwcsct1">9/3/18</td><td class="css-0 e1wwcsct1">9/5/18</td><td class="css-0 e1wwcsct1">3 days</td></tr><tr><td class="css-0 e1wwcsct1">10/8/18</td><td class="css-0 e1wwcsct1">10/8/18</td><td class="css-0 e1wwcsct1">1 days</td></tr></tbody></table><p>Tables may share a card with other related content.</p></div></div></div></div></div></div></div><div class="css-nt0b02 ei5i0ad1"><pre class="prism-code css-12h1oks ei5i0ad2" spellcheck="false" contenteditable="true"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>EzPage</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>EzCard</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>EzHeading</span>
+      <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>3<span class="token punctuation">"</span></span> 
+    <span class="token punctuation">></span></span>
+      Card Title
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>EzHeading</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>EzAlert</span>
+      <span class="token attr-name">headline</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Info message<span class="token punctuation">"</span></span>
+      <span class="token attr-name">tagline</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>An example of content that is a sibling of the table.<span class="token punctuation">"</span></span>
+      <span class="token attr-name">use</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>info<span class="token punctuation">"</span></span>
+    <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>EzTable</span>
+      <span class="token attr-name">columns</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>heading<span class="token punctuation">:</span> <span class="token string">'From'</span><span class="token punctuation">,</span> accessor<span class="token punctuation">:</span> <span class="token string">'from'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>heading<span class="token punctuation">:</span> <span class="token string">'Through'</span><span class="token punctuation">,</span> accessor<span class="token punctuation">:</span> <span class="token string">'to'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>heading<span class="token punctuation">:</span> <span class="token string">'Total time closed'</span><span class="token punctuation">,</span> accessor<span class="token punctuation">:</span> <span class="token string">'total'</span><span class="token punctuation">}</span>
+      <span class="token punctuation">]</span><span class="token punctuation">}</span></span>
+      <span class="token attr-name">items</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">[</span>
+        <span class="token punctuation">{</span><span class="token keyword">from</span><span class="token punctuation">:</span> <span class="token string">'9/3/18'</span><span class="token punctuation">,</span> to<span class="token punctuation">:</span> <span class="token string">'9/5/18'</span><span class="token punctuation">,</span> total<span class="token punctuation">:</span> <span class="token string">'3 days'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span><span class="token keyword">from</span><span class="token punctuation">:</span> <span class="token string">'10/8/18'</span><span class="token punctuation">,</span> to<span class="token punctuation">:</span> <span class="token string">'10/8/18'</span><span class="token punctuation">,</span> total<span class="token punctuation">:</span> <span class="token string">'1 days'</span><span class="token punctuation">}</span>
+      <span class="token punctuation">]</span><span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Tables may share a card <span class="token keyword">with</span> other related content<span class="token punctuation">.</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>EzCard</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>EzPage</span><span class="token punctuation">></span></span>
+</pre><div class="react-live-preview css-zp1v3o ei5i0ad3"><div class="css-1txwdqa e1jx45ez0"><div class="css-i91q4u e53wloi0"><div class="css-1n70up5 e53wloi4"><div class="css-1200coh eaz6o1f0"><h3 class="e1mn1gux1 css-1iiws2e e1mn1gux0" size="3">Card Title</h3><div class="css-1u5g90a eco3y3w0"><svg height="17px" version="1.1" viewBox="0 0 14 14" width="14px"><title>info-icon</title><g id="info-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M5.85937295,10.6093533 L5.85937295,7.51561066 L5.42968648,7.51561066 C5.31510352,7.51561066 5.21484324,7.47264201 5.12890594,7.38670471 C5.04296865,7.30076742 5,7.20050713 5,7.08592418 L5,6.05467664 C5,5.94009369 5.04296865,5.8398334 5.12890594,5.75389611 C5.21484324,5.66795881 5.31510352,5.62499017 5.42968648,5.62499017 L7.83593074,5.62499017 C7.95051369,5.62499017 8.05077398,5.66795881 8.13671127,5.75389611 C8.22264857,5.8398334 8.26561721,5.94009369 8.26561721,6.05467664 L8.26561721,10.6093533 L8.69530369,10.6093533 C8.80988664,10.6093533 8.91014693,10.6523219 8.99608422,10.7382592 C9.08202152,10.8241965 9.12499017,10.9244568 9.12499017,11.0390398 L9.12499017,12.0702873 C9.12499017,12.1848702 9.08202152,12.2851305 8.99608422,12.3710678 C8.91014693,12.4570051 8.80988664,12.4999738 8.69530369,12.4999738 L5.42968648,12.4999738 C5.31510352,12.4999738 5.21484324,12.4570051 5.12890594,12.3710678 C5.04296865,12.2851305 5,12.1848702 5,12.0702873 L5,11.0390398 C5,10.9244568 5.04296865,10.8241965 5.12890594,10.7382592 C5.21484324,10.6523219 5.31510352,10.6093533 5.42968648,10.6093533 L5.85937295,10.6093533 Z M7.06249508,1.5 C7.49218156,1.5 7.85741506,1.65039027 8.1581956,1.9511708 C8.45897613,2.25195133 8.60936639,2.61718484 8.60936639,3.04687131 C8.60936639,3.47655779 8.45897613,3.84179129 8.1581956,4.14257182 C7.85741506,4.44335236 7.49218156,4.59374262 7.06249508,4.59374262 C6.63280861,4.59374262 6.2675751,4.44335236 5.96679457,4.14257182 C5.66601404,3.84179129 5.51562377,3.47655779 5.51562377,3.04687131 C5.51562377,2.61718484 5.66601404,2.25195133 5.96679457,1.9511708 C6.2675751,1.65039027 6.63280861,1.5 7.06249508,1.5 Z" id="info" fill="currentColor"></path></g></svg><div class="css-h474ap eco3y3w1"><span class="css-g90fw7 e1343rtc0">Info message</span><div>An example of content that is a sibling of the table.</div></div></div><table class="css-1ylu2ol e1wwcsct3"><thead><tr><th class="css-4xbjey e1wwcsct0">From</th><th class="css-4xbjey e1wwcsct0">Through</th><th class="css-4xbjey e1wwcsct0">Total time closed</th></tr></thead><tbody><tr><td class="css-0 e1wwcsct1">9/3/18</td><td class="css-0 e1wwcsct1">9/5/18</td><td class="css-0 e1wwcsct1">3 days</td></tr><tr><td class="css-0 e1wwcsct1">10/8/18</td><td class="css-0 e1wwcsct1">10/8/18</td><td class="css-0 e1wwcsct1">1 days</td></tr></tbody></table><p>Tables may share a card with other related content.</p></div></div></div></div></div></div></div>
+<h3 id="tables-that-fill-a-card"><a href="#tables-that-fill-a-card" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tables that fill a Card</h3>
+<p>Used whenever the tablular data alone represents a cohesive set of content. Should be used with a <code>title</code> prop and may include optional actions.</p>
+<div class="react-live css-1mxt9av ei5i0ad0"><style>
+.prism-code {
+  display: block;
+  white-space: pre;
+
+  background-color: #1D1F21;
+  color: #C5C8C6;
+
+  padding: 0.5rem;
+  margin: 0;
+
+  box-sizing: border-box;
+  vertical-align: baseline;
+  outline: none;
+  text-shadow: none;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  word-wrap: normal;
+  word-break: normal;
+  text-align: left;
+  word-spacing: normal;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: hsl(30, 20%, 50%);
+}
+
+.token.punctuation {
+  opacity: .7;
+}
+
+.namespace {
+  opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+  color: hsl(350, 40%, 70%);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: hsl(75, 70%, 60%);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: hsl(40, 90%, 60%);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: hsl(350, 40%, 70%);
+}
+
+.token.regex,
+.token.important {
+  color: #e90;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.deleted {
+  color: red;
+}
+</style><div class="css-1bl5ph9 ei5i0ad5"><button class="css-ickmbf e2m0pgn0">Copy Code</button><div><div class="css-1rrg8l1 e2gh440"><div class="css-1txwdqa e1jx45ez0"><div class="css-i91q4u e53wloi0"><div class="css-hw2d00 e53wloi1"><h3 class="css-144qqcg e53wloi2">All Stores</h3><div class="css-tbm5j e53wloi3"><span class="css-4xbjey e1343rtc0">Compared to the same period last year</span></div></div><div class="css-1n70up5 e53wloi4"><div class="css-rr6ym0 e1wwcsct2"><table class="css-1ylu2ol e1wwcsct3"><thead><tr><th class="css-4xbjey e1wwcsct0">Store name</th><th class="css-28roux e1wwcsct0">Total sales</th><th class="css-28roux e1wwcsct0">Average order value</th></tr></thead><tbody><tr><td class="css-0 e1wwcsct1">123 Example Store</td><td class="css-1fuc94h e1wwcsct1">23267</td><td class="css-1fuc94h e1wwcsct1">327.79</td></tr><tr><td class="css-0 e1wwcsct1">45 Meadowview Lane</td><td class="css-1fuc94h e1wwcsct1">22788</td><td class="css-1fuc94h e1wwcsct1">367.55</td></tr></tbody></table></div></div></div></div></div></div></div><div class="css-nt0b02 ei5i0ad1"><pre class="prism-code css-12h1oks ei5i0ad2" spellcheck="false" contenteditable="true"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>EzPage</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>EzTable</span>
+    <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>All Stores<span class="token punctuation">"</span></span>
+    <span class="token attr-name">subtitle</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Compared to the same period last year<span class="token punctuation">"</span></span>
+    <span class="token attr-name">columns</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>heading<span class="token punctuation">:</span> <span class="token string">'Store name'</span><span class="token punctuation">,</span> accessor<span class="token punctuation">:</span> <span class="token string">'store'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>heading<span class="token punctuation">:</span> <span class="token string">'Total sales'</span><span class="token punctuation">,</span> accessor<span class="token punctuation">:</span> <span class="token string">'total'</span><span class="token punctuation">,</span> numeric<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>heading<span class="token punctuation">:</span> <span class="token string">'Average order value'</span><span class="token punctuation">,</span> accessor<span class="token punctuation">:</span> <span class="token string">'average'</span><span class="token punctuation">,</span> numeric<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">}</span></span>
+    <span class="token attr-name">items</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>id<span class="token punctuation">:</span> <span class="token string">'#004'</span><span class="token punctuation">,</span> store<span class="token punctuation">:</span> <span class="token string">'123 Example Store'</span><span class="token punctuation">,</span> total<span class="token punctuation">:</span> <span class="token number">23267</span><span class="token punctuation">,</span> average<span class="token punctuation">:</span> <span class="token number">327.79</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>id<span class="token punctuation">:</span> <span class="token string">'#007'</span><span class="token punctuation">,</span> store<span class="token punctuation">:</span> <span class="token string">'45 Meadowview Lane'</span><span class="token punctuation">,</span> total<span class="token punctuation">:</span> <span class="token number">22788</span><span class="token punctuation">,</span> average<span class="token punctuation">:</span> <span class="token number">367.55</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>EzPage</span><span class="token punctuation">></span></span>
+</pre><div class="react-live-preview css-zp1v3o ei5i0ad3"><div class="css-1txwdqa e1jx45ez0"><div class="css-i91q4u e53wloi0"><div class="css-hw2d00 e53wloi1"><h3 class="css-144qqcg e53wloi2">All Stores</h3><div class="css-tbm5j e53wloi3"><span class="css-4xbjey e1343rtc0">Compared to the same period last year</span></div></div><div class="css-1n70up5 e53wloi4"><div class="css-rr6ym0 e1wwcsct2"><table class="css-1ylu2ol e1wwcsct3"><thead><tr><th class="css-4xbjey e1wwcsct0">Store name</th><th class="css-28roux e1wwcsct0">Total sales</th><th class="css-28roux e1wwcsct0">Average order value</th></tr></thead><tbody><tr><td class="css-0 e1wwcsct1">123 Example Store</td><td class="css-1fuc94h e1wwcsct1">23267</td><td class="css-1fuc94h e1wwcsct1">327.79</td></tr><tr><td class="css-0 e1wwcsct1">45 Meadowview Lane</td><td class="css-1fuc94h e1wwcsct1">22788</td><td class="css-1fuc94h e1wwcsct1">367.55</td></tr></tbody></table></div></div></div></div></div></div></div>
+<h3 id="custom-cell-rendering"><a href="#custom-cell-rendering" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Custom cell rendering</h3>
+<p>Use when more fine-grained control over the table content is desired (in favor of simple Textual/Numerical content).</p>
+<div class="react-live css-1mxt9av ei5i0ad0"><style>
+.prism-code {
+  display: block;
+  white-space: pre;
+
+  background-color: #1D1F21;
+  color: #C5C8C6;
+
+  padding: 0.5rem;
+  margin: 0;
+
+  box-sizing: border-box;
+  vertical-align: baseline;
+  outline: none;
+  text-shadow: none;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  word-wrap: normal;
+  word-break: normal;
+  text-align: left;
+  word-spacing: normal;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: hsl(30, 20%, 50%);
+}
+
+.token.punctuation {
+  opacity: .7;
+}
+
+.namespace {
+  opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+  color: hsl(350, 40%, 70%);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: hsl(75, 70%, 60%);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: hsl(40, 90%, 60%);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: hsl(350, 40%, 70%);
+}
+
+.token.regex,
+.token.important {
+  color: #e90;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.deleted {
+  color: red;
+}
+</style><div class="css-1bl5ph9 ei5i0ad5"><button class="css-ickmbf e2m0pgn0">Copy Code</button><div><div class="css-1rrg8l1 e2gh440"><div class="css-1txwdqa e1jx45ez0"><div class="css-i91q4u e53wloi0"><div class="css-hw2d00 e53wloi1"><h3 class="css-144qqcg e53wloi2">All Stores</h3><div class="css-tbm5j e53wloi3"><span class="css-4xbjey e1343rtc0">Compared to the same period last year</span></div></div><div class="css-1n70up5 e53wloi4"><div class="css-rr6ym0 e1wwcsct2"><table class="css-1ylu2ol e1wwcsct3"><thead><tr><th class="css-4xbjey e1wwcsct0">Store name</th><th class="css-28roux e1wwcsct0">Total sales</th><th class="css-28roux e1wwcsct0">Average order value</th></tr></thead><tbody><tr><td class="css-0 e1wwcsct1"><div><div><a href="javascript:void(0);">123 Example Store</a></div><div><span class="css-4xbjey e1343rtc0">#004</span></div></div></td><td class="css-1fuc94h e1wwcsct1">23267</td><td class="css-1fuc94h e1wwcsct1">327.79</td></tr><tr><td class="css-0 e1wwcsct1"><div><div><a href="javascript:void(0);">45 Meadowview Lane</a></div><div><span class="css-4xbjey e1343rtc0">#007</span></div></div></td><td class="css-1fuc94h e1wwcsct1">22788</td><td class="css-1fuc94h e1wwcsct1">367.55</td></tr></tbody></table></div></div></div></div></div></div></div><div class="css-nt0b02 ei5i0ad1"><pre class="prism-code css-12h1oks ei5i0ad2" spellcheck="false" contenteditable="true"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Component</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token comment">// declare any component to define your custom column template</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">StoreName</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>item<span class="token punctuation">:</span> <span class="token punctuation">{</span>store<span class="token punctuation">,</span> id<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>javascript:void(0);<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token punctuation">{</span>store<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>EzTextStyle</span> <span class="token attr-name">use</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>subdued<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token punctuation">{</span>id<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>EzTextStyle</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>EzPage</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>EzTable</span>
+          <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>All Stores<span class="token punctuation">"</span></span>
+          <span class="token attr-name">subtitle</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Compared to the same period last year<span class="token punctuation">"</span></span>
+          <span class="token attr-name">columns</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>heading<span class="token punctuation">:</span> <span class="token string">'Store name'</span><span class="token punctuation">,</span> accessor<span class="token punctuation">:</span> StoreName<span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>heading<span class="token punctuation">:</span> <span class="token string">'Total sales'</span><span class="token punctuation">,</span> accessor<span class="token punctuation">:</span> <span class="token string">'total'</span><span class="token punctuation">,</span> numeric<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>heading<span class="token punctuation">:</span> <span class="token string">'Average order value'</span><span class="token punctuation">,</span> accessor<span class="token punctuation">:</span> <span class="token string">'average'</span><span class="token punctuation">,</span> numeric<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span>
+          <span class="token punctuation">]</span><span class="token punctuation">}</span></span>
+          <span class="token attr-name">items</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>id<span class="token punctuation">:</span> <span class="token string">'#004'</span><span class="token punctuation">,</span> store<span class="token punctuation">:</span> <span class="token string">'123 Example Store'</span><span class="token punctuation">,</span> total<span class="token punctuation">:</span> <span class="token number">23267</span><span class="token punctuation">,</span> average<span class="token punctuation">:</span> <span class="token number">327.79</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>id<span class="token punctuation">:</span> <span class="token string">'#007'</span><span class="token punctuation">,</span> store<span class="token punctuation">:</span> <span class="token string">'45 Meadowview Lane'</span><span class="token punctuation">,</span> total<span class="token punctuation">:</span> <span class="token number">22788</span><span class="token punctuation">,</span> average<span class="token punctuation">:</span> <span class="token number">367.55</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">]</span><span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>EzPage</span><span class="token punctuation">></span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Component</span><span class="token punctuation">></span></span>
+</pre><div class="react-live-preview css-zp1v3o ei5i0ad3"><div class="css-1txwdqa e1jx45ez0"><div class="css-i91q4u e53wloi0"><div class="css-hw2d00 e53wloi1"><h3 class="css-144qqcg e53wloi2">All Stores</h3><div class="css-tbm5j e53wloi3"><span class="css-4xbjey e1343rtc0">Compared to the same period last year</span></div></div><div class="css-1n70up5 e53wloi4"><div class="css-rr6ym0 e1wwcsct2"><table class="css-1ylu2ol e1wwcsct3"><thead><tr><th class="css-4xbjey e1wwcsct0">Store name</th><th class="css-28roux e1wwcsct0">Total sales</th><th class="css-28roux e1wwcsct0">Average order value</th></tr></thead><tbody><tr><td class="css-0 e1wwcsct1"><div><div><a href="javascript:void(0);">123 Example Store</a></div><div><span class="css-4xbjey e1343rtc0">#004</span></div></div></td><td class="css-1fuc94h e1wwcsct1">23267</td><td class="css-1fuc94h e1wwcsct1">327.79</td></tr><tr><td class="css-0 e1wwcsct1"><div><div><a href="javascript:void(0);">45 Meadowview Lane</a></div><div><span class="css-4xbjey e1343rtc0">#007</span></div></div></td><td class="css-1fuc94h e1wwcsct1">22788</td><td class="css-1fuc94h e1wwcsct1">367.55</td></tr></tbody></table></div></div></div></div></div></div></div>
+<hr/></div></div></div></div></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"231608221292675":"app-c3761c80d3a18fede6b8.js","168727357478965":"component---src-components-markdown-js-37eafda61112d676c4c4.js","162898551421021":"component---src-pages-404-js-4503918ea3a16cfcdb75.js","55594170186159":"component---src-pages-components-js-79f0b98a8534ffa8c6ee.js","35783957827783":"component---src-pages-index-js-3ceb381b1d881983de1b.js","60335399758886":"path----84e573eb260be3548336.js","222227984649547":"path---changelog-ae47c88ed16f1a6498f7.js","116131546829555":"path---patterns-overview-a3e672af3f1c173fa7a6.js","241038254339431":"path---styles-style-bde119b49cbab1ada1e2.js","240877461904222":"path---guides-getting-started-c21f557410254a118e20.js","278095373846372":"path---guides-versioning-and-changelog-3165a276a1b01a3f5446.js","155979078031249":"path---guides-principles-98e92a276eac7155d5a3.js","191832304226673":"path---components-ez-alert-bffff160dffc92008754.js","43302957849783":"path---components-ez-heading-d726bc8c6ddfda51da20.js","117751439257133":"path---components-ez-button-51c59cd729addf6cd49d.js","185034786365324":"path---components-ez-labelled-item-6230f338e7596a244b3e.js","68219209551865":"path---components-ez-card-034d3f491edd7899ace2.js","172631722705587":"path---components-ez-page-d726d95ab0c1c41c9dca.js","202547857057070":"path---components-ez-layout-216e2f8942dc2348fe9a.js","112619870407918":"path---components-ez-modal-c31f8250514260155f37.js","272142911860841":"path---components-ez-page-content-4e5600b507c9536e16ec.js","210558923101091":"path---components-ez-segmented-control-b1c3434098607d920a67.js","76819452159364":"path---components-ez-text-style-bf20be7cea0109deae34.js","144025106797560":"path---guides-contributing-5deca826e82bcb523e42.js","11589892076228":"path---components-ez-table-7c9c6a98168632b90892.js","254022195166212":"path---404-a0e39f21c11f6a62c5ab.js","67716065813132":"path---components-3b4376f290e4c0733b5b.js","142629428675168":"path---index-a0e39f21c11f6a62c5ab.js","178698757827068":"path---404-html-a0e39f21c11f6a62c5ab.js","114276838955818":"component---src-layouts-index-js-3c6e6b471c7feefdbb16.js"}/*]]>*/</script><script>/*<![CDATA[*/["/recipe/commons-ea921e2936ef740e466e.js","/recipe/app-c3761c80d3a18fede6b8.js","/recipe/path---components-ez-table-7c9c6a98168632b90892.js","/recipe/component---src-components-markdown-js-37eafda61112d676c4c4.js","/recipe/component---src-layouts-index-js-3c6e6b471c7feefdbb16.js"].forEach(function(s){document.write('<script src="'+s+'" defer></'+'script>')})/*]]>*/</script></body></html>
