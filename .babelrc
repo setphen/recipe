@@ -1,4 +1,4 @@
 {
-  "presets": ["env", "react"],
-  "plugins": ["emotion"]
+  "presets": [["@babel/preset-env", {"targets": {"ie": "11"}}], "@babel/preset-react"],
+  "plugins": ["emotion", ["@babel/plugin-proposal-class-properties", {"loose": false}]]
 }

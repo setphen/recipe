@@ -22,8 +22,8 @@ export default {
     babel({
       babelrc: false,
       exclude: 'node_modules/**',
-      presets: ['stage-1', 'react', ['env', {modules: false}]],
-      plugins: ['emotion'],
+      presets: ['@babel/preset-env', '@babel/preset-react'],
+      plugins: ['emotion', ['@babel/plugin-proposal-class-properties', {loose: false}]],
     }),
     resolve(),
     commonjs(),
