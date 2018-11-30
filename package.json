@@ -47,6 +47,8 @@
     "build": "rollup -c",
     "build:watch": "rollup -c -w",
     "create-component": "plop component",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
     "test": "jest --coverage --no-cache",
     "test:watch": "npm test -- --watch"
   },
