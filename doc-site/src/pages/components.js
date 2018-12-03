@@ -1,11 +1,12 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import {Link, graphql} from 'gatsby';
+import Layout from '../components/Layout';
 
-export default function Index({data}) {
-  const {edges: pages} = data.allMarkdownRemark || {edges: []};
+export default function Index({data, location}) {
+  const {edges: pages} = data.allMdx || {edges: []};
   if (!pages.length) return <div>No Components Found</div>;
   return (
-    <div>
+    <Layout location={location}>
       {pages.map(({node: component}) => {
         return (
           <div key={component.id}>
@@ -15,19 +16,21 @@ export default function Index({data}) {
           </div>
         );
       })}
-    </div>
+    </Layout>
   );
 }
+
 export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(
-      sort: { order: ASC, fields: [frontmatter___path] },
-      filter: {fileAbsolutePath: {regex: "/components/.*/.*\\.md$/"}}
-    ) {
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMdx(sort: {fields: [frontmatter___path], order: ASC}) {
       edges {
         node {
           id
-          fileAbsolutePath
           frontmatter {
             title
             path

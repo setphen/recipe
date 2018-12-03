@@ -1,42 +1,50 @@
+const componentWithMDXScope = require('gatsby-mdx/component-with-mdx-scope');
 const path = require('path');
 
-exports.modifyWebpackConfig = ({config}) => {
-  config.merge({
-    resolve: {
-      alias: {
-        '@ezcater/recipe': path.resolve(__dirname, '../src'),
-      },
-    },
-  });
-};
-
-exports.createPages = ({boundActionCreators, graphql}) => {
-  const {createPage} = boundActionCreators;
-  return graphql(`
-    {
-      allMarkdownRemark {
-        edges {
-          node {
-            html
-            id
-            frontmatter {
-              category
-              path
-              title
+exports.createPages = ({graphql, actions}) => {
+  const {createPage} = actions;
+  return new Promise((resolve, reject) => {
+    resolve(
+      graphql(
+        `
+          {
+            allMdx {
+              edges {
+                node {
+                  id
+                  frontmatter {
+                    category
+                    path
+                    title
+                  }
+                  tableOfContents
+                  code {
+                    scope
+                    body
+                  }
+                }
+              }
             }
           }
+        `
+      ).then(result => {
+        if (result.errors) {
+          console.log(result.errors); // eslint-disable-line no-console
+          reject(result.errors);
         }
-      }
-    }
-  `).then(result => {
-    if (result.errors) {
-      return Promise.reject(result.errors);
-    }
-    result.data.allMarkdownRemark.edges.forEach(({node}) =>
-      createPage({
-        path: node.frontmatter.path,
-        component: path.resolve('src/components/Markdown.js'),
-        context: {},
+
+        // Create blog posts pages.
+        result.data.allMdx.edges.forEach(({node}) => {
+          createPage({
+            path: node.frontmatter.path,
+            component: componentWithMDXScope(
+              path.resolve('./src/components/Pages.js'),
+              node.code.scope,
+              __dirname
+            ),
+            context: node,
+          });
+        });
       })
     );
   });

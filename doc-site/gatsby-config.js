@@ -5,7 +5,6 @@ module.exports = {
     description: "Documentation for Recipe, ezCater's design system library",
   },
   plugins: [
-    'gatsby-plugin-react-next',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
@@ -15,9 +14,14 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-mdx',
       options: {
-        plugins: [`gatsby-remark-autolink-headers`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-autolink-headers',
+          },
+        ],
+        extensions: ['.mdx', '.md'],
       },
     },
   ],

@@ -1,9 +1,10 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import {Link} from 'gatsby';
 import {EzLayout} from '@ezcater/recipe';
+import Layout from '../components/Layout';
 
-const IndexPage = () => (
-  <div>
+const IndexPage = ({location}) => (
+  <Layout location={location}>
     <EzLayout layout="equal">
       <div>
         <h2>
@@ -46,7 +47,7 @@ const IndexPage = () => (
     <footer>
       <Link to="/changelog">What’s new?</Link>
     </footer>
-  </div>
+  </Layout>
 );
 
 export default IndexPage;
