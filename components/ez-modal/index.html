@@ -43,53 +43,138 @@
         }
       }
     })
-  </script><link as="script" rel="preload" href="/recipe/component---src-components-markdown-js-53e81c15c44358dc9a11.js"/><link as="script" rel="preload" href="/recipe/app-9c5c6013366939e86cf6.js"/><link as="script" rel="preload" href="/recipe/7-4e509a062c354d60dddc.js"/><link as="script" rel="preload" href="/recipe/0-6b001e82cdde48bd3797.js"/><link as="script" rel="preload" href="/recipe/webpack-runtime-c66e09ce64d0189a2ba9.js"/><link rel="preload" href="/recipe/static/d/858/path---components-ez-modal-bb-4-4bd-PyMXLkECQiRxnYzh25zSDzovVxk.json" as="fetch" crossOrigin="use-credentials"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div style="background:rebeccapurple;margin-bottom:1.45rem"><div style="margin:0 auto;max-width:960px;padding:1.45rem 1.0875rem"><h1 style="margin:0"><a style="color:white;text-decoration:none" href="/recipe/">Recipe</a></h1></div></div><div style="margin:0 auto;max-width:960px;padding:0px 1.0875rem 1.45rem;padding-top:0"><div><h1>Modal</h1><p>Modals display content in a layer on top of the application. Modals should be used when it’s necessary to interrupt the user or ensure their attention is focused on a specific chunk of information. Modals can also be used when you’d like the user to accomplish a lower-priority action without changing the state of the page they’re working in.</p>
+  </script><link as="script" rel="preload" href="/recipe/component---src-components-markdown-js-53e81c15c44358dc9a11.js"/><link as="script" rel="preload" href="/recipe/app-9c5c6013366939e86cf6.js"/><link as="script" rel="preload" href="/recipe/7-4e509a062c354d60dddc.js"/><link as="script" rel="preload" href="/recipe/0-6b001e82cdde48bd3797.js"/><link as="script" rel="preload" href="/recipe/webpack-runtime-f02ef75ac1007572256a.js"/><link rel="preload" href="/recipe/static/d/22/path---components-ez-modal-bb-4-4bd-pypAfehScmMyg6Xn50FYahCxjc.json" as="fetch" crossOrigin="use-credentials"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div style="background:rebeccapurple;margin-bottom:1.45rem"><div style="margin:0 auto;max-width:960px;padding:1.45rem 1.0875rem"><h1 style="margin:0"><a style="color:white;text-decoration:none" href="/recipe/">Recipe</a></h1></div></div><div style="margin:0 auto;max-width:960px;padding:0px 1.0875rem 1.45rem;padding-top:0"><div><h1>Modal</h1><p>Modals display content in a layer on top of the application. Modals should be used when it’s necessary to interrupt the user or ensure their attention is focused on specific information. Modals can also be used when you’d like the user to accomplish a lower-priority action without changing the state of the page they’re working in.</p>
 <hr/>
 <h2 id="best-practices"><a href="#best-practices" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Best Practices</h2>
 <p>Modals should:</p>
 <ul>
-<li>Provide the user with clear paths forward (a primary action) and out of the modal (close icon in the upper right). For confirmation modals, include a secondary “no” or “cancel” action.</li>
-<li>Use a footer to provide a consistent location for key actions. For modals with many equally-weighted actions, a footer isn’t necessary and the actions can live in the body of the modal.</li>
+<li>Provide the user with clear paths forward and/or out of the modal.</li>
+<li>Provide tabbable elements in the dialog context when providing content for editing.</li>
 </ul>
 <p>Modals should not:</p>
 <ul>
-<li>Create a “wizard” flow with three or more steps. A secondary step with a back button is acceptable, but discouraged.</li>
-<li>Don’t use a “cancel” or “close” button on informational modals or editing modals.</li>
+<li>Create a “wizard” flow with two or more steps.</li>
 </ul>
 <h2 id="examples"><a href="#examples" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h2>
-<h3 id="informational"><a href="#informational" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Informational</h3>
-<p>Informational modals are used to focus the user’s attention on a specific chunk of information. Use when providing information about something that’s not essential to completing the actions on the page (e.g. more information about ezDispatch), especially if content formatting is needed or there’s too much content to display in a tooltip.</p>
-<h3 id="editing"><a href="#editing" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Editing</h3>
-<p>Editing modals can contain any form elements and should be kept as brief as possible. Long or complex forms should almost always be done in a new section/page instead of a modal.</p>
-<h3 id="confirmation"><a href="#confirmation" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Confirmation</h3>
-<p>Use a confirmation modal to ask the user to confirm changes they’re about to make or confirm a destructive action they’re about to take.</p>
-<h4 id="make-sure-to"><a href="#make-sure-to" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Make sure to:</h4>
-<ul>
-<li>Use destructive buttons to clearly designate actions with destructive consequences</li>
-<li>Provide a cancel option with a clear label. Make sure the copy isn’t confusing when placed next to a destructive action (cancel order, cancel).</li>
-<li>Provide appropriate detail so the user can make an informed decision.</li>
-</ul>
-<h2 id="properties"><a href="#properties" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h2>
-<h3 id="children-node---required"><a href="#children-node---required" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>children (node) - required</h3>
-<p>Arbitrary children for the modal contents.</p>
-<h3 id="headertext-string---required"><a href="#headertext-string---required" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>headerText (string) - required</h3>
-<p>Text to display in the header.</p>
-<h3 id="destructive-bool"><a href="#destructive-bool" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>destructive (bool)</h3>
-<p>When true will display the modal in destructive styles (aka a destructive submit button).</p>
-<h3 id="dismisslabel-string---required"><a href="#dismisslabel-string---required" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>dismissLabel (string) - required</h3>
-<p>Label for the dismiss button. Omitting this prop will suppress the dismiss button.</p>
-<h3 id="isopen-bool---required"><a href="#isopen-bool---required" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>isOpen (bool) - required</h3>
-<p>Dictates whether the modal is open. You must still render the component even if isOpen is false to allow for the opening transition to occur (if present).</p>
-<h3 id="issubmitting-bool"><a href="#issubmitting-bool" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>isSubmitting (bool)</h3>
-<p>When true will render the modal with appropriate styles to signify a loading state. Useful when the submit handler has an asynchronous success condition.</p>
-<h3 id="ondismiss-func"><a href="#ondismiss-func" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onDismiss (func)</h3>
-<p>Callback for when dismiss button is clicked.</p>
-<h3 id="onsubmit-func"><a href="#onsubmit-func" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onSubmit (func)</h3>
-<p>Callback for when submit button is clicked.</p>
-<h3 id="submitlabel-string"><a href="#submitlabel-string" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>submitLabel (string)</h3>
-<p>Label for the submit button. Omitting this prop will suppress the submit button.</p>
-<h2 id="examples-1"><a href="#examples-1" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h2>
-<h3 id="basic-modal"><a href="#basic-modal" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Basic Modal</h3>
+<h3 id="informational-modal"><a href="#informational-modal" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Informational modal</h3>
+<p>Informational modals are used to focus the user’s attention on specific information. Use when providing information about something that’s not essential to completing the actions on the page, especially if content formatting is needed or there’s too much content to display in a tooltip.</p>
+<p>The <code>isOpen</code> prop controls whether or not the dialog is displayed to the user, and will only render the <code>children</code> content when <code>isOpen</code> is <code>true</code>.</p>
+<p>A title for the modal should be provided by using the <code>headerText</code> prop.</p>
+<p>When the user clicks outside the modal, hits the escape key, or hits close, the <code>onDismiss</code> function will be called. The user may also trigger the <code>onDismiss</code> function by clicking the button labelled by the provided <code>dismissLabel</code>.</p>
+<div class="react-live css-pkob2f e1qhjxgg0"><style>
+.prism-code {
+  display: block;
+  white-space: pre;
+
+  background-color: #1D1F21;
+  color: #C5C8C6;
+
+  padding: 0.5rem;
+  margin: 0;
+
+  box-sizing: border-box;
+  vertical-align: baseline;
+  outline: none;
+  text-shadow: none;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  word-wrap: normal;
+  word-break: normal;
+  text-align: left;
+  word-spacing: normal;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: hsl(30, 20%, 50%);
+}
+
+.token.punctuation {
+  opacity: .7;
+}
+
+.namespace {
+  opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+  color: hsl(350, 40%, 70%);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: hsl(75, 70%, 60%);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: hsl(40, 90%, 60%);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: hsl(350, 40%, 70%);
+}
+
+.token.regex,
+.token.important {
+  color: #e90;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.deleted {
+  color: red;
+}
+</style><div class="css-1b3p1af e1qhjxgg5"><button class="css-1kmalqf e8wh6n20">Copy Code</button><div><div class="css-1purguz e1c3knkn0"><button>Button</button></div></div></div><div class="css-r1ui3t e1qhjxgg1"><pre class="prism-code css-i2h9n9 e1qhjxgg2" spellcheck="false" contenteditable="true"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Component</span> <span class="token attr-name">initialState</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>isOpen<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
+  <span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">{</span>state<span class="token punctuation">,</span> setState<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>React.Fragment</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>isOpen<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span>Button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>EzModal</span>
+        <span class="token attr-name">isOpen</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>state<span class="token punctuation">.</span>isOpen<span class="token punctuation">}</span></span>
+        <span class="token attr-name">onDismiss</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>isOpen<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span>
+        <span class="token attr-name">dismissLabel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Dismiss<span class="token punctuation">"</span></span>
+        <span class="token attr-name">headerText</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Header goes here<span class="token punctuation">"</span></span>
+      <span class="token punctuation">></span></span>
+        Modal content goes here<span class="token operator">!</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>EzModal</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>React.Fragment</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">}</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Component</span><span class="token punctuation">></span></span>
+</pre><div class="react-live-preview css-1dal5ky e1qhjxgg3"><button>Button</button></div></div></div>
+<h3 id="editing-modals"><a href="#editing-modals" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Editing modals</h3>
+<p>Editing modals can contain any form elements and should be kept as brief as possible. Long or complex forms should almost always be done in a new section/page instead of a modal. Editing modals are suitable for prompting the user to take a specific action before they are allowed proceed with their regular page interactions.</p>
+<p>The <code>onSubmit</code> function will be called when the user clicking the button labelled by the provided <code>submitLabel</code>.</p>
 <div class="react-live css-pkob2f e1qhjxgg0"><style>
 .prism-code {
   display: block;
@@ -216,121 +301,14 @@
   <span class="token punctuation">)</span><span class="token punctuation">}</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Component</span><span class="token punctuation">></span></span>
 </pre><div class="react-live-preview css-1dal5ky e1qhjxgg3"><div class="css-1orbvxv ekvwvyw0"><div class="css-17ep7e1 ekvwvyw4"><div class="css-1eeqb1h e10ytqrv0"><button>Button</button><div></div></div></div></div></div></div></div>
-<h3 id="only-dismiss-button"><a href="#only-dismiss-button" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Only dismiss button</h3>
-<p>For a purely informational modal you can omit the submitLabel prop which will suppress the submit button</p>
-<div class="react-live css-pkob2f e1qhjxgg0"><style>
-.prism-code {
-  display: block;
-  white-space: pre;
-
-  background-color: #1D1F21;
-  color: #C5C8C6;
-
-  padding: 0.5rem;
-  margin: 0;
-
-  box-sizing: border-box;
-  vertical-align: baseline;
-  outline: none;
-  text-shadow: none;
-  -webkit-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-  word-wrap: normal;
-  word-break: normal;
-  text-align: left;
-  word-spacing: normal;
-  -moz-tab-size: 2;
-  -o-tab-size: 2;
-  tab-size: 2;
-}
-
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: hsl(30, 20%, 50%);
-}
-
-.token.punctuation {
-  opacity: .7;
-}
-
-.namespace {
-  opacity: .7;
-}
-
-.token.property,
-.token.tag,
-.token.boolean,
-.token.number,
-.token.constant,
-.token.symbol {
-  color: hsl(350, 40%, 70%);
-}
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-  color: hsl(75, 70%, 60%);
-}
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string,
-.token.variable {
-  color: hsl(40, 90%, 60%);
-}
-
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-  color: hsl(350, 40%, 70%);
-}
-
-.token.regex,
-.token.important {
-  color: #e90;
-}
-
-.token.important,
-.token.bold {
-  font-weight: bold;
-}
-.token.italic {
-  font-style: italic;
-}
-
-.token.entity {
-  cursor: help;
-}
-
-.token.deleted {
-  color: red;
-}
-</style><div class="css-1b3p1af e1qhjxgg5"><button class="css-1kmalqf e8wh6n20">Copy Code</button><div><div class="css-1purguz e1c3knkn0"><button>Button</button></div></div></div><div class="css-r1ui3t e1qhjxgg1"><pre class="prism-code css-i2h9n9 e1qhjxgg2" spellcheck="false" contenteditable="true"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Component</span> <span class="token attr-name">initialState</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>isOpen<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
-  <span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">{</span>state<span class="token punctuation">,</span> setState<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>React.Fragment</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>isOpen<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span>Button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>EzModal</span>
-        <span class="token attr-name">isOpen</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>state<span class="token punctuation">.</span>isOpen<span class="token punctuation">}</span></span>
-        <span class="token attr-name">onDismiss</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>isOpen<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span>
-        <span class="token attr-name">dismissLabel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Dismiss<span class="token punctuation">"</span></span>
-        <span class="token attr-name">headerText</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Header goes here<span class="token punctuation">"</span></span>
-      <span class="token punctuation">></span></span>
-        Modal content goes here<span class="token operator">!</span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>EzModal</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>React.Fragment</span><span class="token punctuation">></span></span>
-  <span class="token punctuation">)</span><span class="token punctuation">}</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Component</span><span class="token punctuation">></span></span>
-</pre><div class="react-live-preview css-1dal5ky e1qhjxgg3"><button>Button</button></div></div></div>
-<h3 id="destructive"><a href="#destructive" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Destructive</h3>
-<p>If the submit action is destructive you can set the destructive prop</p>
+<h3 id="confirmation-modals"><a href="#confirmation-modals" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Confirmation modals</h3>
+<p>Use a confirmation modal to ask the user to confirm changes they’re about to make or confirm a destructive action they’re about to take.</p>
+<ul>
+<li>Use destructive buttons to clearly designate actions with destructive consequences</li>
+<li>Provide a cancel option with a clear label. Make sure the copy isn’t confusing when placed next to a destructive action (cancel order, cancel).</li>
+<li>Provide appropriate detail so the user can make an informed decision.</li>
+</ul>
+<p>The <code>destructive</code> prop should be used to indicate that the <code>onSubmit</code> function is destructive.</p>
 <div class="react-live css-pkob2f e1qhjxgg0"><style>
 .prism-code {
   display: block;
@@ -445,8 +423,9 @@
   <span class="token punctuation">)</span><span class="token punctuation">}</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Component</span><span class="token punctuation">></span></span>
 </pre><div class="react-live-preview css-1dal5ky e1qhjxgg3"><button>Button</button></div></div></div>
-<h3 id="issubmitting"><a href="#issubmitting" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>isSubmitting</h3>
-<p>You can set the isSubmitting to trigger the loading state for the modal</p>
+<h3 id="asynchronous-actions"><a href="#asynchronous-actions" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Asynchronous actions</h3>
+<p>When triggering an action that may take some time, is can be useful for the user to remain on the modal until the action has completed.</p>
+<p>You can set the <code>isSubmitting</code> prop to indicate that the modal is processing the action.</p>
 <div class="react-live css-pkob2f e1qhjxgg0"><style>
 .prism-code {
   display: block;
@@ -542,14 +521,17 @@
 .token.deleted {
   color: red;
 }
-</style><div class="css-1b3p1af e1qhjxgg5"><button class="css-1kmalqf e8wh6n20">Copy Code</button><div><div class="css-1purguz e1c3knkn0"><button>Button</button></div></div></div><div class="css-r1ui3t e1qhjxgg1"><pre class="prism-code css-i2h9n9 e1qhjxgg2" spellcheck="false" contenteditable="true"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Component</span> <span class="token attr-name">initialState</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>isOpen<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
+</style><div class="css-1b3p1af e1qhjxgg5"><button class="css-1kmalqf e8wh6n20">Copy Code</button><div><div class="css-1purguz e1c3knkn0"><button>Button</button></div></div></div><div class="css-r1ui3t e1qhjxgg1"><pre class="prism-code css-i2h9n9 e1qhjxgg2" spellcheck="false" contenteditable="true"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Component</span> <span class="token attr-name">initialState</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>isOpen<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> isSubmitting<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
   <span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">{</span>state<span class="token punctuation">,</span> setState<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>React.Fragment</span><span class="token punctuation">></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>isOpen<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span>Button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>EzModal</span>
-        <span class="token attr-name">isSubmitting</span>
+        <span class="token attr-name">isSubmitting</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>state<span class="token punctuation">.</span>isSubmitting<span class="token punctuation">}</span></span>
         <span class="token attr-name">isOpen</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>state<span class="token punctuation">.</span>isOpen<span class="token punctuation">}</span></span>
-        <span class="token attr-name">onSubmit</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>isOpen<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span>
+        <span class="token attr-name">onSubmit</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+          <span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>isSubmitting<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>isOpen<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> isSubmitting<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
         <span class="token attr-name">submitLabel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Submit<span class="token punctuation">"</span></span>
         <span class="token attr-name">onDismiss</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>isOpen<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span>
         <span class="token attr-name">dismissLabel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Dismiss<span class="token punctuation">"</span></span>
@@ -560,7 +542,4 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>React.Fragment</span><span class="token punctuation">></span></span>
   <span class="token punctuation">)</span><span class="token punctuation">}</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Component</span><span class="token punctuation">></span></span>
-</pre><div class="react-live-preview css-1dal5ky e1qhjxgg3"><button>Button</button></div></div></div>
-<hr/>
-<h2 id="related-components"><a href="#related-components" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Related components</h2>
-<p>*</p></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-components-markdown-js","jsonName":"components-ez-modal-bb4","path":"/components/ez-modal"};window.dataPath="858/path---components-ez-modal-bb-4-4bd-PyMXLkECQiRxnYzh25zSDzovVxk";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-9c5c6013366939e86cf6.js"],"component---src-components-markdown-js":["/component---src-components-markdown-js.c9c3cb5a5ad292629f4e.css","/component---src-components-markdown-js-53e81c15c44358dc9a11.js"],"component---src-pages-404-js":["/component---src-pages-404-js-a307e8c04d5f61dc2bc7.js"],"component---src-pages-components-js":["/component---src-pages-components-js.c9c3cb5a5ad292629f4e.css","/component---src-pages-components-js-495e0970720038ff594e.js"],"component---src-pages-index-js":["/component---src-pages-index-js.c9c3cb5a5ad292629f4e.css","/component---src-pages-index-js-04ba5228df266c0cc3f0.js"]};/*]]>*/</script><script src="/recipe/webpack-runtime-c66e09ce64d0189a2ba9.js" async=""></script><script src="/recipe/0-6b001e82cdde48bd3797.js" async=""></script><script src="/recipe/7-4e509a062c354d60dddc.js" async=""></script><script src="/recipe/app-9c5c6013366939e86cf6.js" async=""></script><script src="/recipe/component---src-components-markdown-js-53e81c15c44358dc9a11.js" async=""></script></body></html>
+</pre><div class="react-live-preview css-1dal5ky e1qhjxgg3"><button>Button</button></div></div></div></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-components-markdown-js","jsonName":"components-ez-modal-bb4","path":"/components/ez-modal"};window.dataPath="22/path---components-ez-modal-bb-4-4bd-pypAfehScmMyg6Xn50FYahCxjc";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-9c5c6013366939e86cf6.js"],"component---src-components-markdown-js":["/component---src-components-markdown-js.c9c3cb5a5ad292629f4e.css","/component---src-components-markdown-js-53e81c15c44358dc9a11.js"],"component---src-pages-404-js":["/component---src-pages-404-js-a307e8c04d5f61dc2bc7.js"],"component---src-pages-components-js":["/component---src-pages-components-js.c9c3cb5a5ad292629f4e.css","/component---src-pages-components-js-495e0970720038ff594e.js"],"component---src-pages-index-js":["/component---src-pages-index-js.c9c3cb5a5ad292629f4e.css","/component---src-pages-index-js-04ba5228df266c0cc3f0.js"]};/*]]>*/</script><script src="/recipe/webpack-runtime-f02ef75ac1007572256a.js" async=""></script><script src="/recipe/0-6b001e82cdde48bd3797.js" async=""></script><script src="/recipe/7-4e509a062c354d60dddc.js" async=""></script><script src="/recipe/app-9c5c6013366939e86cf6.js" async=""></script><script src="/recipe/component---src-components-markdown-js-53e81c15c44358dc9a11.js" async=""></script></body></html>
