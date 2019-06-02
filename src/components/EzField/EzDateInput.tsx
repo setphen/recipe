@@ -52,7 +52,7 @@ const EzDateInput = ({id, name, disabled, onChange, ...props}) => {
   const comboboxFlyout = useComboboxFlyout(comboboxState);
 
   return (
-    <Container innerRef={clickOutsideRef} hasError={props.touched && props.error} opened={visible}>
+    <Container ref={clickOutsideRef} hasError={props.touched && props.error} opened={visible}>
       <Combobox {...combobox}>
         <input {...comboboxInput} />
       </Combobox>
