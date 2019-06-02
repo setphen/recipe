@@ -155,7 +155,7 @@ const EzSelect = ({id, options, value, onChange, ...rest}) => {
   useJumpToOption(comboboxInput.ref, {options, move: setActiveOption});
 
   return (
-    <Container innerRef={clickOutsideRef} hasError={rest.touched && rest.error} opened={visible}>
+    <Container ref={clickOutsideRef} hasError={rest.touched && rest.error} opened={visible}>
       <Combobox {...combobox}>
         <input {...comboboxInput} />
       </Combobox>
@@ -164,7 +164,7 @@ const EzSelect = ({id, options, value, onChange, ...rest}) => {
           aria-labelledby={ariaLabelledBy}
           role="listbox"
           {...comboboxFlyout}
-          innerRef={scrollableRef}
+          ref={scrollableRef}
           onClick={() => comboboxInput.ref.current.focus()}
         >
           {hasGroupedOptions(options) ? (
