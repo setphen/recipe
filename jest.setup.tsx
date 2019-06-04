@@ -3,9 +3,8 @@ import 'jest-enzyme';
 import {configure} from 'enzyme';
 // @ts-ignore
 import Adapter from 'enzyme-adapter-react-16';
-import {createSerializer, createMatchers} from 'jest-emotion';
+import {createSerializer, matchers} from 'jest-emotion';
 import {toHaveNoViolations} from 'jest-axe';
-import * as emotion from 'emotion';
 import {configure as configureSosia} from 'sosia';
 import {RemotePuppeteerBrowserTarget} from 'sosia-remote-puppeteer';
 import markdownSource from './emotionComponentSource';
@@ -22,14 +21,14 @@ expect.extend(toHaveNoViolations);
 // Add a snapshot serializer that removes random hashes
 // from emotion class names.
 expect.addSnapshotSerializer(
-  createSerializer(emotion, {
+  createSerializer({
     classNameReplacer(className, index) {
       return `recipe-${index}`;
     },
   })
 );
 
-expect.extend(createMatchers(emotion));
+expect.extend(matchers);
 
 // cheat for syntax highlighting
 const css = (...args): string => args[0];
