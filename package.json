@@ -34,7 +34,7 @@
     "babel-plugin-emotion": "^9.2.4",
     "babel-plugin-transform-inline-environment-variables": "^0.4.3",
     "concurrently": "^4.1.0",
-    "emotion-theming": "^9.2.3",
+    "emotion-theming": "^10.0.19",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.9.1",
     "jest": "^24.1.0",
