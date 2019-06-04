@@ -1,3 +1,4 @@
+import {css} from '@emotion/core';
 import {StandardPropertiesHyphen, Color} from 'csstype';
 import {darken} from '.';
 
@@ -8,9 +9,20 @@ type Options = {
   focusColor?: Color;
 };
 
-export default (style: CSSPropertyName, {color, focusColor}: Options) => ({
-  [style]: color,
-  '&:hover:enabled': {[style]: darken(color, 0.15)},
-  '&:focus:enabled': focusColor && {[style]: focusColor},
-  '&:active:enabled': {[style]: darken(color, 0.25)},
-});
+const magic = css;
+
+export default (style: CSSPropertyName, {color, focusColor}: Options) => magic`
+  ${style}: ${color};
+
+  &:hover:enabled {
+    ${style}: ${darken(color, 0.15)};
+  }
+
+  &:focus:enabled {
+    ${style}: ${focusColor};
+  }
+
+  &:active:enabled {
+    ${style}: ${darken(color, 0.25)};
+  }
+`;
