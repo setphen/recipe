@@ -1,5 +1,5 @@
-import React from 'react';
-import {css} from 'react-emotion';
+/** @jsx jsx */
+import {css} from '@emotion/core';
 import {themes} from '@ezcater/recipe';
 
 const {standard} = themes;
