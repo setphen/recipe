@@ -1,6 +1,6 @@
 import React from 'react';
-import {components} from 'docz-theme-default';
-import styled, {injectGlobal} from 'react-emotion';
+import Theme, {components} from 'docz-theme-default';
+import styled from '@emotion/styled';
 import DocFrame from './Frame';
 
 const {playground: DoczPlayground} = components;
@@ -46,7 +46,9 @@ injectGlobal`
 
 const Playground = ({code, scope}) => (
   <Container>
-    <DoczPlayground code={code} scope={{...scope}} wrapper={DocFrame} />
+    <Theme>
+      <DoczPlayground code={code} scope={{...scope}} wrapper={DocFrame} />
+    </Theme>
   </Container>
 );
 
