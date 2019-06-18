@@ -9,6 +9,7 @@ export {default as EzFormLayout} from './EzFormLayout';
 export {default as EzHeading} from './EzHeading';
 export {default as EzLabelledItem} from './EzLabelledItem';
 export {default as EzLink} from './EzLink';
+export {default as EzMarketingContainer} from './EzMarketingContainer';
 export {default as EzModal} from './EzModal';
 export {default as EzOrderSummary} from './EzOrderSummary';
 export {EzPage, EzPageSection} from './EzPage';
