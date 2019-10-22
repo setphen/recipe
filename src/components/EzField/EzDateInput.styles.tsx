@@ -5,7 +5,10 @@ export {Container} from './EzCombobox.styles';
 
 export const Combobox = styled(BaseCombobox)`
   width: 200px;
-  input {
+`;
+
+export const DateInput = styled.input`
+  && {
     padding-left: 2.5em;
     padding-right: 1em;
     width: 200px;
