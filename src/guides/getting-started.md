@@ -46,6 +46,7 @@ Squads should challenge themselves to use the design system as much as possible.
 However, Recipe is still a young design system and has plenty of room to evolve. We welcome ideas for new components and extensions of existing ones. We want to evolve the system in a thoughtful way so that we can main consistency.
 
 Here are some things to consider when proposing a change to Recipe:
+
 - Is this pattern general enough to apply to applications other than the one you are currently working on?
 - Have you identified three or more situations where your proposed component could be used? These don't have to be all new cases, they could include situations where Recipe already has a solution but you think your proposed one is better for the user.
 - Have you thought about the "distance" between this pattern and related patterns that are already in Recipe?
@@ -66,12 +67,12 @@ The matching Sketch symbol library for Recipe is available through a tool called
 npm install @ezcater/recipe
 ```
 
-After installing recipe in your new application you may need to install some additional peer dependencies, check the warnings in your terminal for what those are as well as the `package.json` file. There is a section specifically for `peerDependencies` which need to be installed by the parent application.
+After installing recipe in your new application you may need to install some additional peer dependencies. When installing recipe, you may see warnings in your terminal prompting you to install these dependencies. There is a `peerDependencies` section in Recipe's `package.json` file which lists the dependencies that need to be installed by the parent application.
 
 Aside from React and React DOM, Recipe requires the following `peerDependencies` to be provided by your project:
 
 ```term
-npm install emotion@9.x react-emotion@9.x emotion-theming@9.x
+npm install @emotion/core @emotion/styled
 ```
 
 ### Importing components in downstream projects
@@ -112,10 +113,9 @@ Add ThemeProvider component to the top level of your app and access the theme wi
 
 To install or update to the [latest version of Recipe](/changelog) in your application, you can run the following npm command:
 
-​​​​```term
+```term
 npm install @ezcater/recipe@latest
-​​​​```
-
+```
 
 ---
 
