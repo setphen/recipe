@@ -1,10 +1,6 @@
 import React from 'react';
-import 'jest-enzyme';
-import {configure} from 'enzyme';
 import {Global, css, CacheProvider} from '@emotion/core';
 import createCache from '@emotion/cache';
-// @ts-ignore
-import Adapter from 'enzyme-adapter-react-16';
 import {createSerializer, matchers} from 'jest-emotion';
 import {toHaveNoViolations} from 'jest-axe';
 import {configure as configureSosia} from 'sosia';
@@ -13,8 +9,6 @@ import {RemotePuppeteerBrowserTarget} from 'sosia-remote-puppeteer';
 import {ThemeProvider} from 'emotion-theming';
 import * as themes from './src/themes';
 import EzGlobalStyles from './src/components/EzGlobalStyles';
-
-configure({adapter: new Adapter()});
 
 // Add custom matchers
 expect.extend(toHaveNoViolations);
