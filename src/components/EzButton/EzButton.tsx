@@ -41,7 +41,9 @@ const EzButton = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
 const buildProps = (props: ButtonProps & {ref: React.Ref<HTMLButtonElement>}) => {
   if (props.use === 'tertiary') return props;
 
-  return {...props, disabled: props.disabled || props.loading};
+  const {loading, ...rest} = props;
+
+  return {...rest, isLoading: loading, disabled: props.disabled || loading};
 };
 
 /**
