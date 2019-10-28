@@ -9,7 +9,7 @@ type Props = {
 export const vertical = ({horizontal, theme}: Props) =>
   !horizontal &&
   css`
-    > *:not(:first-child) {
+    && > * + * {
       margin-top: ${theme.spacing.md};
     }
   `;
