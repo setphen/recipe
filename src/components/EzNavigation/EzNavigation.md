@@ -151,15 +151,15 @@ Note: a special notification value `★` can be used to highlight the link for e
 <EzAppLayout>
   <EzNavigation
     home={{
-      href: 'javascript:void(0);',
+      href: '#',
       label: 'Homepage',
       logo: {src: ezCaterLogoPath, width: 100},
     }}
     links={[
-      {href: 'javascript:void(0);', label: 'Orders', active: true, notifications: 15},
-      {href: 'javascript:void(0);', label: 'Get More Orders', notifications: '★'},
-      {href: 'javascript:void(0);', label: 'Customers', notifications: 5},
-      {href: 'javascript:void(0);', label: 'Reports'},
+      {href: '#', label: 'Orders', active: true, notifications: 15},
+      {href: '#', label: 'Get More Orders', notifications: '★'},
+      {href: '#', label: 'Customers', notifications: 5},
+      {href: '#', label: 'Reports'},
     ]}
   >
     <EzPage>
