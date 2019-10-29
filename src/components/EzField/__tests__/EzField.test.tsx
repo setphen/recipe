@@ -2,7 +2,6 @@ import React from 'react';
 import {visualSnapshots} from 'sosia';
 import dayjs from 'dayjs';
 import {axe} from 'jest-axe';
-import 'jest-dom/extend-expect';
 import {getByLabelText, getByText, fireEvent} from 'react-testing-library';
 import ReactTestUtils, {act} from 'react-dom/test-utils';
 import Component from 'react-component-component';
