@@ -32,7 +32,7 @@
     "babel-plugin-emotion": "^9.2.4",
     "babel-plugin-transform-inline-environment-variables": "^0.4.3",
     "concurrently": "^4.1.0",
-    "css-zero": "^0.2.0",
+    "css-zero": "^0.2.1",
     "csstype": "^2.6.3",
     "emotion-theming": "^10.0.19",
     "jest": "^24.9.0",
