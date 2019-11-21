@@ -1,37 +1,44 @@
 import React from 'react';
-import {base, resets} from './EzPage.styles';
+import {css, styles} from 'css-zero/macro';
 import {MaxWidth} from '../EzAppLayout/EzAppLayout';
-import {childStyles} from './styles';
-import styled from '../../themes/styled';
+import {theme} from '../../themes/styled';
 
 type PageProps = {
   children: React.ReactNode;
 };
 
-type PageWrapperProps = {
-  children: React.ReactNode;
-  width?: string;
-};
+const container = css`
+  background: ${theme.colors.page.background};
+  padding: ${theme.spacing.sm} ${theme.spacing.xs};
+  flex-grow: 1;
 
-/**
- * Page is the main content container for a page.
- */
-const EzPageContainer = styled.div<PageWrapperProps>(base, resets);
-const EzPageWrapper = styled.div<PageWrapperProps>(childStyles);
+  @media screen and (min-width: ${theme.breakpoints.medium}) {
+    padding: ${theme.spacing.xl2};
+  }
+`;
+
+const wrapper = css`
+  margin-bottom: ${theme.spacing.xl};
+`;
+
+const EzPageWrapper: React.FC = ({children}) => (
+  <>
+    {React.Children.map(children, child => (
+      <div className={styles(wrapper)}>{child}</div>
+    ))}
+  </>
+);
 
 const EzPage: React.FC<PageProps> = ({children}) => {
   return (
-    <EzPageContainer>
+    <div className={styles(container)}>
       <MaxWidth>
         <EzPageWrapper>{children}</EzPageWrapper>
       </MaxWidth>
-    </EzPageContainer>
+    </div>
   );
 };
 
 EzPage.displayName = 'EzPage';
 
-/**
- * @component
- */
 export default EzPage;

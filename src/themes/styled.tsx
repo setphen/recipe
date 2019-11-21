@@ -1,5 +1,4 @@
 import styled, {CreateStyled, StyledOptions} from '@emotion/styled';
-import {css, styles} from 'css-zero';
 import * as standard from './standard';
 
 export type Theme = typeof standard;
@@ -26,6 +25,6 @@ const createStyled = (tag: any, options?: StyledOptions) => {
   };
 };
 
-export {css, styles, standard as theme};
+export {standard as theme};
 
 export default createStyled as CreateStyled<Theme>;
