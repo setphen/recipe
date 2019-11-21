@@ -30,6 +30,7 @@
     "@types/react-dom": "^16.9.3",
     "babel-jest": "^24.1.0",
     "babel-plugin-emotion": "^9.2.4",
+    "babel-plugin-macros": "^2.7.0",
     "babel-plugin-transform-inline-environment-variables": "^0.4.3",
     "concurrently": "^4.1.0",
     "css-zero": "^0.2.1",

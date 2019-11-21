@@ -9,6 +9,7 @@
       {
         "include": ["npm_package_version"]
       }
-    ]
+    ],
+    "macros"
   ]
 }
