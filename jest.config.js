@@ -14,6 +14,7 @@ module.exports = {
     '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
     '^.+\\.svg$': '<rootDir>/jest.fileTransformer.js',
     '^.+\\.md?$': 'jest-raw-loader',
+    '^.+\\.linaria.css?$': '<rootDir>/jest.cssTransformer.js',
   },
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(j|t)sx?$',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.tsx'],
