@@ -21,6 +21,14 @@ const IFramePlayground = props => {
     const iframe = iframeEl.current;
     const contentDocument = iframe.contentDocument;
     setContainer(contentDocument);
+
+    // copy gatsby's included link based styles
+    const links = Array.from(document.getElementsByTagName('link'));
+    links.forEach(link => {
+      if (link.rel === 'stylesheet') {
+        contentDocument.head.appendChild(link.cloneNode(true));
+      }
+    });
   }, []);
 
   useEffect(() => {
