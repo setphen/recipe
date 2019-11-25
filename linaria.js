@@ -4,6 +4,7 @@ const fs = require('fs');
 const mkdirp = require('mkdirp');
 const extract = require('linaria/lib/babel/extract');
 const {addSideEffect} = require('@babel/helper-module-imports');
+const stylis = require('stylis');
 
 module.exports = function linaria(context, options) {
   const {visitor} = extract(context, {
@@ -35,7 +36,7 @@ module.exports = function linaria(context, options) {
           let cssText = '';
 
           Object.keys(state.rules).forEach(selector => {
-            cssText += `${selector} {${state.rules[selector].cssText}}\n`;
+            cssText += `${stylis(selector, state.rules[selector].cssText)}\n`;
           });
 
           if (!cssText) return;
