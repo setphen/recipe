@@ -1,6 +1,8 @@
-import {css} from '@emotion/core';
+import {styled} from 'linaria/react';
+import {theme} from '../../themes/styled';
+import {Heading} from '../EzHeading/EzHeading.styles';
 
-export const base = ({theme}) => css`
+export const EzPageContainer = styled.div`
   background: ${theme.colors.page.background};
   padding: ${theme.spacing.sm} ${theme.spacing.xs};
   flex-grow: 1;
@@ -8,11 +10,24 @@ export const base = ({theme}) => css`
   @media screen and (min-width: ${theme.breakpoints.medium}) {
     padding: ${theme.spacing.xl2};
   }
-`;
 
-// This allows us to gradually roll out style resets. Eventually they will move to a more typically global location.
-export const resets = () => css`
   p {
     margin: 0;
+  }
+`;
+
+export const EzPageWrapper = styled.div`
+  > *:not(:last-child) {
+    margin-bottom: ${theme.spacing.sm};
+  }
+
+  @media screen and (min-width: ${theme.breakpoints.medium}) {
+    > *:not(:last-child) {
+      margin-bottom: ${theme.spacing.xl};
+    }
+  }
+
+  > ${Heading as any} {
+    margin-bottom: ${theme.spacing.sm};
   }
 `;

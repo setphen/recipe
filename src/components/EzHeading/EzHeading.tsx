@@ -1,6 +1,6 @@
 import React from 'react';
-import {headings, Subheading} from './EzHeading.styles';
-import styled from '../../themes/styled';
+import {cx} from 'linaria';
+import {Heading, Subheading, sizes} from './EzHeading.styles';
 
 type HeadingProps = {
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
@@ -23,10 +23,10 @@ const EzHeading: React.FC<HeadingProps> = ({
   subheading: subtitle,
 }) => {
   const headingElement = as || `h${headingSize}`;
-  const Heading = headings[headingElement];
+  const size = sizes[`h${headingSize}`];
 
   const heading = (
-    <Heading className={className} size={headingSize} id={id}>
+    <Heading className={cx(className, size)} as={headingElement as any} id={id}>
       {title}
     </Heading>
   );
@@ -45,7 +45,4 @@ const EzHeading: React.FC<HeadingProps> = ({
   );
 };
 
-/**
- * @component
- */
-export default styled(EzHeading)();
+export default EzHeading;

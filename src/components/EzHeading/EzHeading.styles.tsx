@@ -1,33 +1,44 @@
-import variant from 'styled-component-variant';
-import {css} from '@emotion/core';
-import styled from '../../themes/styled';
+import {css} from 'linaria';
+import {styled} from 'linaria/react';
+import {theme} from '../../themes/styled';
 
 export const Subheading = styled.div`
-  color: ${props => props.theme.colors.text.deemphasis};
-  font-size: ${props => props.theme.fontSizes[300]};
-  font-weight: ${props => props.theme.fontWeights.normal};
-  line-height: ${props => props.theme.lineHeights.heading};
-  margin-top: ${props => props.theme.spacing.xs};
+  color: ${theme.colors.text.deemphasis};
+  font-size: ${theme.fontSizes[300]};
+  font-weight: ${theme.fontWeights.normal};
+  line-height: ${theme.lineHeights.heading};
+  margin-top: ${theme.spacing.xs};
 `;
 
-const heading = (size, weight) => ({theme}) => css`
+export const sizes = {
+  h1: css`
+    font-size: ${theme.fontSizes[700]};
+    font-weight: ${theme.fontWeights.normal};
+  `,
+  h2: css`
+    font-size: ${theme.fontSizes[600]};
+    font-weight: ${theme.fontWeights.normal};
+  `,
+  h3: css`
+    font-size: ${theme.fontSizes[500]};
+    font-weight: ${theme.fontWeights.bold};
+  `,
+  h4: css`
+    font-size: ${theme.fontSizes[400]};
+    font-weight: ${theme.fontWeights.normal};
+  `,
+  h5: css`
+    font-size: ${theme.fontSizes[300]};
+    font-weight: ${theme.fontWeights.bold};
+  `,
+  h6: css`
+    font-size: ${theme.fontSizes[200]};
+    font-weight: ${theme.fontWeights.normal};
+  `,
+};
+
+export const Heading = styled.h1`
   color: ${theme.colors.text.base};
-  font-size: ${theme.fontSizes[size]};
-  font-weight: ${theme.fontWeights[weight]};
   line-height: ${theme.lineHeights.heading};
   margin: 0;
 `;
-
-const size = variant('size', {
-  1: heading(700, 'normal'),
-  2: heading(600, 'normal'),
-  3: heading(500, 'bold'),
-  4: heading(400, 'normal'),
-  5: heading(300, 'bold'),
-  6: heading(200, 'normal'),
-});
-
-export const headings = ['1', '2', '3', '4', '5', '6'].reduce((res, n) => {
-  const tag = `h${n}` as 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-  return {[tag]: styled(tag)(size), ...res};
-}, {});

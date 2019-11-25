@@ -25,4 +25,6 @@ const createStyled = (tag: any, options?: StyledOptions) => {
   };
 };
 
+export {standard as theme};
+
 export default createStyled as CreateStyled<Theme>;

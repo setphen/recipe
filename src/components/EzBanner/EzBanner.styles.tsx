@@ -22,7 +22,7 @@ const base = ({theme}) => css`
     color: ${theme.colors.content.background};
     margin-right: ${theme.spacing.md};
   }
-  p {
+  && > p {
     margin-top: ${theme.spacing.sm};
     margin-bottom: ${theme.spacing.md};
   }
