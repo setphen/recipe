@@ -18,14 +18,28 @@ const container = css`
 `;
 
 const wrapper = css`
-  margin-bottom: ${theme.spacing.xl};
+  :not(:last-child) {
+    margin-bottom: ${theme.spacing.sm};
+  }
+
+  @media screen and (min-width: ${theme.breakpoints.medium}) {
+    :not(:last-child) {
+      margin-bottom: ${theme.spacing.xl};
+    }
+  }
 `;
 
 const EzPageWrapper: React.FC = ({children}) => (
   <>
-    {React.Children.map(children, child => (
-      <div className={styles(wrapper)}>{child}</div>
-    ))}
+    {React.Children.map(children, child => {
+      if (!React.isValidElement(child)) return child;
+
+      let {className = ''} = child.props;
+
+      className = [className, styles(wrapper)].join(' ').trim();
+
+      return React.cloneElement(child, {className});
+    })}
   </>
 );
 
