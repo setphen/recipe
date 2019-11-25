@@ -9,6 +9,13 @@
       {
         "include": ["npm_package_version"]
       }
+    ],
+    [
+      "./linaria",
+      {
+        "outDir": "lib",
+        "sourceRoot": "src"
+      }
     ]
   ]
 }
