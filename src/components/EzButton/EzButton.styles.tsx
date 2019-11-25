@@ -50,8 +50,8 @@ const primary = ({theme: {colors}, destructive}) => {
   return css`
     color: ${colors.white};
     border-color: ${color};
-    ${pseudoClasses('border-color', {color, focusColor: darken(color, 0.25)})};
-    ${pseudoClasses('background-color', {color})};
+    ${pseudoClasses('borderColor', {color, focusColor: darken(color, 0.25)})};
+    ${pseudoClasses('backgroundColor', {color})};
   `;
 };
 
@@ -62,7 +62,7 @@ const secondary = ({theme: {colors}, destructive}) => {
   return css`
     background-color: white;
     border: solid 1px;
-    ${pseudoClasses('border-color', {color: borderColor, focusColor})};
+    ${pseudoClasses('borderColor', {color: borderColor, focusColor})};
     ${pseudoClasses('color', {color})};
     &:hover:enabled {
       background-color: ${colors.interactive.hover.background};
