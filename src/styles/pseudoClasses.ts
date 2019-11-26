@@ -1,5 +1,5 @@
 import {StandardProperties, Color} from 'csstype';
-import {darken} from '.';
+import darken from './darken';
 
 type CSSPropertyName = keyof StandardProperties;
 
