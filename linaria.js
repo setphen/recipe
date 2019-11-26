@@ -20,7 +20,6 @@ module.exports = function linaria(context, options) {
       Program: {
         enter(path, state) {
           visitor.Program.enter(path, state);
-          //
         },
         exit(path, state) {
           // if no styles were create for this file, no more work to do
@@ -43,9 +42,23 @@ module.exports = function linaria(context, options) {
 
           mkdirp.sync(dirname(outputFilename));
 
-          fs.writeFileSync(outputFilename, cssText);
-
           addSideEffect(path, './' + basename(outputFilename));
+
+          // Read the file first to compare the content
+          // Write the new content only if it's changed
+          // This will prevent unnecessary reloads
+          let currentCssText;
+
+          try {
+            currentCssText = fs.readFileSync(outputFilename, 'utf-8');
+          } catch (e) {
+            // Ignore error
+          }
+
+          // if the files hasn't changed, nothing more to do
+          if (currentCssText === cssText) return;
+
+          fs.writeFileSync(outputFilename, cssText);
         },
       },
     },
