@@ -1,9 +1,10 @@
-import {css} from '@emotion/core';
+import {css} from 'linaria';
+import {theme} from '../../themes/styled';
 
-export const strong = ({theme}) => css`
+export const strong = css`
   font-weight: ${theme.fontWeights.bold};
 `;
 
-export const subdued = ({theme}) => css`
+export const subdued = css`
   color: ${theme.colors.text.deemphasis};
 `;

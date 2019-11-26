@@ -1,6 +1,6 @@
-import variant from 'styled-component-variant';
+import React from 'react';
 import {strong, subdued} from './EzTextStyle.styles';
-import styled from '../../themes/styled';
+import variant from '../../styles/variant';
 
 const use = variant('use', {
   strong,
@@ -16,9 +16,8 @@ type Props = {
 /**
  * Enhances text with styles to communicate emphasis.
  */
-const EzTextStyle = styled.span<Props>(use);
+const EzTextStyle: React.FC<Props> = ({children, ...props}) => (
+  <span className={use(props)}>{children}</span>
+);
 
-/**
- * @component
- */
 export default EzTextStyle;
