@@ -1,22 +1,22 @@
-import {css} from '@emotion/core';
-import styled from '../../themes/styled';
-import {pseudoClasses} from '../../styles';
+import {styled} from 'linaria/react';
+import {theme} from '../../themes/styled';
+import pseudoClasses from '../../styles/pseudoClasses';
 
-const base = ({theme}) => css`
-  font-weight: bold;
-  text-decoration: none;
-  ${pseudoClasses('color', {color: theme.colors.interactive.base})};
+const base = {
+  fontWeight: 'bold',
+  textDecoration: 'none',
+  ...pseudoClasses('color', {color: theme.colors.interactive.base}),
+  '&:hover': {
+    textDecoration: 'underline',
+  },
+};
 
-  &:hover {
-    text-decoration: underline;
-  }
-`;
-
-const link = p => css`
+export const StyledLink = styled.span`
   > * {
-    ${base(p)};
+    ${base};
   }
 `;
 
-export const StyledLink = styled.span(link as any);
-export const StyledAnchor = styled.a(base as any);
+export const StyledAnchor = styled.a`
+  ${base};
+`;

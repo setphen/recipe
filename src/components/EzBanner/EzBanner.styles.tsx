@@ -57,8 +57,11 @@ const button = ({theme}) => css`
   background-color: ${theme.colors.content.background};
   border-radius: ${theme.borderRadius[1]};
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
-  color: ${theme.colors.text.base};
   padding: ${theme.spacing.xs} ${theme.spacing.md};
+
+  && {
+    color: ${theme.colors.text.base};
+  }
 
   &:focus {
     box-shadow: 0px 0px 2px 2px ${theme.colors.interactive.focus.outline},
@@ -68,7 +71,7 @@ const button = ({theme}) => css`
   &:active,
   &:hover {
     box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
-    color: ${theme.colors.interactive.hover.highlight};
+    color: ${theme.colors.interactive.base};
     text-decoration: none;
   }
 `;
