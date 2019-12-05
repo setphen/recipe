@@ -15,7 +15,6 @@ const getId = (name, {value}) => `${name}-${value}`;
 
 const EzSuperRadioButtons = forwardRef<HTMLElement, EzSuperRadioButtonsProps>(
   ({options, label, value, onChange}, ref) => {
-    console.log("happy div guy whatever");
     const id = useUniqueId();
     return (
       <EzSuperRadioButtonsGroup
