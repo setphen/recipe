@@ -91,8 +91,8 @@ export const EzSuperRadioButtonsImageWrapper = styled.div`
 
 export const EzSuperRadioButtonsImage = styled.img`
   margin: 0;
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 60px;
+  max-height: 60px;
 `;
 
 export const EzSuperRadioButtonsItemLabel = styled.p`
