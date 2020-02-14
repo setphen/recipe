@@ -11,14 +11,16 @@ export const useComboboxState = () => {
 };
 
 export const useCombobox = (options, htmlProps) => {
-  const ref = useRef<HTMLInputElement>();
+  const ref = useRef<HTMLElement>();
+  const optionsRef = useRef<HTMLElement>();
 
-  useOnClickOutside(options.hide, [ref]);
+  useOnClickOutside(options.hide, [ref, optionsRef]);
   useEventListenerOutside(options.hide, 'focusin', [ref]);
 
   return {
     role: 'combobox',
     ref,
+    optionsRef,
     'aria-expanded': Boolean(options.visible),
     'aria-owns': options.unstable_hiddenId,
     ...htmlProps,
