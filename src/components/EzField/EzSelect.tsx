@@ -2,6 +2,7 @@ import React, {useState, useEffect, useRef, useCallback} from 'react';
 import {Combobox, Container, Listbox} from './EzSelect.styles';
 import {useScrollIntoView, useJumpToOption, useUniqueId} from '../../utils/hooks';
 import {useComboboxState, useCombobox, useComboboxInput, useComboboxFlyout} from './EzCombobox';
+import EzPopover from '../EzPopover';
 
 const flatten = options => {
   const grouped = new Map();
@@ -165,25 +166,27 @@ const EzSelect = props => {
         <input {...comboboxInput} />
       </Combobox>
       {visible && (
-        <Listbox
-          aria-labelledby={ariaLabelledBy}
-          role="listbox"
-          {...comboboxFlyout}
-          ref={optionsRef as any}
-          onClick={() => comboboxInput.ref.current.focus()}
-        >
-          {hasGroupedOptions(options) ? (
-            <>
-              {flatten(options).map(group => (
-                <OptGroup {...listbox} group={group} key={group[0]} selectItem={selectItem} />
-              ))}
-            </>
-          ) : (
-            options.map(o => (
-              <Option {...listbox} option={o} key={o.label} onClick={() => selectItem(o.value)} />
-            ))
-          )}
-        </Listbox>
+        <EzPopover position="vertical" targetRef={containerRef}>
+          <Listbox
+            aria-labelledby={ariaLabelledBy}
+            role="listbox"
+            {...comboboxFlyout}
+            ref={optionsRef as any}
+            onClick={() => comboboxInput.ref.current.focus()}
+          >
+            {hasGroupedOptions(options) ? (
+              <>
+                {flatten(options).map(group => (
+                  <OptGroup {...listbox} group={group} key={group[0]} selectItem={selectItem} />
+                ))}
+              </>
+            ) : (
+              options.map(o => (
+                <Option {...listbox} option={o} key={o.label} onClick={() => selectItem(o.value)} />
+              ))
+            )}
+          </Listbox>
+        </EzPopover>
       )}
     </Container>
   );

@@ -11,7 +11,6 @@ const listbox = ({theme}) => css`
   list-style: none;
   margin: 0;
   padding: 0;
-  position: absolute;
   width: 100%;
   z-index: 1;
   overflow: scroll;
