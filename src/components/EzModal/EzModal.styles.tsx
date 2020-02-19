@@ -24,11 +24,11 @@ export const ModalContainer = styled(DialogContent)`
   max-height: 100vh;
   outline: none;
   width: 100%;
+  overflow-y: auto;
 
   @media screen and (min-width: ${props => props.theme.breakpoints.medium}) {
     border-radius: 12px;
     height: auto;
-    overflow: hidden; /* so the border-radius is applies to child content  */
     max-height: calc(100vh - ${props => props.theme.spacing.xl4});
     width: 575px;
   }
