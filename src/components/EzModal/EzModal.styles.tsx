@@ -24,7 +24,7 @@ export const ModalContainer = styled(DialogContent)`
   max-height: 100vh;
   outline: none;
   width: 100%;
-  overflow-y: auto;
+  overflow-y: auto; // IE fix to prevent flex items overflowing. See: https://github.com/philipwalton/flexbugs#flexbug-3
 
   @media screen and (min-width: ${props => props.theme.breakpoints.medium}) {
     border-radius: 12px;
