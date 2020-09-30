@@ -186,12 +186,12 @@ export const lineHeights = {
 
 export const fontSizes = {
   100: rem(10),
-  200: rem(12),
-  300: rem(14),
-  400: rem(16),
-  500: rem(18),
-  600: rem(21),
-  700: rem(32),
+  200: rem(11),
+  300: rem(13),
+  400: rem(14),
+  500: rem(16),
+  600: rem(18),
+  700: rem(28),
   900: rem(60),
 };
 
