@@ -34,10 +34,9 @@ export const listbox = ({theme}) => css`
     cursor: default;
     margin: 0;
     padding: ${theme.spacing.xs} ${theme.spacing.sm};
-    color: ${theme.colors.interactive.base};
-    font-weight: bold;
     position: relative;
     padding-right: 2em;
+    ${theme.fonts.link}
 
     &[aria-selected='true'] {
       background-color: ${theme.colors.interactive.base};
