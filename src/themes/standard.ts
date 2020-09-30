@@ -212,6 +212,13 @@ export const fonts = {
     fontSize: fontSizes[700],
     color: grays[700],
   },
+  modalHeading: {
+    fontFamily: baseFontFamily,
+    fontWeight: fontWeights.bold,
+    lineHeight: '1.35em',
+    fontSize: fontSizes[600],
+    color: grays[700],
+  },
   pageHeading: {
     fontFamily: baseFontFamily,
     fontWeight: fontWeights.normal,
@@ -219,6 +226,7 @@ export const fonts = {
     fontSize: fontSizes[600],
     color: grays[700],
   },
+  // card heading
   containerHeading: {
     fontFamily: baseFontFamily,
     fontWeight: fontWeights.bold,
@@ -226,6 +234,7 @@ export const fonts = {
     fontSize: fontSizes[500],
     color: grays[700],
   },
+  // subnavigation - is this used anywhere?
   navigation: {
     fontFamily: baseFontFamily,
     fontWeight: fontWeights.normal,

@@ -71,7 +71,7 @@ const EzModal: React.FC<Props> = ({
         <FocusScope contain restoreFocus autoFocus>
           <div {...dialog} css={dialogStyles({theme})} aria-labelledby={labelId}>
             <HeaderContainer>
-              <EzHeading size="2" id={labelId}>
+              <EzHeading size="2" id={labelId} css={theme.fonts.modalHeading}>
                 {headerText}
               </EzHeading>
               <CloseButton tabIndex={-1} label={dismissLabel} onClick={onDismiss} />
