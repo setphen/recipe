@@ -3,7 +3,7 @@ import styled from '../../themes/styled';
 import {pseudoClasses} from '../../styles';
 
 const base = ({theme}) => css`
-  font-weight: bold;
+  ${theme.fonts.link};
   text-decoration: none;
   cursor: pointer;
   ${pseudoClasses('color', {color: theme.colors.interactive.base})};

@@ -263,4 +263,11 @@ export const fonts = {
     fontSize: fontSizes[200],
     color: grays[600],
   },
+  link: {
+    fontFamily: baseFontFamily,
+    fontWeight: fontWeights.bold,
+    lineHeight: '1.3em',
+    fontSize: fontSizes[300],
+    color: colors.interactive.base,
+  },
 };
