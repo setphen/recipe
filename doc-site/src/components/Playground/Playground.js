@@ -50,7 +50,7 @@ const DoczGlobals = () => (
       @import url('https://fonts.googleapis.com/css?family=Inconsolata');
       body {
         font-size: ${themes.standard.baseFontSize};
-        font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        font-family: ${themes.standard.baseFontFamily};
         line-height: normal;
       }
       .with-overlay {

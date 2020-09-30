@@ -16,7 +16,7 @@ const arrowSize = 5;
 export const CalendarWrapper = styled('div')`
   position: relative;
   padding: ${props => props.theme.spacing.sm};
-  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: ${props => props.theme.baseFontFamily};
   font-size: ${props => props.theme.fontSizes[300]};
   width: 320px;
   margin-top: ${props => props.theme.spacing.xs};

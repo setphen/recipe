@@ -10,7 +10,7 @@ const EzGlobalStyles = () => (
       html {
         box-sizing: border-box;
         font-size: ${theme.baseFontSize};
-        font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        font-family: ${theme.baseFontFamily};
       }
       body {
         margin: 0;
