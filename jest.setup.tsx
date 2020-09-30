@@ -54,7 +54,7 @@ const GlobalStylesWrapper = ({children}) => (
     <ThemeProvider theme={themes.standard}>
       <>
         <link
-          href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&display=swap"
+          href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i&display=swap"
           rel="stylesheet"
         />
         <EzGlobalStyles />

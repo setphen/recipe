@@ -77,7 +77,7 @@ const IFramePlayground = props => {
           <CacheProvider value={createStylesCache()}>
             <Wrapper ref={playgroundRef} margin={margin} page={page}>
               <link
-                href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&display=swap"
+                href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i&display=swap"
                 rel="stylesheet"
               />
               <EzGlobalStyles />

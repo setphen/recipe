@@ -82,7 +82,7 @@ const Layout = ({name, title, path, children, sections, location, layout}) => (
           >
             <html lang="en" />
             <link
-              href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i"
+              href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700,700i"
               rel="stylesheet"
             />
           </Helmet>

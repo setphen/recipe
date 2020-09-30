@@ -65,11 +65,11 @@ const getHtmlData = Component => {
     <!DOCTYPE html>
     <head>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700,700i" rel="stylesheet">
     <style>
       html {
         box-sizing: border-box;
-        font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        font-family: Montserrat, 'Helvetica Neue', Arial, Helvetica, sans-serif;
       }
       body {margin: 0;}
       ${css}
