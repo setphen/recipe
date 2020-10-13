@@ -31,7 +31,7 @@ const createStyled = (tag: any, options?: StyledOptions) => {
     const argsWithStandardTheme = [...arguments].map(wrapWithStandardTheme);
     const Component = createStyledComponent(...argsWithStandardTheme);
     // Tag component for analytics
-    Object.assign(Component, {__recipe: process.env.npm_package_version});
+    // Object.assign(Component, {__recipe: process.env.npm_package_version});
     return Component;
   };
 };
