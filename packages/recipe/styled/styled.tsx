@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, {CreateStyled, StyledOptions} from '@emotion/styled';
 import {ThemeContext, Interpolation} from '@emotion/core';
-import * as standard from './standard';
+import * as standard from '../themes/standard';
 
 export function useTheme(): Theme {
   const theme = React.useContext(ThemeContext) as Theme;
