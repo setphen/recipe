@@ -1,14 +1,37 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "commonjs",
+    // maybe bump to 'esNext'?
+    "target": "es6",
+    // allows react jsx in tsx files
     "jsx": "react",
-    "declaration": true,
-    "outDir": "lib",
-    "rootDir": "src",
-    "strict": false,
-    "esModuleInterop": true
+    // Eventually turn off, one we have no more assumed default exports.
+    // Allow default imports from modules with no default export.
+    "allowSyntheticDefaultImports": true,
+    // Search under node_modules for non-relative imports.
+    "moduleResolution": "node",
+    // Process & infer types from .js files.
+    "allowJs": true,
+    // Don't emit; allow Babel to transform files.
+    "noEmit": true,
+    // Disallow features that require cross-file information for emit.
+    "isolatedModules": true,
+    // Import non-ES modules as default imports.
+    "esModuleInterop": true,
+    // if 'target' is updated, this should be updated as well
+    "lib": [
+      "es6",
+      "dom",
+      "es2016.array.include",
+      "es2017.object",
+      "es2017.intl",
+      "esnext.intl"
+    ],
+    "skipLibCheck": false
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "packages"
+  ],
+  "exclude": [
+    "**/node_modules"
+  ]
 }
