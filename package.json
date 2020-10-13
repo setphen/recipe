@@ -64,7 +64,7 @@
     "start": "concurrently \"npm run build:watch\" \"(cd doc-site/ && npm run develop)\" --kill-others",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
-    "build": "parcel build packages/recipe/themes/ --no-minify",
+    "build": "parcel build packages/recipe/{themes,styled,CloseButton}/ --no-minify",
     "bundle-size": "cd tree-shaking-size/ && npm i && npm run build && node check-size.js",
     "clean": "rm -rf lib",
     "create-component": "plop component",

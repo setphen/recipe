@@ -1,6 +1,6 @@
 import React from 'react';
+import styled from '@recipe/styled';
 import {base} from './CloseButton.styles';
-import styled from '../../themes/styled';
 
 const CloseButton = styled.button<any>(base);
 

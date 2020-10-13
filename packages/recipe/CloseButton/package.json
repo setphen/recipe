@@ -1,0 +1,20 @@
+{
+  "name": "@recipe/close-button",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "types": "dist/types.d.ts",
+  "source": "index.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "dependencies": {
+    "@recipe/styled": "file:../styled"
+  },
+  "peerDependencies": {
+    "@emotion/core": "^10.0.27",
+    "react": "^16.8.0"
+  }
+}
