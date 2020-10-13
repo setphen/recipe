@@ -5,7 +5,7 @@ import {visualSnapshots} from 'sosia';
 import markdown from '../EzLink.md';
 import EzLink from '../EzLink';
 import {EzLayout} from '../../index';
-import {renderToHtml} from '../../../jest-globals';
+import {renderToHtml} from '../../../test-utils/jest-globals';
 
 const scope = {EzLink, EzLayout, require};
 

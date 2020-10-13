@@ -5,7 +5,7 @@ import userEvent from '@testing-library/user-event';
 import ReactTestUtils from 'react-dom/test-utils';
 import ezSelectTests from './EzSelect.test.md';
 import EzField from '../EzField';
-import {fullRender as render} from '../../../jest-globals';
+import {fullRender as render} from '../../../test-utils/jest-globals';
 import {EzFormLayout, EzButton, EzLayout} from '../../index';
 import Open from '../Open';
 import Media from '../Media';

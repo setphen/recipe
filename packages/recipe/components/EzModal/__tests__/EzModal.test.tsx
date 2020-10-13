@@ -5,7 +5,7 @@ import {axe} from 'jest-axe';
 import {visualSnapshots} from 'sosia';
 import regressionTests from './EzModal.test.md';
 import EzModal from '../EzModal';
-import {fullRender} from '../../../jest-globals';
+import {fullRender} from '../../../test-utils/jest-globals';
 
 afterEach(cleanup);
 

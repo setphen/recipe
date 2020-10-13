@@ -4,7 +4,7 @@ import {visualSnapshots} from 'sosia';
 import {fireEvent} from '@testing-library/react';
 import markdown from '../EzSegmentedControl.md';
 import EzSegmentedControl from '../EzSegmentedControl';
-import {fullRender, renderToHtml} from '../../../jest-globals';
+import {fullRender, renderToHtml} from '../../../test-utils/jest-globals';
 
 const scope = {EzSegmentedControl};
 

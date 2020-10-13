@@ -3,7 +3,7 @@ import {axe} from 'jest-axe';
 import {visualSnapshots} from 'sosia';
 import markdown from '../EzPortal.md';
 import EzPortal from '../EzPortal';
-import {renderToHtml} from '../../../jest-globals';
+import {renderToHtml} from '../../../test-utils/jest-globals';
 
 const scope = {EzPortal};
 

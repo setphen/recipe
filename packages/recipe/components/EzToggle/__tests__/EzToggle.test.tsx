@@ -7,7 +7,7 @@ import {fireEvent, cleanup} from '@testing-library/react';
 import regressionTests from './EzToggle.test.md';
 import markdown from '../EzToggle.md';
 import EzToggle from '../EzToggle';
-import {renderToHtml, fullRender} from '../../../jest-globals';
+import {renderToHtml, fullRender} from '../../../test-utils/jest-globals';
 
 const scope = {EzToggle, Global, css};
 

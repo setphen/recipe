@@ -7,7 +7,7 @@ import regressionTests from './EzButton.test.md';
 import EzButton from '../EzButton';
 import markdown from '../EzButton.md';
 import {EzLayout} from '../../index';
-import {fullRender, renderToHtml} from '../../../jest-globals';
+import {fullRender, renderToHtml} from '../../../test-utils/jest-globals';
 
 const scope = {EzButton, EzLayout, Global, css};
 

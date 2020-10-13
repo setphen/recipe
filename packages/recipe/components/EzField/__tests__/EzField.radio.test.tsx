@@ -3,7 +3,7 @@ import {visualSnapshots} from 'sosia';
 import {getByLabelText, fireEvent} from '@testing-library/react';
 import regressionTests from './EzField.radio.test.md';
 import EzField from '../EzField';
-import {fullRender as render} from '../../../jest-globals';
+import {fullRender as render} from '../../../test-utils/jest-globals';
 import Media from '../Media';
 
 const scope = {EzField, Media};

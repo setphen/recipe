@@ -4,7 +4,7 @@ import {visualSnapshots} from 'sosia';
 import markdown from '../EzHeading.md';
 import EzHeading from '../EzHeading';
 import {EzCard} from '../../index';
-import {fullRender, renderToHtml} from '../../../jest-globals';
+import {fullRender, renderToHtml} from '../../../test-utils/jest-globals';
 
 const scope = {EzHeading, EzCard, React};
 

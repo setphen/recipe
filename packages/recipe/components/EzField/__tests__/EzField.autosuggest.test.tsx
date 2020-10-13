@@ -4,7 +4,7 @@ import {getByLabelText, fireEvent, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import markdown from './EzField.autosuggest.test.md';
 import EzField from '../EzField';
-import {fullRender as render} from '../../../jest-globals';
+import {fullRender as render} from '../../../test-utils/jest-globals';
 import {EzFormLayout, EzButton, EzLayout} from '../../index';
 import Open from '../Open';
 import Media from '../Media';

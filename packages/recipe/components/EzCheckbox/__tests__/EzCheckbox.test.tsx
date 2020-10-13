@@ -4,7 +4,7 @@ import {visualSnapshots} from 'sosia';
 import markdown from '../EzCheckbox.md';
 import EzCheckbox from '..';
 import EzLink from '../../EzLink';
-import {renderToHtml} from '../../../jest-globals';
+import {renderToHtml} from '../../../test-utils/jest-globals';
 
 const scope = {EzCheckbox, EzLink};
 

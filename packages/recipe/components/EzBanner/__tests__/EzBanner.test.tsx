@@ -5,7 +5,7 @@ import regressionTests from './EzBanner.test.md';
 import markdown from '../EzBanner.md';
 import EzBanner from '../EzBanner';
 import {EzPage} from '../../index';
-import {renderToHtml} from '../../../jest-globals';
+import {renderToHtml} from '../../../test-utils/jest-globals';
 
 const scope = {EzBanner, EzPage};
 

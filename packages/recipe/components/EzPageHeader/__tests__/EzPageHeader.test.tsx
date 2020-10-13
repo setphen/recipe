@@ -16,7 +16,7 @@ import {
   EzField,
   EzSearchInput,
 } from '../../index';
-import {fullRender, renderToHtml} from '../../../jest-globals';
+import {fullRender, renderToHtml} from '../../../test-utils/jest-globals';
 import Media from '../../EzField/Media';
 
 afterEach(cleanup);

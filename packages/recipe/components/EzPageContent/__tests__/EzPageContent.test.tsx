@@ -3,7 +3,7 @@ import {axe} from 'jest-axe';
 import {visualSnapshots} from 'sosia';
 import markdown from '../EzPageContent.md';
 import {EzPageContent, EzContentGroup} from '..';
-import {renderToHtml} from '../../../jest-globals';
+import {renderToHtml} from '../../../test-utils/jest-globals';
 import {EzCard, EzSegmentedControl} from '../../index';
 
 const scope = {EzPageContent, EzCard, EzContentGroup, EzSegmentedControl};

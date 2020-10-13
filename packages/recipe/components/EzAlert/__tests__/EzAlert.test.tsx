@@ -4,7 +4,7 @@ import {visualSnapshots} from 'sosia';
 import EzAlert from '../EzAlert';
 import markdown from '../EzAlert.md';
 import {EzCard} from '../../index';
-import {renderToHtml} from '../../../jest-globals';
+import {renderToHtml} from '../../../test-utils/jest-globals';
 
 const scope = {EzAlert, EzCard};
 

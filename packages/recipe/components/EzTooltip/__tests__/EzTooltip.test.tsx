@@ -4,7 +4,7 @@ import {visualSnapshots} from 'sosia';
 import {fireEvent} from '@testing-library/react';
 import regressionTests from './EzTooltip.test.md';
 import EzTooltip from '../EzTooltip';
-import {fullRender as render} from '../../../jest-globals';
+import {fullRender as render} from '../../../test-utils/jest-globals';
 
 const scope = {EzTooltip, Global, css};
 

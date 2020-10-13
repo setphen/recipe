@@ -3,7 +3,7 @@ import {axe} from 'jest-axe';
 import {visualSnapshots} from 'sosia';
 import regressionTests from './EzRadioButton.test.md';
 import EzRadioButton from '../EzRadioButton';
-import {renderToHtml} from '../../../jest-globals';
+import {renderToHtml} from '../../../test-utils/jest-globals';
 
 const scope = {EzRadioButton};
 

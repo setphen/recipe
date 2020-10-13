@@ -3,7 +3,7 @@ import {visualSnapshots} from 'sosia';
 import {getByLabelText, fireEvent, getAllByRole, act} from '@testing-library/react';
 import ezTimeInputTests from './EzTimeInput.test.md';
 import EzField from '../EzField';
-import {fullRender as render} from '../../../jest-globals';
+import {fullRender as render} from '../../../test-utils/jest-globals';
 import {EzFormLayout} from '../../index';
 import Open from '../Open';
 import Media from '../Media';

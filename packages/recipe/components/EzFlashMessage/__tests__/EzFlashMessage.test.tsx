@@ -4,7 +4,7 @@ import {visualSnapshots} from 'sosia';
 import markdown from '../EzFlashMessage.md';
 import EzFlashMessage from '../EzFlashMessage';
 import {EzPage} from '../../EzPage';
-import {renderToHtml} from '../../../jest-globals';
+import {renderToHtml} from '../../../test-utils/jest-globals';
 
 const scope = {EzFlashMessage, EzPage};
 

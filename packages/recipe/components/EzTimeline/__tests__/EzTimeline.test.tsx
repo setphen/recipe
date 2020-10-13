@@ -4,7 +4,7 @@ import {visualSnapshots} from 'sosia';
 import markdown from '../EzTimeline.md';
 import {EzTimeline, EzTimelinePeriod, EzTimelineEvent} from '..';
 import {EzPage, EzButton, EzStatus} from '../..';
-import {renderToHtml} from '../../../jest-globals';
+import {renderToHtml} from '../../../test-utils/jest-globals';
 import regressionTests from './EzTimeline.test.md';
 
 const scope = {EzTimeline, EzTimelinePeriod, EzTimelineEvent, EzPage, EzButton, EzStatus};

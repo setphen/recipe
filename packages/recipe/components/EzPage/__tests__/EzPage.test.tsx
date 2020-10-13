@@ -4,7 +4,7 @@ import {visualSnapshots} from 'sosia';
 import markdown from '../EzPage.md';
 import regressionTests from './EzPage.test.md';
 import {EzPage, EzPageSection} from '..';
-import {renderToHtml, fullRender as render} from '../../../jest-globals';
+import {renderToHtml, fullRender as render} from '../../../test-utils/jest-globals';
 import Media from '../../EzField/Media';
 import {EzCard, EzHeading, EzPageHeader, EzLayout, EzButton, EzAppLayout} from '../../index';
 

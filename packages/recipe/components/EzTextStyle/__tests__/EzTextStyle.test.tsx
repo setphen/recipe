@@ -5,7 +5,7 @@ import markdown from '../EzTextStyle.md';
 import regressionTests from './EzTextStyle.test.md';
 import EzTextStyle from '../EzTextStyle';
 import Media from '../../EzField/Media';
-import {renderToHtml} from '../../../jest-globals';
+import {renderToHtml} from '../../../test-utils/jest-globals';
 
 const scope = {EzTextStyle, Media};
 

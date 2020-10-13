@@ -1,7 +1,7 @@
 import React from 'react';
 import {render, cleanup} from '@testing-library/react';
 import {ThemeProvider} from 'emotion-theming';
-import {standard} from './themes';
+import {standard} from '../themes';
 
 import '@testing-library/jest-dom/extend-expect';
 

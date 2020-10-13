@@ -3,7 +3,7 @@ import {axe} from 'jest-axe';
 import {screen, fireEvent} from '@testing-library/react';
 import EzPopover from '../EzPopover';
 import {useCloseOnBlur} from '../useCloseOnBlur';
-import {renderToHtml, fullRender as render} from '../../../jest-globals';
+import {renderToHtml, fullRender as render} from '../../../test-utils/jest-globals';
 
 describe('EzPopover', () => {
   describe('shouldCloseOnBlur', () => {

@@ -5,7 +5,7 @@ import {getByLabelText, fireEvent, act} from '@testing-library/react';
 import regressionTests from './EzField.test.md';
 import markdown from '../EzField.md';
 import EzField from '../EzField';
-import {fullRender as render, renderToHtml} from '../../../jest-globals';
+import {fullRender as render, renderToHtml} from '../../../test-utils/jest-globals';
 import {EzButton, EzFormLayout, EzLayout, EzLabelledItem, EzSearchInput} from '../../index';
 import Open from '../Open';
 import Media from '../Media';

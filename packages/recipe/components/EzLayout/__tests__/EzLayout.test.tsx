@@ -7,7 +7,7 @@ import regressionTests from './EzLayout.test.md';
 import alignmentTests from './EzLayout.alignment.test.md';
 import EzLayout from '../EzLayout';
 import {EzCard, EzCardSection, EzHeading, EzField, EzPage} from '../../index';
-import {renderToHtml} from '../../../jest-globals';
+import {renderToHtml} from '../../../test-utils/jest-globals';
 import Media from '../../EzField/Media';
 import Placeholder from '../../../../doc-site/src/components/Placeholder';
 

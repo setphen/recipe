@@ -5,7 +5,7 @@ import markdown from '../EzOrderSummary.md';
 import regressionTests from './EzOrderSummary.test.md';
 import EzOrderSummary from '../EzOrderSummary';
 import {EzButton, EzPage} from '../../index';
-import {renderToHtml} from '../../../jest-globals';
+import {renderToHtml} from '../../../test-utils/jest-globals';
 
 const scope = {EzButton, EzPage, EzOrderSummary};
 

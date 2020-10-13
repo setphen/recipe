@@ -6,7 +6,7 @@ import regressionTests from './EzTable.test.md';
 import markdown from '../EzTable.md';
 import EzTable from '../EzTable';
 import {EzButton, EzPage, EzCard, EzHeading, EzAlert, EzTextStyle} from '../../index';
-import {fullRender, renderToHtml} from '../../../jest-globals';
+import {fullRender, renderToHtml} from '../../../test-utils/jest-globals';
 
 let mockOverflow = false;
 jest.mock('../useOverflowDetection', () => () => [mockOverflow, () => {}]);

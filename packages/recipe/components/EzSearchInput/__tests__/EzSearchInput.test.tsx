@@ -3,7 +3,7 @@ import {axe} from 'jest-axe';
 import {visualSnapshots} from 'sosia';
 import markdown from '../EzSearchInput.md';
 import EzSearchInput from '../EzSearchInput';
-import {renderToHtml} from '../../../jest-globals';
+import {renderToHtml} from '../../../test-utils/jest-globals';
 
 const scope = {EzSearchInput};
 

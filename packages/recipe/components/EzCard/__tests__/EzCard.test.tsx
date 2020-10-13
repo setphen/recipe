@@ -3,7 +3,7 @@ import {axe} from 'jest-axe';
 import {visualSnapshots} from 'sosia';
 import {renderToStaticMarkup} from 'react-dom/server';
 import {EzCard, EzCardSection, EzCardExpandable} from '..';
-import {renderToHtml} from '../../../jest-globals';
+import {renderToHtml} from '../../../test-utils/jest-globals';
 import regressionTests from './EzCard.test.md';
 import markdown from '../EzCard.md';
 import {EzPage, EzPageSection, EzLayout, EzButton, EzField} from '../../index';

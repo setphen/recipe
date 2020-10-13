@@ -4,7 +4,7 @@ import {visualSnapshots} from 'sosia';
 import markdown from '../EzFormLayout.md';
 import EzFormLayout from '../EzFormLayout';
 import {EzField, EzLayout} from '../..';
-import {renderToHtml} from '../../../jest-globals';
+import {renderToHtml} from '../../../test-utils/jest-globals';
 
 const scope = {EzField, EzLayout, EzFormLayout};
 

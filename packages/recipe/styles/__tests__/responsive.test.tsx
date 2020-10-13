@@ -1,7 +1,7 @@
 import React from 'react';
 import {responsive} from '..';
 import styled from '../../themes/styled';
-import {fullRender} from '../../jest-globals';
+import {fullRender} from '../../test-utils/jest-globals';
 
 describe('responsive()', () => {
   let fn;
