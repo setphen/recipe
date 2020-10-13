@@ -1,6 +1,6 @@
 import React, {useRef} from 'react';
 import {css} from '@emotion/core';
-import {useMenuTrigger, useMenuTriggerState, useOverlayPosition} from '../Overlays';
+import {useMenuTrigger, useMenuTriggerState, useOverlayPosition} from '../../utils/hooks/overlays';
 import {menuStyles} from './Menu';
 import EzLink from '../EzLink';
 import styled from '../../themes/styled';

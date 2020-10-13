@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {useUniqueId} from '../utils/hooks';
+import {useUniqueId} from '.';
 
 export const useMenuTrigger = (state: OverlayTriggerState) => {
   const menuTriggerId = useUniqueId();
