@@ -1,4 +1,4 @@
-type Column = {
+type Column<T> = {
   heading: string;
   numeric?: boolean;
   defaultSort?: Direction;
@@ -13,12 +13,15 @@ type Column = {
 
 type Direction = 'asc' | 'desc';
 
-type OnSortClickOptions = {
-  column: Column;
+type OnSortClickOptions<T> = {
+  column: Column<T>;
   direction: Direction;
 };
 
-type onSortClick = (event: React.MouseEvent<HTMLElement>, options: OnSortClickOptions) => void;
+type onSortClick<T> = (
+  event: React.MouseEvent<HTMLElement>,
+  options: OnSortClickOptions<T>
+) => void;
 
 type onRowsPerPageChange = (event: any) => void;
 
@@ -88,26 +91,26 @@ type PaginationSelectionCombination =
   | PaginationAndSelection
   | PaginationAndSelectionDisabled;
 
-type TableBase = {
+type TableBase<T = unknown> = {
   subtitle?: string;
-  columns: Column[];
+  columns: Column<T>[];
   items: any[];
-  onSortClick?: onSortClick;
+  onSortClick?: onSortClick<T>;
 };
 
-export type TableProps = TableBase & TableActions & PaginationSelectionCombination;
+export type TableProps<T = unknown> = TableBase<T> & TableActions & PaginationSelectionCombination;
 
-export type Sortable = {
+export type Sortable<T> = {
   direction: Direction;
-  isSorted: (column: Column) => boolean;
+  isSorted: (column: Column<T>) => boolean;
   onClick: (
     event: React.MouseEvent<HTMLElement>,
-    column: Column,
-    callback: (event: React.MouseEvent<HTMLElement>, options: OnSortClickOptions) => void
+    column: Column<T>,
+    callback: (event: React.MouseEvent<HTMLElement>, options: OnSortClickOptions<T>) => void
   ) => void;
 };
 
-export type SortingState = {
+export type SortingState<T> = {
   direction: Direction;
-  column?: Column;
+  column?: Column<T>;
 };

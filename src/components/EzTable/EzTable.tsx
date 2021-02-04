@@ -265,7 +265,7 @@ const TablePagination = ({pagination}) => {
  * so that users can look for patterns and insights.
  * They can be embedded in primary content, such as cards.
  */
-const EzTable: React.FC<TableProps> = ({
+const EzTable = <T extends unknown = unknown>({
   actions,
   title,
   subtitle,
@@ -274,7 +274,7 @@ const EzTable: React.FC<TableProps> = ({
   selection,
   onSortClick,
   pagination,
-}) => {
+}: TableProps<T>) => {
   const [allSelected, setAllSelected] = useState(false);
   const selected = selection && items.filter(selection.isRowSelected);
   const numSelectedOnPage = selected && selected.length;
@@ -292,7 +292,7 @@ const EzTable: React.FC<TableProps> = ({
       key = typeof accessor === 'string' ? accessor : undefined,
       component = typeof accessor === 'function'
         ? accessor
-        : ({item}: any) => <Fragment>{item[key]}</Fragment>,
+        : ({item}: {item: T}) => <Fragment>{item[key]}</Fragment>,
       sortable,
       ...rest
     }) => ({
