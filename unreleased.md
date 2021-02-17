@@ -12,6 +12,7 @@ title: 'Unreleased changes'
 #### Enhancements
 
 - Added support for capturing email address with `EzField[type=email]`.
+- Add tabIndex to modal's submit button to focus it by default
 
 #### Design updates
 
