@@ -90,6 +90,7 @@ const EzModal: React.FC<PropsWithRequiredLabels> = ({
                     destructive={destructive}
                     onClick={onSubmit}
                     loading={isSubmitting}
+                    tabIndex={0}
                   >
                     {submitLabel}
                   </EzButton>
