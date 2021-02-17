@@ -90,7 +90,8 @@ const EzModal: React.FC<PropsWithRequiredLabels> = ({
                     destructive={destructive}
                     onClick={onSubmit}
                     loading={isSubmitting}
-                    tabIndex={0}
+                    // eslint-disable-next-line jsx-a11y/tabindex-no-positive
+                    tabIndex={1}
                   >
                     {submitLabel}
                   </EzButton>
