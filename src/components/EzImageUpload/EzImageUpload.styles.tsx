@@ -1,23 +1,17 @@
 import styled from '@emotion/styled';
 import {CSSProperties} from 'react';
 
-interface ContainerProps {
+interface ContainerProps extends Pick<CSSProperties, 'height' | 'width'> {
   readonly rounded?: boolean;
-  readonly hasPreview?: boolean;
-}
-
-function getBorderColor({hasPreview}: ContainerProps): CSSProperties['borderColor'] {
-  if (hasPreview) return 'transparent';
-  return '#ccc';
 }
 
 export const Container = styled.div<ContainerProps>`
   position: relative;
-  height: 10rem;
-  width: 10rem;
+  height: ${({height}) => height ?? '10rem'};
+  width: ${({width}) => width ?? '10rem'};
   overflow: hidden;
   border-style: dashed;
-  border-color: ${getBorderColor};
+  border-color: #ccc;
   border-width: 2px;
   border-radius: ${({rounded}) => (rounded ? '100%' : '0.5rem')};
 `;
@@ -67,4 +61,18 @@ export const Upload = styled.input`
   width: 100%;
   top: 0;
   left: 0;
+`;
+
+export const Image = styled.img`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border: none;
+  outline: none;
+`;
+
+export const ImagePreview = styled.img`
+  border-radius: 0.25rem;
 `;

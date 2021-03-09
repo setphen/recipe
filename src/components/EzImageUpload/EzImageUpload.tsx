@@ -1,17 +1,16 @@
-import React, {ChangeEventHandler, forwardRef, HTMLProps, useEffect, useRef, useState} from 'react';
+import React, {ChangeEventHandler, forwardRef, HTMLProps, useEffect, useRef} from 'react';
 import {Container, Preview, Upload, VisuallyHidden} from './EzImageUpload.styles';
+import {useImageUploadContext} from './EzImageUploadProvider';
 import useUniqueId from '../../utils/hooks/useUniqueId';
 
-interface Props extends Omit<HTMLProps<HTMLInputElement>, 'id'> {
-  /**
-   * Callback that is invoked when the preview changes.
-   * The url represents an object url, or a temporary preview of the given file
-   * @param url
-   */
-  onPreviewChange?(url: string): void;
+interface Props extends Omit<HTMLProps<HTMLInputElement>, 'id' | 'children'> {
   readonly label: string;
   /**
    * if set to true, will make a circular image instead of a square
+   */
+  readonly children?: React.ReactNode;
+  /**
+   * Makes a circular instead of square image input
    */
   readonly rounded?: boolean;
 }
@@ -40,22 +39,15 @@ interface Props extends Omit<HTMLProps<HTMLInputElement>, 'id'> {
  * ```
  */
 const EzImageUpload = forwardRef<HTMLInputElement, Props>(
-  ({onChange, rounded, onPreviewChange, label, ...props}, ref) => {
+  ({onChange, rounded, label, height, width, children, ...props}, ref) => {
     const id = useUniqueId();
-    const [objectUrl, setObjectUrl] = useState<string | null>(null);
+    const ctx = useImageUploadContext();
     const teardown = useRef<() => void>(() => {});
 
     const handleChange: ChangeEventHandler<HTMLInputElement> = e => {
       // We're going to take the first file
       // then generate an object url to use as a preview
-      if (e.target.files instanceof FileList) {
-        const [file] = e.target.files;
-        setObjectUrl(URL.createObjectURL(file));
-        onPreviewChange?.(objectUrl);
-        // We need to revoke the object url when this component unmounts
-        // save it in a ref to make sure that the use effect has no dependencies.
-        teardown.current = () => URL.revokeObjectURL(objectUrl);
-      }
+      if (e.target.files instanceof FileList) ctx?.setImages(Array.from(e.target.files));
       onChange?.(e);
     };
 
@@ -65,10 +57,8 @@ const EzImageUpload = forwardRef<HTMLInputElement, Props>(
     }, []);
 
     return (
-      <Container rounded={rounded} hasPreview={!!objectUrl}>
-        <Preview htmlFor={id} style={{backgroundImage: `url("${objectUrl}")`}}>
-          {!objectUrl && label}
-        </Preview>
+      <Container height={height} width={width} rounded={rounded}>
+        <Preview htmlFor={id}>{label}</Preview>
         <VisuallyHidden>
           <Upload
             aria-hidden="true"
@@ -81,6 +71,7 @@ const EzImageUpload = forwardRef<HTMLInputElement, Props>(
             ref={ref}
           />
         </VisuallyHidden>
+        {children}
       </Container>
     );
   }
@@ -88,7 +79,6 @@ const EzImageUpload = forwardRef<HTMLInputElement, Props>(
 
 EzImageUpload.defaultProps = {
   rounded: false,
-  onPreviewChange() {},
 };
 
 /**

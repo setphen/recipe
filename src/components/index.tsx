@@ -34,3 +34,4 @@ export {default as EzToggle} from './EzToggle';
 export {default as EzTooltip} from './EzTooltip';
 export {default as EzLayout} from './EzLayout';
 export {default as EzPopover} from './EzPopover';
+export {EzImageUpload, EzImageUploadProvider} from './EzImageUpload';
