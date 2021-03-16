@@ -27,3 +27,5 @@ title: 'Unreleased changes'
 #### Dependency upgrades
 
 #### Development workflow
+
+- Updated latest babel build tooling (to support TS template literals)
