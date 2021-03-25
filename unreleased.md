@@ -19,6 +19,8 @@ title: 'Unreleased changes'
 #### Bug fixes
 
 - Fix: hidden content receiving focus in doc-site playground.
+- Fix: new EzLink API should retain className and refs
+- Fix inconsistent button line-height in EzBanner
 
 #### Documentation
 
@@ -29,3 +31,4 @@ title: 'Unreleased changes'
 #### Development workflow
 
 - Updated latest babel build tooling (to support TS template literals)
+- Added compression and other techniques to reduce the payload size of visual regression test input
