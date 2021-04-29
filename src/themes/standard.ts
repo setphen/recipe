@@ -14,7 +14,7 @@ import {
 } from '@recipe-ui/legacy-theme';
 
 /**
- * @deprecated import from `@recipe-ui/legacy-theme` directly, or define styles local to your project.
+ * @deprecated import from `@recipe-ui/legacy-theme` directly, or define styles local to your project. test test test
  */
 export const baseFontFamily = baseFontFamilyLegacy;
 /**
