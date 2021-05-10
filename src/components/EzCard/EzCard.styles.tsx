@@ -100,7 +100,6 @@ export const grid = theme.css({
   variants: {
     imagePosition: {
       top: {
-        '-ms-grid-columns': '0px minmax(0px, 100%)',
         gridTemplateColumns: `
           [left] 0
           [header] minmax(0, 100%)
@@ -108,7 +107,6 @@ export const grid = theme.css({
         `,
       },
       right: {
-        '-ms-grid-columns': '0px minmax(0px, 100%) var(--sizes-card-preview-max-w, 50%)',
         gridTemplateColumns: `
           [left] 0
           [header] minmax(0, 100%)
@@ -116,7 +114,6 @@ export const grid = theme.css({
         `,
       },
       left: {
-        '-ms-grid-columns': 'var(--sizes-card-preview-max-w, 50%) 0px minmax(0px, 100%)',
         gridTemplateColumns: `
           [left] var(--sizes-card-preview-max-w, 50%)
           [header] minmax(0, 100%)
