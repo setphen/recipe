@@ -131,7 +131,7 @@ const createPlayroomLink = code => {
   if (!code) return null;
 
   /* remove the react-router-dom imports */
-  const reactRouterDomImportRegex = /(?=const)(.*?)(?<=require\('react-router-dom'\)\;)/;
+  const reactRouterDomImportRegex = /(const)(.*?)(require\('react-router-dom'\)\;)/;
   const codeWithoutRouter = code.replace(reactRouterDomImportRegex, '');
 
   /* make the stateful code work in the playground with IIFE
