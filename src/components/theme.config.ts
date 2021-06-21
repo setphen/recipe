@@ -202,7 +202,6 @@ const stitches = createCss({
     mediumToLarge: '@media (min-width: 768px) and (max-width: 1060.9375px)',
     large: '@media (min-width: 1061px)',
   },
-  insertMethod: () => () => {},
 });
 
 type BaseConfig = typeof stitches.config;
@@ -242,7 +241,6 @@ export function mergeCss<
     ...extension, 
     utils, 
     conditions,
-    insertMethod: () => () => {},
   });
 
   return {
