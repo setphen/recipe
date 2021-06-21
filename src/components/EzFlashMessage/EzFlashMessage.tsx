@@ -1,5 +1,5 @@
 import React from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzFlashMessage.theme.config';
 import EzLayout from '../EzLayout';
 import EzHeading from '../EzHeading';

@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import Label from '../EzLabel';
 import theme from './EzSegmentedControl.theme.config';
 import {clsx} from '../../utils';

@@ -1,5 +1,5 @@
 import React, {forwardRef} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import EzHeading from '../EzHeading';
 import EzTextStyle from '../EzTextStyle';
 import theme from './EzBlankState.theme.config';

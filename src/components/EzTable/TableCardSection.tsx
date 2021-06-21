@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzTable.theme.config';
 import {EzCardSection} from '../EzCard';
 import {clsx} from '../../utils';

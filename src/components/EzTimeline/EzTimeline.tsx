@@ -1,5 +1,5 @@
 import React from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import {TimelineProps} from './EzTimeline.types';
 import theme from './EzTimeline.theme.config';
 import {clsx} from '../../utils';
