@@ -1,5 +1,5 @@
 /* eslint-disable filenames/match-exported */
-import {createCss} from '../../packages/@stitches/core';
+import {createCss} from '@stitches/core';
 import type {
   TConditions,
   TTheme,
@@ -7,7 +7,7 @@ import type {
   CSSPropertiesToTokenScale,
   TStyledSheet,
   IConfig,
-} from '../../packages/@stitches/core';
+} from '@stitches/core';
 import {PlaceItemsProperty} from 'csstype';
 
 type Globals = 'inherit' | 'initial' | 'revert' | 'unset';

@@ -2,7 +2,7 @@ import {HTMLAttributes} from 'react';
 import filterValidProps from './filterValidProps';
 import {mergeProps} from './mergeProps';
 // eslint-disable-next-line
-import type {StyledExpression} from '../../packages/@stitches/core';
+import type {StyledExpression} from '@stitches/core';
 
 /**
  * Filters out all props that aren't valid DOM props. Optionally includes dom props from any stitches styles provided.
