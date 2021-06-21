@@ -217,6 +217,8 @@ type MapUtils<U, T extends TTheme> = {
     : never;
 };
 
+const configs = [stitches] as any[];
+
 /**
  * Extends the base stitches configuration with additional theme tokens.
  */
@@ -245,10 +247,12 @@ export function mergeCss<
     insertMethod: () => () => {},
   });
 
+  configs.push(merged);
+
   return {
     ...merged,
     toString() {
-      return [stitches.toString(), merged.toString()].join(' ');
+      return configs.map(config => config.toString()).join(' ');
     },
   } as any;
 }
