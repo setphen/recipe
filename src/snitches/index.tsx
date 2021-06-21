@@ -3,7 +3,7 @@ import React, {createContext, useContext} from 'react';
 
 const Context = createContext(null);
 
-const Style = ({children, ruleset}) => {
+const Style = ({children, ruleset}: any) => {
   const context = useContext(Context);
 
   if (context) return children;
