@@ -1,5 +1,5 @@
 import React, {HTMLAttributes} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzLayout.theme.config';
 import {domProps, responsiveProps} from '../../utils';
 

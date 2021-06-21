@@ -1,6 +1,6 @@
 import React from 'react';
 import * as CSS from 'csstype';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzCard.theme.config';
 import {
   grid,

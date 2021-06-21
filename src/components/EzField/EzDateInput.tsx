@@ -1,6 +1,6 @@
 import React, {useState, useRef} from 'react';
 import dayjs from 'dayjs';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzField.theme.config';
 import EzTextInput from './EzTextInput';
 import {TextInputWrapper} from './Picker.styles';

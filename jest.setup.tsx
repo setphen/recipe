@@ -3,7 +3,7 @@ import {toHaveNoViolations} from 'jest-axe';
 import {configure as configureSosia} from 'sosia';
 import {MarkdownSource} from 'sosia-markdown';
 import {RemotePuppeteerBrowserTarget} from 'sosia-remote-puppeteer';
-import Style from '@ezcater/snitches';
+import Style from './src/snitches';
 import EzGlobalStyles from './src/components/EzGlobalStyles';
 import theme from './src/components/theme.config';
 import {decorate as minifyDecorator} from './MinifiedBrowserTarget';

@@ -1,5 +1,5 @@
 import React, {useRef, useContext} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzPage.theme.config';
 import {MaxWidth} from '../EzAppLayout/EzAppLayout';
 import EzHeading from '../EzHeading';

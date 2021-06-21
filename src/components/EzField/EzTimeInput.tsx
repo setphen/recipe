@@ -1,6 +1,6 @@
 import React from 'react';
 import dayjs from 'dayjs';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzField.theme.config';
 import en from './en';
 import {useTranslation} from '../../utils/hooks';

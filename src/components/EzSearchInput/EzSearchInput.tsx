@@ -1,5 +1,5 @@
 import React, {forwardRef} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzSearchInput.theme.config';
 import EzTextInput from '../EzField/EzTextInput';
 

@@ -1,5 +1,5 @@
 import React, {forwardRef} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzStatus.theme.config';
 import {EzStatusProps} from './EzStatus.types';
 import {DotIcon} from '../Icons';
