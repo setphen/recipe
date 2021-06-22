@@ -1,5 +1,5 @@
 import React from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import {EzCard, EzTable, EzTextStyle, EzLayout, EzCardSection} from '..';
 import en from './en';
 import {useTranslation} from '../../utils/hooks';

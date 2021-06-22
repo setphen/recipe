@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, createRef, useState} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import dayjs from 'dayjs';
 import theme from './EzCalendar.theme.config';
 import EzButton from '../EzButton';

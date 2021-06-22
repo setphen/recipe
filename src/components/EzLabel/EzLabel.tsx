@@ -1,5 +1,5 @@
 import React, {forwardRef, LabelHTMLAttributes} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzLabel.theme.config';
 
 const styles = theme.css({

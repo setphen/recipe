@@ -1,5 +1,5 @@
 import React, {FC, createContext, createElement, useContext, useState, useEffect} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzTable.theme.config';
 import {EzCard} from '../EzCard';
 import EzCheckbox from '../EzCheckbox';

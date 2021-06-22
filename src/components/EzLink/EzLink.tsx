@@ -1,5 +1,5 @@
 import React, {forwardRef, ReactElement, ReactNode} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzLink.theme.config';
 import {Link as LinkProps} from './EzLink.types';
 import {isAnchor, isLink} from './utils';

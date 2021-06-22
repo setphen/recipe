@@ -1,5 +1,5 @@
 import React, {useRef, useCallback} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzField.theme.config';
 import {TextInputWrapper} from './Picker.styles';
 import EzTextInput from './EzTextInput';

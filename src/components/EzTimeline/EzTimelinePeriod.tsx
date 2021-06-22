@@ -1,5 +1,5 @@
 import React from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzTimeline.theme.config';
 
 const heading = theme.css({

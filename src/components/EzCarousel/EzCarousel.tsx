@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState, HTMLAttributes} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzCarousel.theme.config';
 import {useUniqueId} from '../../utils/hooks';
 import {clsx, responsiveProps} from '../../utils';
