@@ -39,7 +39,11 @@ function Provider(props: ProviderProps, ref: Ref<HTMLDivElement>) {
       children
     );
 
-  return <Context.Provider value={context}>{contents}</Context.Provider>;
+  return (
+    <Style ruleset={topLevelTheme}>
+      <Context.Provider value={context}>{contents}</Context.Provider>
+    </Style>
+  );
 }
 
 const ProviderWrapper = React.forwardRef(function ProviderWrapper(
@@ -51,11 +55,9 @@ const ProviderWrapper = React.forwardRef(function ProviderWrapper(
   const className = theme.global ? Object.values(theme.global).join(' ') : null;
 
   return (
-    <Style ruleset={topLevelTheme}>
-      <div className={className} ref={ref}>
-        {children}
-      </div>
-    </Style>
+    <div className={className} ref={ref}>
+      {children}
+    </div>
   );
 });
 
