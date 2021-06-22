@@ -1,5 +1,5 @@
 import React, {forwardRef} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzCheckbox.theme.config';
 import EzLabel from '../EzLabel';
 import {useUniqueId} from '../../utils/hooks';

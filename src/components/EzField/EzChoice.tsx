@@ -1,5 +1,5 @@
 import React from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzChoice.theme.config';
 import EzCheckbox from '../EzCheckbox';
 import EzRadioButton from '../EzRadioButton';

@@ -1,5 +1,5 @@
 import React, {createRef, useRef} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import LinkButton from './LinkButton';
 import {Link, LabelledLink, Labelled} from '../EzLink/EzLink.types';
 import {EzHeading, EzLayout} from '..';

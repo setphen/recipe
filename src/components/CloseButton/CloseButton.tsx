@@ -1,5 +1,5 @@
 import React, {forwardRef, HTMLAttributes} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './CloseButton.theme.config';
 
 const button = theme.css({

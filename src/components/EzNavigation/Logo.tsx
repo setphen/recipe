@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzNavigation.theme.config';
 import {Link} from '../EzLink/EzLink';
 import {LabelledLink, Link as LinkType} from '../EzLink/EzLink.types';

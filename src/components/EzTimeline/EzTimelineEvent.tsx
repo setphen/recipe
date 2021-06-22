@@ -1,5 +1,5 @@
 import React from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import {EzCard} from '../EzCard';
 import EzLayout from '../EzLayout';
 import EzHeading from '../EzHeading';

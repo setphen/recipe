@@ -1,6 +1,6 @@
 import React, {useRef} from 'react';
 import Highlighter from 'react-highlight-words';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzField.theme.config';
 import {useUniqueId, useScrollIntoView} from '../../utils/hooks';
 import {clsx} from '../../utils';

@@ -1,5 +1,5 @@
 import React from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzPageSection.theme.config';
 import {usePageSection} from './EzPage';
 import {clsx} from '../../utils';
