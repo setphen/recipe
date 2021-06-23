@@ -1,7 +1,7 @@
 {
   "private": true,
   "internal": true,
-  "version": "0.1.0-canary.20",
+  "version": "0.2.2",
   "description": "The @stitches CSS-in-JS library adapted to support IE",
   "source": "src/index.ts",
   "main": "./dist/index.cjs.js",
@@ -22,11 +22,11 @@
     "IE 11"
   ],
   "dependencies": {
-    "@stitches/core": "0.1.0-canary.20"
+    "@stitches/core": "0.2.2"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.10.4",
-    "@stitches/core": "0.1.0-canary.20",
+    "@stitches/core": "0.2.2",
     "microbundle": "^0.13.0",
     "patch-package": "^6.4.7"
   }
