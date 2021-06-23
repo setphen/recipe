@@ -1,6 +1,5 @@
 /* eslint-disable filenames/match-exported */
 import React, {createContext, useContext} from 'react';
-// import ReactDOM from 'react-dom';
 
 const Context = createContext(null);
 
