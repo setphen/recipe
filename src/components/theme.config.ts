@@ -1,13 +1,13 @@
 /* eslint-disable filenames/match-exported */
-import {createCss} from '../../packages/@stitches/core';
+import {createCss} from '@stitches/core';
 import type {
-  TConditions,
+  TMedias,
   TTheme,
   TThemeMap,
   CSSPropertiesToTokenScale,
   TStyledSheet,
   IConfig,
-} from '../../packages/@stitches/core';
+} from '@stitches/core';
 import {PlaceItemsProperty} from 'csstype';
 
 type Globals = 'inherit' | 'initial' | 'revert' | 'unset';
@@ -194,15 +194,14 @@ const stitches = createCss({
     roundedLeft: () => (value: TokenValue<'radii'>) => ({borderTopLeftRadius: value, borderBottomLeftRadius: value}),
     roundedRight: () => (value: TokenValue<'radii'>) => ({borderTopRightRadius: value, borderBottomRightRadius: value}),
   },
-  conditions: {
-    base: '@media (min-width: 0px)',
-    baseToMedium: '@media (max-width: 767.9375px)',
-    baseToLarge: '@media (max-width: 1060.9375px)',
-    medium: '@media (min-width: 768px)',
-    mediumToLarge: '@media (min-width: 768px) and (max-width: 1060.9375px)',
-    large: '@media (min-width: 1061px)',
+  media: {
+    base: '(min-width: 0px)',
+    baseToMedium: '(max-width: 767.9375px)',
+    baseToLarge: '(max-width: 1060.9375px)',
+    medium: '(min-width: 768px)',
+    mediumToLarge: '(min-width: 768px) and (max-width: 1060.9375px)',
+    large: '(min-width: 1061px)',
   },
-  insertMethod: () => () => {},
 });
 
 type BaseConfig = typeof stitches.config;
@@ -217,38 +216,43 @@ type MapUtils<U, T extends TTheme> = {
     : never;
 };
 
+const getCustomProperties = theme => {
+  /** Object of custom property styles. */
+  const styles = {};
+
+  for (const scaleName in theme) {
+    for (const tokenName in theme[scaleName]) {
+      styles[`$${scaleName}-${tokenName}`] = String(
+        theme[scaleName][tokenName]
+      ).replace(/\$[$\w-]+/g, $1 => (/[^]\$/.test($1) ? $1 : `$${scaleName}${$1}`));
+    }
+  }
+
+  return styles;
+};
+
 /**
  * Extends the base stitches configuration with additional theme tokens.
  */
 export function mergeCss<
-  Conditions extends TConditions,
+  Medias extends TMedias,
   Theme extends TTheme = Record<string, unknown>,
   Utils = BaseConfig['utils'],
   Prefix = '',
   ThemeMap extends TThemeMap = CSSPropertiesToTokenScale,
   MergedTheme = Theme & BaseConfig['theme']
 >(
-  extension?: IConfig<Conditions, Theme, Utils, Prefix, ThemeMap>
+  extension?: IConfig<Medias, Theme, Utils, Prefix, ThemeMap>
 ): TStyledSheet<
-  BaseConfig['conditions'],
+  BaseConfig['media'],
   MergedTheme,
   MapUtils<Utils, MergedTheme>,
   Prefix,
   ThemeMap & BaseConfig['themeMap']
 > {
-  const utils = Object.assign({}, stitches.config.utils, extension.utils) as any;
-  const conditions = Object.assign({}, stitches.config.conditions, extension.conditions) as any;
-  const merged = createCss({
-    ...extension, 
-    utils, 
-    conditions,
-    insertMethod: () => () => {},
-  });
+  const vars = getCustomProperties(extension.theme);
 
-  return {
-    ...merged,
-    toString() {
-      return [stitches.toString(), merged.toString()].join(' ');
-    },
-  } as any;
+  stitches.global({':root': vars})();
+
+  return stitches as any;
 }

@@ -1,5 +1,5 @@
 import React, {forwardRef, Fragment} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzSuperRadioButtons.theme.config';
 import EzRadioButton from '../EzRadioButton';
 import {EzSuperRadioButtonsProps} from './EzSuperRadioButtons.types';

@@ -1,5 +1,5 @@
 import React, {createRef, useRef} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import LinkButton from './LinkButton';
 import {Link, LabelledLink, Labelled} from '../EzLink/EzLink.types';
 import {EzHeading, EzLayout} from '..';
@@ -32,10 +32,8 @@ const pageHeader = theme.css({
   backgroundColor: '$page-header-bg',
   boxShadow: '$page-header-box-shadow',
   padding: '$page-header-py $page-header-px',
-  when: {
-    medium: {
-      padding: '$page-header-md-py $page-header-md-px',
-    },
+  '@medium': {
+    padding: '$page-header-md-py $page-header-md-px',
   },
 });
 
@@ -50,11 +48,9 @@ const subnavWrapper = theme.css({
 });
 
 const subheaderWrapper = theme.css({
-  when: {
-    medium: {
-      paddingTop: '$page-header-md-subheader-py',
-      paddingBottom: '$page-header-md-subheader-py',
-    },
+  '@medium': {
+    paddingTop: '$page-header-md-subheader-py',
+    paddingBottom: '$page-header-md-subheader-py',
   },
 });
 

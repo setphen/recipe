@@ -1,5 +1,5 @@
 import React, {useState, useRef, ReactElement} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzTooltip.theme.config';
 import {useUniqueId} from '../../utils/hooks';
 import EzPopover from '../EzPopover';

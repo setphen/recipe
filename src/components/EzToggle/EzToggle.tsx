@@ -1,5 +1,5 @@
 import React, {forwardRef, useRef} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzToggle.theme.config';
 import EzLabel from '../EzLabel';
 import EzInlineFeedback from '../EzInlineFeedback';

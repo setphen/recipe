@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzProgressTracker.theme.config';
 import EzLayout from '../EzLayout';
 import EzTextStyle from '../EzTextStyle';

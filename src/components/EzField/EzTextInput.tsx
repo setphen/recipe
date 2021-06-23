@@ -1,5 +1,5 @@
 import React, {forwardRef} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzField.theme.config';
 import {domProps, filterValidProps} from '../../utils';
 
@@ -48,11 +48,9 @@ const textInput = theme.css({
       true: {
         borderBottomRightRadius: '0',
         borderBottomLeftRadius: '0',
-        when: {
-          medium: {
-            borderBottomRightRadius: '$regular',
-            borderBottomLeftRadius: '$regular',
-          },
+        '@medium': {
+          borderBottomRightRadius: '$regular',
+          borderBottomLeftRadius: '$regular',
         },
       },
     },

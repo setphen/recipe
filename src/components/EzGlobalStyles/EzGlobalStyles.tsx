@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzGlobalStyles.theme.config';
 import features from './features';
 

@@ -1,5 +1,5 @@
 import React, {useRef, useContext} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import theme from './EzPage.theme.config';
 import {MaxWidth} from '../EzAppLayout/EzAppLayout';
 import EzHeading from '../EzHeading';
@@ -11,10 +11,8 @@ const pageContainer = theme.css({
   p: {
     margin: 0,
   },
-  when: {
-    medium: {
-      padding: '$page-md-py $page-md-px',
-    },
+  '@medium': {
+    padding: '$page-md-py $page-md-px',
   },
 });
 
@@ -25,20 +23,16 @@ const pageWrapper = theme.css({
   '& > *:not(:last-child)': {
     marginBottom: '$page-content-gap',
   },
-  when: {
-    medium: {
-      '& > *:not(:last-child)': {
-        marginBottom: '$page-md-content-gap',
-      },
+  '@medium': {
+    '& > *:not(:last-child)': {
+      marginBottom: '$page-md-content-gap',
     },
   },
   [`&& > ${ezHeadingSelector}`]: {
     marginBottom: '$page-heading-mb',
     marginLeft: '$page-heading-ml',
-    when: {
-      medium: {
-        marginLeft: 0,
-      },
+    '@medium': {
+      marginLeft: 0,
     },
   },
 });

@@ -1,5 +1,5 @@
 import React, {forwardRef} from 'react';
-import Style from '@ezcater/snitches';
+import Style from '../../snitches';
 import {AnchorProps, LinkProps} from '../EzLink/EzLink.types';
 import LinkButton from './LinkButton';
 import theme from './Tabs.theme.config';
