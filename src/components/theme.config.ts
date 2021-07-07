@@ -1,7 +1,7 @@
 /* eslint-disable filenames/match-exported */
 import {createCss} from '../../packages/@stitches/core';
 import type {
-  TConditions,
+  TMedias,
   TTheme,
   TThemeMap,
   CSSPropertiesToTokenScale,
@@ -15,7 +15,11 @@ type FromTheme<T> = `$${Extract<keyof T, string | number>}`;
 type Token<T> = FromTheme<T> | Globals | number | (string & {});
 type TokenValue<T extends keyof TTheme> = T;
 
+// disable stitches style insertion (forces SSR mode). Snitches is used to insert styles instead.
+const root = {root: null};
+
 const stitches = createCss({
+  ...root,
   theme: {
     borderWidths: {
       thin: '1px',
@@ -170,7 +174,7 @@ const stitches = createCss({
       justifyContent: value,
       alignItems: value,
     }),
-    'sr-only': () => () => ({
+    srOnly: () => () => ({
       border: 'none',
       clip: 'rect(0 0 0 0)',
       clipPath: 'inset(50%)',
@@ -194,15 +198,14 @@ const stitches = createCss({
     roundedLeft: () => (value: TokenValue<'radii'>) => ({borderTopLeftRadius: value, borderBottomLeftRadius: value}),
     roundedRight: () => (value: TokenValue<'radii'>) => ({borderTopRightRadius: value, borderBottomRightRadius: value}),
   },
-  conditions: {
-    base: '@media (min-width: 0px)',
-    baseToMedium: '@media (max-width: 767.9375px)',
-    baseToLarge: '@media (max-width: 1060.9375px)',
-    medium: '@media (min-width: 768px)',
-    mediumToLarge: '@media (min-width: 768px) and (max-width: 1060.9375px)',
-    large: '@media (min-width: 1061px)',
+  media: {
+    base: '(min-width: 0px)',
+    baseToMedium: '(max-width: 767.9375px)',
+    baseToLarge: '(max-width: 1060.9375px)',
+    medium: '(min-width: 768px)',
+    mediumToLarge: '(min-width: 768px) and (max-width: 1060.9375px)',
+    large: '(min-width: 1061px)',
   },
-  insertMethod: () => () => {},
 });
 
 type BaseConfig = typeof stitches.config;
@@ -217,38 +220,74 @@ type MapUtils<U, T extends TTheme> = {
     : never;
 };
 
+const getCustomProperties = theme => {
+  /** Object of custom property styles. */
+  const styles = {};
+
+  for (const scaleName in theme) {
+    for (const tokenName in theme[scaleName]) {
+      styles[`$${scaleName}-${tokenName}`] = String(
+        theme[scaleName][tokenName]
+      ).replace(/\$[$\w-]+/g, $1 => (/[^]\$/.test($1) ? $1 : `$${scaleName}${$1}`));
+    }
+  }
+
+  return styles;
+};
+
 /**
  * Extends the base stitches configuration with additional theme tokens.
  */
 export function mergeCss<
-  Conditions extends TConditions,
+  Medias extends TMedias,
   Theme extends TTheme = Record<string, unknown>,
   Utils = BaseConfig['utils'],
   Prefix = '',
   ThemeMap extends TThemeMap = CSSPropertiesToTokenScale,
   MergedTheme = Theme & BaseConfig['theme']
 >(
-  extension?: IConfig<Conditions, Theme, Utils, Prefix, ThemeMap>
+  extension?: IConfig<Medias, Theme, Utils, Prefix, ThemeMap>
 ): TStyledSheet<
-  BaseConfig['conditions'],
+  BaseConfig['media'],
   MergedTheme,
   MapUtils<Utils, MergedTheme>,
   Prefix,
   ThemeMap & BaseConfig['themeMap']
 > {
-  const utils = Object.assign({}, stitches.config.utils, extension.utils) as any;
-  const conditions = Object.assign({}, stitches.config.conditions, extension.conditions) as any;
-  const merged = createCss({
-    ...extension, 
-    utils, 
-    conditions,
-    insertMethod: () => () => {},
-  });
+  const vars = getCustomProperties(extension.theme);
+
+  stitches.global({':root': vars})();
+
+  const css = config => {
+    const definition = stitches.css(config);
+    const {variants} = config;
+
+    if (!variants) return definition;
+
+    return (props = {}) => {
+      const mappedProps = {...props};
+
+      Object.keys(variants).forEach(name => {
+        const value = props[name];
+
+        if (name in props && typeof value === 'object') {
+          mappedProps[name] = addAtPrefix(value || {});
+        }
+      });
+
+      return definition(mappedProps);
+    };
+  }
 
   return {
-    ...merged,
-    toString() {
-      return [stitches.toString(), merged.toString()].join(' ');
-    },
+    ...stitches,
+    css,
   } as any;
+}
+
+const addAtPrefix = (obj: Record<string, unknown>) => {
+  return Object.entries(obj).reduce((res, [key, value]) => ({
+    ...res,
+    [key.includes('@') ? key : `@${key}`]: value,
+  }), {});
 }
