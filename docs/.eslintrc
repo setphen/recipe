@@ -1,0 +1,25 @@
+{
+  "rules": {
+    "no-param-reassign": "off",
+    "filenames/match-regex": "off",
+    "filenames/match-exported": "off",
+    "react/react-in-jsx-scope": "off",
+    // for compatibility with next/link (which expects the href on the Link component rather than the anchor)
+    "jsx-a11y/anchor-is-valid": "off",
+    // I think there's a parser issue causing this rule to give false positives on typescript types
+    "@typescript-eslint/no-unused-vars": "off",
+    "no-useless-escape": "off"
+  },
+  "overrides": [
+    {
+      "files": ["next.config.js"],
+      "env": {
+        "node": true
+      },
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off",
+        "import/no-commonjs": "off"
+      }
+    }
+  ]
+}
