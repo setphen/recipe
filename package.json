@@ -119,7 +119,7 @@
     "@react-types/shared": "^3.7.0",
     "@recipe-ui/legacy-theme": "^1.0.0",
     "dayjs": "^1.8.14",
-    "react-highlight-words": "^0.16.0"
+    "react-highlight-words": "^0.17.0"
   },
   "jest-junit": {
     "outputDirectory": "./reports/jest",
