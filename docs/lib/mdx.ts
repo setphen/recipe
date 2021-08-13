@@ -4,10 +4,11 @@ import glob from 'glob';
 import matter from 'gray-matter';
 import {bundleMDX} from 'mdx-bundler';
 
-const ROOT_PATH = process.cwd();
+const DOCS_ROOT = process.cwd();
 
-export const COMPONENTS_PATH = path.join(ROOT_PATH, '../src/components');
-export const GUIDES_PATH = path.join(ROOT_PATH, 'content/guides');
+export const ROOT_PATH = path.join(DOCS_ROOT, '../');
+export const COMPONENTS_PATH = path.join(ROOT_PATH, 'src/components');
+export const GUIDES_PATH = path.join(DOCS_ROOT, 'content/guides');
 
 // the front matter and content of all mdx files based on `docsPaths`
 export const getAllFrontmatter = (fromPath: string) => {
