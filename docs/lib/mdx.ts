@@ -7,7 +7,7 @@ import {bundleMDX} from 'mdx-bundler';
 const ROOT_PATH = process.cwd();
 
 export const COMPONENTS_PATH = path.join(ROOT_PATH, '../src/components');
-export const GUIDES_PATH = path.join(ROOT_PATH, 'guides');
+export const GUIDES_PATH = path.join(ROOT_PATH, 'content/guides');
 
 // the front matter and content of all mdx files based on `docsPaths`
 export const getAllFrontmatter = (fromPath: string) => {
