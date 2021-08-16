@@ -10,6 +10,7 @@ export const ROOT_PATH = path.join(DOCS_ROOT, '../');
 export const COMPONENTS_PATH = path.join(ROOT_PATH, 'src/components');
 export const GUIDES_PATH = path.join(DOCS_ROOT, 'content/guides');
 export const SUPPORT_PATH = path.join(DOCS_ROOT, 'content/support');
+export const COOKBOOK_PATH = path.join(DOCS_ROOT, 'content/cookbook');
 
 // the front matter and content of all mdx files based on `docsPaths`
 export const getAllFrontmatter = (fromPath: string) => {

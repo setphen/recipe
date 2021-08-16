@@ -6,6 +6,7 @@ export default function ComponentGrid({frontmatters}: any) {
   const componentFrontmatters = frontmatters.filter((c: any) => !c.slug?.includes('cookbook'));
 
   const categorized = new Map<string, any[]>([
+    // component categories
     ['Layout', []],
     ['Navigation', []],
     ['Data', []],
@@ -14,6 +15,14 @@ export default function ComponentGrid({frontmatters}: any) {
     ['Feedback', []],
     ['Marketing', []],
     ['Typography', []],
+
+    // cookbook categories
+    ['Detail Screens', []],
+    ['Form/Creation Screens', []],
+    ['Settings Screens', []],
+    ['Dashboard Screens', []],
+    ['Marketing Screens', []],
+    ['Table/List Screens', []],
   ]);
 
   componentFrontmatters.forEach((frontmatter: any) => {
