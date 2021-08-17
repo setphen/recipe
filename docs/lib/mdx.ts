@@ -4,6 +4,7 @@ import glob from 'glob';
 import matter from 'gray-matter';
 import {bundleMDX} from 'mdx-bundler';
 import remarkSlug from 'remark-slug';
+import remarkGfm from 'remark-gfm';
 
 const DOCS_ROOT = process.cwd();
 
@@ -63,7 +64,7 @@ export const getMdx = async (basePath: string, file: string) => {
       // this is the recommended way to add custom remark/rehype plugins:
       // The syntax might look weird, but it protects you in case we add/remove
       // plugins in the future.
-      options.remarkPlugins = [...((options.remarkPlugins ?? []) as any), remarkSlug];
+      options.remarkPlugins = [...((options.remarkPlugins ?? []) as any), remarkSlug, remarkGfm];
 
       return options;
     },
