@@ -3,6 +3,7 @@ import {EzAppLayout, EzNavigation} from '@ezcater/recipe';
 import {docsRoutes} from '../lib/docsRoutes';
 import recipeLogo from '../public/images/recipe-logo.svg';
 import NextLink from './NextLink';
+import Sprites from './Sprites';
 
 export default function Layout({children}: any) {
   return (
@@ -13,6 +14,7 @@ export default function Layout({children}: any) {
           rel="stylesheet"
         />
       </Head>
+      <Sprites />
       <EzAppLayout layout="full">
         <EzNavigation
           home={{

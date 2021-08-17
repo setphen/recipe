@@ -198,7 +198,7 @@ The Carousel component internally uses [`Element.prototype.scrollTo()`](https://
 
 We recommend using [Polyfill.io](https://polyfill.io/v3/) in your application to apply necessary polyfills only when they are needed for the requesting browser:
 
-<br>`https://polyfill.io/v3/polyfill.min.js?features=smoothscroll`
+- `https://polyfill.io/v3/polyfill.min.js?features=smoothscroll`
 
 ---
 
