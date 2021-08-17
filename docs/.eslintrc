@@ -20,6 +20,11 @@
         "@typescript-eslint/no-var-requires": "off",
         "import/no-commonjs": "off"
       }
+    },
+    {
+      "files": ["components/CodeDemo.tsx"],
+      // we reuse the playroom install from the top-level Recipe install
+      "rules": {"import/no-extraneous-dependencies": "off"}
     }
   ]
 }

@@ -3,6 +3,8 @@ import * as Recipe from '@ezcater/recipe';
 import {ComponentMap} from 'mdx-bundler/client';
 import NextLink from './NextLink';
 import styles from '../styles/Link.module.css';
+import SyntaxHighlighting from './SyntaxHighlighting';
+import CodeDemo from './CodeDemo';
 import ezcaterLogo from '../public/images/ezcater-logo.svg';
 
 const {EzHeading, EzLink} = Recipe;
@@ -68,6 +70,20 @@ export const components: ComponentMap = {
       </EzLink>
     );
   },
+  pre: ({children}: any) => <>{children}</>,
+  code: (props: any) => {
+    const {className} = props;
+    const language = className?.replace('language-', '') || 'jsx';
+
+    // inline code snippet
+    if (!className) return <code {...props} />;
+
+    // highlighted example code
+    return <SyntaxHighlighting code={props.children} language={language} />;
+  },
+  CodeDemo,
+  Preview: ({children}: any) => <>{children()}</>,
+  React,
 };
 
 export const scope = {

@@ -31,9 +31,34 @@ export const getAllFrontmatter = (fromPath: string) => {
   });
 };
 
+const fencedCodeBlock = /`{3}([\S]+)?\n([\s\S]+?(?=\n`{3}))\n`{3}/g;
+
 export const getMdx = async (basePath: string, file: string) => {
   const source = fs.readFileSync(path.join(basePath, `${file}.md`), 'utf8');
-  const {frontmatter, code} = await bundleMDX(source, {
+
+  // TODO consider making this a remark plugin
+  const live = Array.from(source.matchAll(fencedCodeBlock) as any).reduce(
+    (res: string, next: any) => {
+      const [match, lang, code] = next;
+
+      if (lang !== 'jsx') return res;
+
+      const preview = code.startsWith('(')
+        ? `<Preview>\n{${code.replace(/\;$/, '')}}\n</Preview>`
+        : code;
+
+      // string code may include template literals and expression interpolation
+      // that needs to be escaped before re-inserting within a string prop
+      const sanitized = code.replace(/\`/g, '\\`').replace(/\$\{/g, '$\\{');
+
+      const wrapped = `<CodeDemo code={\`${sanitized}\`} language="${lang}">${preview}</CodeDemo>`;
+
+      return res.replace(match, `${wrapped}`);
+    },
+    source
+  );
+
+  const {frontmatter, code} = await bundleMDX(live, {
     xdmOptions(options) {
       // this is the recommended way to add custom remark/rehype plugins:
       // The syntax might look weird, but it protects you in case we add/remove
