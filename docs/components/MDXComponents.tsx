@@ -2,7 +2,7 @@ import React from 'react';
 import * as Recipe from '@ezcater/recipe';
 import {ComponentMap} from 'mdx-bundler/client';
 import NextLink from './NextLink';
-import styles from '../styles/Link.module.css';
+import styles from '../styles/Component.module.css';
 import SyntaxHighlighting from './SyntaxHighlighting';
 import CodeDemo from './CodeDemo';
 import Placeholder from './Placeholder';
@@ -86,6 +86,7 @@ export const components: ComponentMap = {
   Preview: ({children}: any) => <>{children()}</>,
   Placeholder,
   React,
+  table: ({children}: any) => <table className={styles.table}>{children}</table>,
 };
 
 export const scope = {

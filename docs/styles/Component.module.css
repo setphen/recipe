@@ -18,3 +18,9 @@
 .heading:hover a {
   text-decoration: underline;
 }
+
+.table {
+  width: 100%;
+  max-width: 120ch;
+  margin: 1rem auto;
+}

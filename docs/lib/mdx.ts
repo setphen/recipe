@@ -5,6 +5,7 @@ import matter from 'gray-matter';
 import {bundleMDX} from 'mdx-bundler';
 import remarkSlug from 'remark-slug';
 import remarkGfm from 'remark-gfm';
+import {remarkMdxImages} from 'remark-mdx-images';
 
 const DOCS_ROOT = process.cwd();
 
@@ -60,11 +61,26 @@ export const getMdx = async (basePath: string, file: string) => {
   );
 
   const {frontmatter, code} = await bundleMDX(live, {
+    cwd: path.parse(path.join(basePath, `${file}.md`)).dir,
     xdmOptions(options) {
       // this is the recommended way to add custom remark/rehype plugins:
       // The syntax might look weird, but it protects you in case we add/remove
       // plugins in the future.
-      options.remarkPlugins = [...((options.remarkPlugins ?? []) as any), remarkSlug, remarkGfm];
+      options.remarkPlugins = [
+        ...((options.remarkPlugins ?? []) as any),
+        remarkSlug,
+        remarkGfm,
+        remarkMdxImages,
+      ];
+
+      return options;
+    },
+    esbuildOptions: options => {
+      options.loader = {
+        ...options.loader,
+        '.png': 'dataurl',
+        '.svg': 'dataurl',
+      };
 
       return options;
     },
