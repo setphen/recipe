@@ -5,7 +5,7 @@ import {visualSnapshots} from 'sosia';
 import regressionTests from './EzCarousel.test.md';
 import markdown from '../EzCarousel.md';
 import EzCarousel from '../EzCarousel';
-import Placeholder from '../../../../doc-site/src/components/Placeholder';
+import Placeholder from '../../EzLayout/Placeholder';
 import {EzCard, EzLayout, EzHeading, EzPage} from '../../index';
 
 if (!('scrollTo' in Element.prototype)) {

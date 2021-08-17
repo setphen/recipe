@@ -5,6 +5,7 @@ import NextLink from './NextLink';
 import styles from '../styles/Link.module.css';
 import SyntaxHighlighting from './SyntaxHighlighting';
 import CodeDemo from './CodeDemo';
+import Placeholder from './Placeholder';
 import ezcaterLogo from '../public/images/ezcater-logo.svg';
 
 const {EzHeading, EzLink} = Recipe;
@@ -83,6 +84,7 @@ export const components: ComponentMap = {
   },
   CodeDemo,
   Preview: ({children}: any) => <>{children()}</>,
+  Placeholder,
   React,
 };
 

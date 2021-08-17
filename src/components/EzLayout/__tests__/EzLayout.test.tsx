@@ -9,7 +9,7 @@ import EzLayout from '../EzLayout';
 import {EzCard, EzCardSection, EzHeading, EzField, EzPage, EzSearchInput} from '../../index';
 import Media from '../../EzField/Media';
 import {Global, css} from '../../../styles';
-import Placeholder from '../../../../doc-site/src/components/Placeholder';
+import Placeholder from '../Placeholder';
 
 const scope = {
   EzPage,

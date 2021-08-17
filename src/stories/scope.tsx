@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link, NavLink, BrowserRouter, StaticRouter, Route} from 'react-router-dom';
 import * as Components from '..';
-import Placeholder from '../../doc-site/src/components/Placeholder';
+import Placeholder from '../components/EzLayout/Placeholder';
 import ezCaterLogoPath from '../../doc-site/src/ezcater-logo.svg';
 import {Global, css} from '../styles';
 

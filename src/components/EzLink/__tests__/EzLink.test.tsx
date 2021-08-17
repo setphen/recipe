@@ -6,7 +6,7 @@ import {render} from '@testing-library/react';
 import markdown from '../EzLink.md';
 import EzLink from '../EzLink';
 import {EzLayout} from '../../index';
-import Placeholder from '../../../../doc-site/src/components/Placeholder';
+import Placeholder from '../../EzLayout/Placeholder';
 
 const scope = {EzLink, EzLayout, Placeholder};
 
