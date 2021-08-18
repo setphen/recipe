@@ -6,6 +6,7 @@ import {bundleMDX} from 'mdx-bundler';
 import remarkSlug from 'remark-slug';
 import remarkGfm from 'remark-gfm';
 import {remarkMdxImages} from 'remark-mdx-images';
+import {tocGenerator} from './toc';
 
 const DOCS_ROOT = process.cwd();
 
@@ -60,6 +61,8 @@ export const getMdx = async (basePath: string, file: string) => {
     source
   );
 
+  const {plugin: remarkToc, toc} = tocGenerator();
+
   const {frontmatter, code} = await bundleMDX(live, {
     cwd: path.parse(path.join(basePath, `${file}.md`)).dir,
     xdmOptions(options) {
@@ -71,6 +74,7 @@ export const getMdx = async (basePath: string, file: string) => {
         remarkSlug,
         remarkGfm,
         remarkMdxImages,
+        remarkToc,
       ];
 
       return options;
@@ -85,5 +89,5 @@ export const getMdx = async (basePath: string, file: string) => {
       return options;
     },
   });
-  return {frontmatter, code};
+  return {frontmatter, code, toc};
 };

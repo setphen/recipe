@@ -13,6 +13,7 @@
     "@recipe-ui/theme-marketplace": "^2.0.0",
     "glob": "^7.1.7",
     "gray-matter": "^4.0.3",
+    "mdast-util-toc": "^5.1.0",
     "mdx-bundler": "^5.2.1",
     "next": "11.0.1",
     "next-mdx-remote": "^3.0.4",

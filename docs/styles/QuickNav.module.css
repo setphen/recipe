@@ -1,0 +1,41 @@
+.sticky {
+  position: sticky;
+  top: 10px;
+}
+
+@media (max-width: 768px) {
+  .sticky {
+    display: none;
+  }
+}
+
+.multiLevel {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.multiLevel a {
+  font-weight: bold;
+}
+
+.item {
+  list-style-type: none;
+  margin: 4px 0;
+}
+
+.item a {
+  padding: 5px 0;
+  display: block;
+  padding-left: 12px;
+}
+
+.multiLevel .multiLevel .item a {
+  padding: 2px 12px;
+  font-weight: normal;
+  padding-left: 24px;
+}
+
+.isSelected {
+  background-color: rgba(44, 44, 44, 0.06);
+}

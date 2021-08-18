@@ -1,14 +1,17 @@
 import React from 'react';
 import {getMDXComponent} from 'mdx-bundler/client';
-import {EzCard, EzPage, EzPageHeader} from '@ezcater/recipe';
+import {EzCard, EzPage, EzPageHeader, EzPageSection} from '@ezcater/recipe';
 import {components, scope} from '../../components/MDXComponents';
 import {COMPONENTS_PATH, getAllFrontmatter, getMdx} from '../../lib/mdx';
 import Layout from '../../components/Layout';
 import NextLink from '../../components/NextLink';
+import {QuickNav} from '../../components/QuickNav';
+import quickNavStyles from '../../styles/QuickNav.module.css';
 
 type Doc = {
   frontmatter: any;
   code: any;
+  toc: any;
 };
 
 const toPascalCase = (str: string) =>
@@ -19,7 +22,7 @@ const toPascalCase = (str: string) =>
     })
     .join('') as string;
 
-export default function Doc({frontmatter, code}: Doc) {
+export default function Doc({frontmatter, code, toc}: Doc) {
   const Component = React.useMemo(() => getMDXComponent(code, scope), [code]);
 
   return (
@@ -29,9 +32,14 @@ export default function Doc({frontmatter, code}: Doc) {
         breadcrumb={{to: '/components', as: NextLink, label: 'Back to Components'}}
       />
       <EzPage>
-        <EzCard>
-          <Component components={components} />
-        </EzCard>
+        <EzPageSection use="main">
+          <EzCard>
+            <Component components={components} />
+          </EzCard>
+        </EzPageSection>
+        <EzPageSection use="aside" {...({className: quickNavStyles.sticky} as any)}>
+          <QuickNav toc={toc} />
+        </EzPageSection>
       </EzPage>
     </Layout>
   );
@@ -56,12 +64,13 @@ export async function getStaticProps(context: any) {
   const dir = slots.includes(name) ? 'EzContent' : name;
   const file = `${dir}/${name}`;
 
-  const {frontmatter, code} = await getMdx(COMPONENTS_PATH, file);
+  const {frontmatter, code, toc} = await getMdx(COMPONENTS_PATH, file);
 
   return {
     props: {
       frontmatter,
       code,
+      toc,
     },
   };
 }
