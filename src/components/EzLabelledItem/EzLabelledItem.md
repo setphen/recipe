@@ -41,7 +41,7 @@ Labelled items should
 - Use size="normal" with any position value
 - Use size="small" with position="top"
 - Use title case for the label title
-- Use htmlFor={controlId} to associate the label with the form control. This allows the label to increase the hit-surface to focus/activate the input, as well as allowing assistive technology to identify the label when the input is focused.
+- Use `htmlFor={controlId}` to associate the label with the form control. This allows the label to increase the hit-surface to focus/activate the input, as well as allowing assistive technology to identify the label when the input is focused.
 
 #### Don’t
 
@@ -53,7 +53,7 @@ Labelled items should
 
 ### With input controls
 
-Use htmlFor={controlId} to associate the label with the form control. This allows the label to increase the hit-surface to focus/activate the input, as well as allowing assistive technology to identify the label when the input is focused.
+Use `htmlFor={controlId}` to associate the label with the form control. This allows the label to increase the hit-surface to focus/activate the input, as well as allowing assistive technology to identify the label when the input is focused.
 
 ```jsx
 <EzLabelledItem htmlFor="search-input" position="top" size="small" title="Search">

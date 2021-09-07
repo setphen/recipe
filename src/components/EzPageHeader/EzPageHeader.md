@@ -40,7 +40,7 @@ Page headers should:
 ## Content guidelines
 
 - Use title case for the Page title, and describe the page in as few words as possible. Typically this will be the primary identifier or a pluralized name when the page is a list. Avoid truncating the page title.
-- Use clear and predictable labels for page actions, favoring the {verb}+{noun} naming format where there may be ambiguity about the target of the action.
+- Use clear and predictable labels for page actions, favoring the `{verb}+{noun}` naming format where there may be ambiguity about the target of the action.
 - Consider wrapping page header actions in a [Layout](/components/ez-layout) to manage how they stack at smaller breakpoints.
 - Avoid using interactive components for displaying status information
 
