@@ -1,6 +1,6 @@
 import React from 'react';
 import {getMDXComponent} from 'mdx-bundler/client';
-import {EzCard, EzPage, EzPageHeader, EzPageSection} from '@ezcater/recipe';
+import {EzCard, EzPage, EzPageHeader, EzPageSection, EzLink, EzTextStyle} from '@ezcater/recipe';
 import {components, scope} from '../../components/MDXComponents';
 import {COMPONENTS_PATH, getAllFrontmatter, getMdx} from '../../lib/mdx';
 import Layout from '../../components/Layout';
@@ -12,6 +12,7 @@ type Doc = {
   frontmatter: any;
   code: any;
   toc: any;
+  filePath: any;
 };
 
 const toPascalCase = (str: string) =>
@@ -22,7 +23,7 @@ const toPascalCase = (str: string) =>
     })
     .join('') as string;
 
-export default function Doc({frontmatter, code, toc}: Doc) {
+export default function Doc({frontmatter, code, toc, filePath}: Doc) {
   const Component = React.useMemo(() => getMDXComponent(code, scope), [code]);
 
   return (
@@ -35,6 +36,17 @@ export default function Doc({frontmatter, code, toc}: Doc) {
         <EzPageSection use="main">
           <EzCard>
             <Component components={components} />
+            <EzTextStyle use="subdued" align="right">
+              <EzLink use="secondary">
+                <a
+                  href={`https://github.com/ezcater/recipe/edit/main/${filePath}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>Edit this page on GitHub.</span>
+                </a>
+              </EzLink>
+            </EzTextStyle>
           </EzCard>
         </EzPageSection>
         <EzPageSection use="aside" {...({className: quickNavStyles.sticky} as any)}>
@@ -71,6 +83,7 @@ export async function getStaticProps(context: any) {
       frontmatter,
       code,
       toc,
+      filePath: `src/components/${file}.md`,
     },
   };
 }
