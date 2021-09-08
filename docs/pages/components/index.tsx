@@ -1,5 +1,5 @@
 import {EzCard, EzCardSection, EzLink, EzPage, EzPageHeader} from '@ezcater/recipe';
-import {getAllFrontmatter} from '../../lib/mdx';
+import {COMPONENTS_PATH, getAllFrontmatter} from '../../lib/mdx';
 import ComponentGrid from '../../components/ComponentGrid';
 import Layout from '../../components/Layout';
 
@@ -50,6 +50,6 @@ export default function ComponentsList({frontmatters}: any) {
 }
 
 export function getStaticProps() {
-  const frontmatters = getAllFrontmatter('components');
+  const frontmatters = getAllFrontmatter(COMPONENTS_PATH);
   return {props: {frontmatters}};
 }
