@@ -1,0 +1,20 @@
+.heading {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -18px;
+  margin: auto;
+  visibility: hidden;
+}
+
+.heading:hover .icon {
+  visibility: visible;
+}
+
+.heading:hover a {
+  text-decoration: underline;
+}
