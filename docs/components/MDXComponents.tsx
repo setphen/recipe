@@ -99,12 +99,20 @@ export const components: ComponentMap = {
   Placeholder,
   React,
   table: ({children}: any) => <table className={styles.table}>{children}</table>,
+  img: (props: any) => {
+    // rewrite url when deployed to a prefixed path (such as /recipe under GH Pages)
+    const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
+    const src = props.src?.includes('data:image') ? props.src : `${prefix}${props.src}`;
+    // eslint-disable-next-line jsx-a11y/alt-text
+    return <img {...props} src={src} className={styles.img} />;
+  },
   ...reactRouter,
 };
 
 export const scope = {
   withPrefix(url: string) {
-    return url;
+    const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
+    return `${prefix}${url}`;
   },
   ezCaterLogoPath: ezcaterLogo.src,
   ...reactRouter,
