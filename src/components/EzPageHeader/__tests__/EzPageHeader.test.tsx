@@ -20,15 +20,15 @@ import Media from '../../EzField/Media';
 
 afterEach(cleanup);
 
-const mockRequire = () => ({
+const routerScope = {
   Link,
-  BrowserRouter: ({children}) => (
+  Router: ({children}) => (
     <StaticRouter context={{}} location="/components/ez-page-header/">
       {children}
     </StaticRouter>
   ),
   Route,
-});
+};
 
 const scope = {
   EzPageHeader,
@@ -40,8 +40,8 @@ const scope = {
   EzLabelledItem,
   EzField,
   EzSearchInput,
-  require: mockRequire,
   Media,
+  ...routerScope,
 };
 
 describe('EzPageHeader', () => {

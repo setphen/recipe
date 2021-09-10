@@ -65,7 +65,7 @@ When using the `as` prop, you must use the `to` prop in place of `href` to provi
 
 ```jsx
 () => {
-  const {Link, NavLink, BrowserRouter: Router, Route} = require('react-router-dom');
+  // NOTE: Link, Router and NavLink are components from react-router
   return (
     <Router>
       <EzAppLayout>
@@ -147,33 +147,30 @@ Utility links can only be used in conjunction with the main navigation links. On
 
 ```jsx
 () => {
-  const {Link, NavLink, BrowserRouter: Router, Route} = require('react-router-dom');
   return (
-    <Router>
-      <EzAppLayout>
-        <EzNavigation
-          home={{href: '/', label: 'Homepage', logo: {src: ezCaterLogoPath, width: 100}}}
-          links={[
-            {href: '/orders', onClick: e => e.preventDefault(), label: 'Orders'},
-            {href: '/customers', onClick: e => e.preventDefault(), label: 'Customers'},
-            {href: '/reports', onClick: e => e.preventDefault(), label: 'Reports'},
-          ]}
-          utilityLinks={[
-            {href: '/chat', onClick: e => e.preventDefault(), label: 'Chat'},
-            {href: '/support', onClick: e => e.preventDefault(), label: '24/7 Support'},
-          ]}
-        >
-          <EzPage>
-            <EzCard>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultrices finibus
-                purus, in maximus diam molestie nec. Aenean maximus eget lacus sed lobortis.
-              </p>
-            </EzCard>
-          </EzPage>
-        </EzNavigation>
-      </EzAppLayout>
-    </Router>
+    <EzAppLayout>
+      <EzNavigation
+        home={{href: '/', label: 'Homepage', logo: {src: ezCaterLogoPath, width: 100}}}
+        links={[
+          {href: '/orders', onClick: e => e.preventDefault(), label: 'Orders'},
+          {href: '/customers', onClick: e => e.preventDefault(), label: 'Customers'},
+          {href: '/reports', onClick: e => e.preventDefault(), label: 'Reports'},
+        ]}
+        utilityLinks={[
+          {href: '/chat', onClick: e => e.preventDefault(), label: 'Chat'},
+          {href: '/support', onClick: e => e.preventDefault(), label: '24/7 Support'},
+        ]}
+      >
+        <EzPage>
+          <EzCard>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultrices finibus
+              purus, in maximus diam molestie nec. Aenean maximus eget lacus sed lobortis.
+            </p>
+          </EzCard>
+        </EzPage>
+      </EzNavigation>
+    </EzAppLayout>
   );
 };
 ```

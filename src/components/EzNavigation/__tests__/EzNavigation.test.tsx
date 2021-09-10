@@ -1,6 +1,7 @@
 import React from 'react';
 import {axe} from 'jest-axe';
 import {visualSnapshots} from 'sosia';
+import {Link, NavLink, StaticRouter} from 'react-router-dom';
 import {render, fireEvent, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import markdown from '../EzNavigation.md';
@@ -40,6 +41,13 @@ const scope = {
   require,
   themes,
   Media,
+  NavLink,
+  Link,
+  Router: ({children}) => (
+    <StaticRouter context={{}} location="/components/ez-navigation/">
+      {children}
+    </StaticRouter>
+  ),
 };
 
 describe('EzNavigation', () => {

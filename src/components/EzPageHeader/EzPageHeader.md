@@ -174,7 +174,7 @@ Normally links render an [anchor element](https://developer.mozilla.org/en-US/do
 
 ```jsx
 () => {
-  const {Link, BrowserRouter: Router, Route} = require('react-router-dom');
+  // NOTE: Link, Router and Route are components from react-router
   const tabs = [
     {label: 'Header', to: '/components/ez-page-header/', as: Link},
     {label: 'Button', to: '/components/ez-button/', as: Link},

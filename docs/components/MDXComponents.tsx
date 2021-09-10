@@ -1,6 +1,7 @@
 import React from 'react';
 import * as Recipe from '@ezcater/recipe';
 import {ComponentMap} from 'mdx-bundler/client';
+import {Link, NavLink, BrowserRouter, StaticRouter, Route} from 'react-router-dom';
 import NextLink from './NextLink';
 import styles from '../styles/Component.module.css';
 import SyntaxHighlighting from './SyntaxHighlighting';
@@ -38,6 +39,17 @@ const headingStyle = {
   marginTop: 24,
   marginBottom: 16,
   paddingBottom: 7,
+};
+
+const reactRouter = {
+  Link,
+  NavLink,
+  Router:
+    typeof window === 'undefined'
+      ? ({children}: any) =>
+          React.createElement(StaticRouter, {context: {}, location: '/'}, children)
+      : BrowserRouter,
+  Route,
 };
 
 export const components: ComponentMap = {
@@ -87,6 +99,7 @@ export const components: ComponentMap = {
   Placeholder,
   React,
   table: ({children}: any) => <table className={styles.table}>{children}</table>,
+  ...reactRouter,
 };
 
 export const scope = {
@@ -94,4 +107,5 @@ export const scope = {
     return url;
   },
   ezCaterLogoPath: ezcaterLogo.src,
+  ...reactRouter,
 };
