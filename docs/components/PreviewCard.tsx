@@ -1,5 +1,4 @@
 import {EzHeading, EzLayout, EzLink, EzTextStyle} from '@ezcater/recipe';
-import Image from 'next/image';
 import styles from '../styles/PreviewCard.module.css';
 import NextLink from './NextLink';
 
@@ -17,7 +16,13 @@ const PreviewCard = ({title, path, subtitle, name, tags}: any) => (
     <figure className={styles.m0}>
       <EzLayout layout="stack">
         <div className={styles.previewImage}>
-          <Image width={1024} height={512} src={`/images/preview/${name}.png`} alt="" />
+          <img
+            width={1024}
+            height={512}
+            src={`/images/preview/${name}.png`}
+            alt=""
+            style={{width: '100%', height: 'auto', aspectRatio: 'attr(width) / attr(height)'}}
+          />
         </div>
         <figcaption>
           <EzHeading size="5">{title}</EzHeading>

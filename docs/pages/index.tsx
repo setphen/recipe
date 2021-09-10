@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import {EzAppLayout, EzLayout, EzLink} from '@ezcater/recipe';
-import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import heroImage from '../public/images/hero-pattern-xl.jpg';
@@ -10,6 +9,16 @@ import recipeLogo from '../public/images/recipe-logo.svg';
 import githubLogo from '../public/images/github-logo.svg';
 // eslint-disable-next-line import/extensions
 import packageJson from '../../package.json';
+
+// We'd typically want to use `next/image` here, but that doesn't work with `next export`
+// without a custom loader, so instead, we're just using a plain, un-optimized image tag.
+const Image = ({src, alt, layout, objectFit}: any) => (
+  <img
+    src={src.src}
+    alt={alt}
+    style={{objectFit, ...(layout === 'fill' ? {width: '100%', height: '100%'} : {})}}
+  />
+);
 
 function Avatar({imgSrc, children, link}: any) {
   return (
