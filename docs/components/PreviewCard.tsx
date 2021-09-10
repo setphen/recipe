@@ -1,6 +1,7 @@
 import {EzHeading, EzLayout, EzLink, EzTextStyle} from '@ezcater/recipe';
 import styles from '../styles/PreviewCard.module.css';
 import NextLink from './NextLink';
+import {prefix} from '../utils/prefix';
 
 const LinkOrPlaceholder = ({path, tags, children}: any) =>
   tags && tags.includes('coming-soon') ? (
@@ -19,7 +20,7 @@ const PreviewCard = ({title, path, subtitle, name, tags}: any) => (
           <img
             width={1024}
             height={512}
-            src={`/images/preview/${name}.png`}
+            src={`${prefix}/images/preview/${name}.png`}
             alt=""
             style={{width: '100%', height: 'auto', aspectRatio: 'attr(width) / attr(height)'}}
           />

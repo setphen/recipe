@@ -8,6 +8,7 @@ import SyntaxHighlighting from './SyntaxHighlighting';
 import CodeDemo from './CodeDemo';
 import Placeholder from './Placeholder';
 import ezcaterLogo from '../public/images/ezcater-logo.svg';
+import {prefix} from '../utils/prefix';
 
 const {EzHeading, EzLink} = Recipe;
 
@@ -101,7 +102,6 @@ export const components: ComponentMap = {
   table: ({children}: any) => <table className={styles.table}>{children}</table>,
   img: (props: any) => {
     // rewrite url when deployed to a prefixed path (such as /recipe under GH Pages)
-    const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
     const src = props.src?.includes('data:image') ? props.src : `${prefix}${props.src}`;
     // eslint-disable-next-line jsx-a11y/alt-text
     return <img {...props} src={src} className={styles.img} />;
@@ -111,9 +111,8 @@ export const components: ComponentMap = {
 
 export const scope = {
   withPrefix(url: string) {
-    const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
     return `${prefix}${url}`;
   },
-  ezCaterLogoPath: ezcaterLogo.src,
+  ezCaterLogoPath: `${prefix}${ezcaterLogo.src}`,
   ...reactRouter,
 };

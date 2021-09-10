@@ -9,12 +9,13 @@ import recipeLogo from '../public/images/recipe-logo.svg';
 import githubLogo from '../public/images/github-logo.svg';
 // eslint-disable-next-line import/extensions
 import packageJson from '../../package.json';
+import {prefix} from '../utils/prefix';
 
 // We'd typically want to use `next/image` here, but that doesn't work with `next export`
 // without a custom loader, so instead, we're just using a plain, un-optimized image tag.
 const Image = ({src, alt, layout, objectFit}: any) => (
   <img
-    src={src.src}
+    src={`${prefix}${src.src}`}
     alt={alt}
     style={{objectFit, ...(layout === 'fill' ? {width: '100%', height: '100%'} : {})}}
   />

@@ -6,6 +6,7 @@ import recipeLogo from '../public/images/recipe-logo.svg';
 import NextLink from './NextLink';
 import Sprites from './Sprites';
 import {useMarketplaceTheme, useToggleMarketplaceTheme} from '../pages/_app';
+import {prefix} from '../utils/prefix';
 
 export default function Layout({children}: any) {
   const isMarketplaceThemeSelected = useMarketplaceTheme();
@@ -26,7 +27,7 @@ export default function Layout({children}: any) {
             to: '/',
             as: NextLink,
             label: 'Recipe',
-            logo: {src: recipeLogo.src, width: 120},
+            logo: {src: `${prefix}${recipeLogo.src}`, width: 120},
           }}
           links={docsRoutes.map((route: any) => ({
             label: route.title,
