@@ -77,8 +77,7 @@
     "typescript": "^4.2.2"
   },
   "scripts": {
-    "start": "concurrently \"npm run build:watch\" \"(cd doc-site/ && npm run develop)\" \"npm run playroom:start\" --kill-others",
-    "start:with-ie11": "concurrently \"npm run build:watch\" \"(cd doc-site/ && npm run develop:with-ie11)\" --kill-others",
+    "start": "concurrently \"npm run build:watch\" \"(cd docs/ && npm run dev)\" \"npm run playroom:start\" --kill-others",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
     "build": "npm run clean && npm run copy:packages && npm run build:types && npm run build:cjs && npm run build:esm && cp .npmignore dist",
@@ -87,11 +86,9 @@
     "build:cjs": "cross-env BABEL_ENV=cjs babel src --out-dir dist/cjs --extensions \".ts,.tsx\" --source-maps inline --copy-files",
     "build:esm": "cross-env BABEL_ENV=esm babel src --out-dir dist/esm --extensions \".ts,.tsx\" --source-maps inline --copy-files",
     "build:watch": "npm run build:cjs && npm run build:esm -- --watch",
-    "build:docs:prod": "cd doc-site && npm run build:prod",
+    "build:docs:prod": "cd docs && npm run export",
     "copy:packages": "cd packages/@stitches/core && npm run package",
-    "install:docs": "cd doc-site && npm ci",
-    "push:docs": "cd doc-site && npm run deploy",
-    "deploy": "npm run build:docs:prod && npm run playroom:build && npm run push:docs",
+    "install:docs": "cd docs && npm ci",
     "clean": "npx rimraf './dist'",
     "create-component": "plop component",
     "create-preview": "node packages/snapshot/index.js",
