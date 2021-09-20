@@ -5,7 +5,7 @@ const fs = require('fs');
 const glob = require('glob');
 
 const inputPathOrGlob = process.argv[2];
-const outputPath = process.argv[3] || '../../doc-site/static/images/preview/';
+const outputPath = process.argv[3] || '../../docs/public/images/preview/';
 const styles = [];
 
 // allow node.js to import Recipe (which uses CSS imports)

@@ -3,7 +3,7 @@ module.exports = {
   typeScriptFiles: ['src/components/**/*.{ts,tsx}', '!**/node_modules'],
   scope: './playroom/useScope.js',
   components: './src/components/index.tsx',
-  outputPath: './doc-site/public/playroom',
+  outputPath: './docs/out/playroom',
   title: 'ezCater Recipe',
   themes: './src/themes/index.ts',
   snippets: './playroom/snippets.js',

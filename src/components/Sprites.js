@@ -1,8 +1,8 @@
 import React from 'react';
 
 /* this file exists because we didn't want to spend more time
-  making /doc-site/src/components/Sprites compatible with jest
-  if you add/remove/edit anything here, edit it in /doc-site/src/components/Sprites too
+  making /docs/components/Sprites compatible with jest
+  if you add/remove/edit anything here, edit it in /docs/components/Sprites too
 */
 
 const editPencil = (
