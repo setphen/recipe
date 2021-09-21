@@ -11,6 +11,10 @@ jobs:
     if: ${{ github.event.label.name == 'ghpages' }}
 
     runs-on: ubuntu-latest
+
+    env:
+      NEXT_PUBLIC_BASE_PATH: /recipe
+
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
