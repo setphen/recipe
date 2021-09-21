@@ -9,11 +9,15 @@ import {
   SetStateAction,
 } from 'react';
 import TagManager from 'react-gtm-module';
+import cssVars from 'css-vars-ponyfill';
 
 const tagManagerArgs = {gtmId: 'GTM-TJRFGNR'};
 
 const ThemeState = createContext(false);
 const ThemeToggle = createContext<Dispatch<SetStateAction<boolean>>>(() => {});
+
+// init css vars polyfill
+cssVars({watch: true, exclude: 'body style'});
 
 function ThemeProvider(props: any) {
   const [isMarketplaceThemeSelected, showMarketplaceTheme] = useState(false);

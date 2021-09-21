@@ -86,6 +86,8 @@ export const getMdx = async (basePath: string, file: string) => {
         '.svg': 'dataurl',
       };
 
+      options.target = ['es5'];
+
       return options;
     },
   });

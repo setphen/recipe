@@ -11,7 +11,7 @@ const useHighlightCurrentLink = () => {
     requestAnimationFrame(() => {
       headers.some((header: any) => {
         if (
-          header.header.offsetTop + header.header.getBoundingClientRect().height >
+          header.header?.offsetTop + header.header?.getBoundingClientRect().height >
           document.documentElement.scrollTop
         ) {
           const currentSelection = document.querySelectorAll(`#toc .${styles.isSelected}`);

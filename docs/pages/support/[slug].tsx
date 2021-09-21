@@ -1,8 +1,8 @@
 import React from 'react';
-import {getMDXComponent} from 'mdx-bundler/client';
 import {EzCard, EzPage, EzPageHeader} from '@ezcater/recipe';
 import {components, scope} from '../../components/MDXComponents';
 import {SUPPORT_PATH, getAllFrontmatter, getMdx} from '../../lib/mdx';
+import {getMDXComponent} from '../../lib/getMDXComponent';
 import Layout from '../../components/Layout';
 
 type Doc = {
