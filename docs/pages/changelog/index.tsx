@@ -26,7 +26,7 @@ export default function Doc({frontmatter, code}: Doc) {
 }
 
 export async function getStaticProps() {
-  const {frontmatter, code} = await getMdx(ROOT_PATH, 'changelog');
+  const {frontmatter, code} = await getMdx(ROOT_PATH, 'CHANGELOG');
 
   return {
     props: {
