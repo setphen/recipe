@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {EzSegmentedControl, EzLayout, EzLink, EzWell} from '@ezcater/recipe';
 import {createUrl} from 'playroom/utils';
 import Code from './SyntaxHighlighting';
+import {prefix} from '../utils/prefix';
 
 const codeIcon = (
   <svg
@@ -123,7 +124,7 @@ const CodeDemo = ({code, language, children}: any) => {
             active={active}
             onChange={value => setActive(value)}
           />
-          <EzLink target="_blank" href={createPlayroomLink(code)}>
+          <EzLink target="_blank" href={`${prefix}${createPlayroomLink(code)}`}>
             <TextWithIcon>{playIcon} Playroom</TextWithIcon>
           </EzLink>
         </EzLayout>

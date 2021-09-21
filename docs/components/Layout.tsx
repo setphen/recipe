@@ -31,8 +31,11 @@ export default function Layout({children}: any) {
           }}
           links={docsRoutes.map((route: any) => ({
             label: route.title,
-            links: route.pages?.map(({title, path}: any) => ({label: title, href: path})),
-            ...(route.external ? {href: route.path} : {as: NextLink, to: route.path}),
+            links: route.pages?.map(({title, path}: any) => ({
+              label: title,
+              href: `${prefix}${path}`,
+            })),
+            ...(route.external ? {href: `${prefix}${route.path}`} : {as: NextLink, to: route.path}),
           }))}
           utilityLinks={[
             {
