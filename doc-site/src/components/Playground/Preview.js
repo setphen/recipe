@@ -142,7 +142,7 @@ const createPlayroomLink = code => {
 };
 
 const TextWithIcon = ({children}) => (
-  // setting this css variable is cheating. Don't do this at home kids.
+  // setting this css variable is cheating. don't do this at home kids.
   <EzLayout layout="cluster" alignX="center" style={{'--space-layout-gap': '4px'}}>
     {children}
   </EzLayout>
