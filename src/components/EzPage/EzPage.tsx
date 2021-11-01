@@ -1,5 +1,4 @@
 import React, {useRef, useContext} from 'react';
-import Style from '@ezcater/snitches';
 import theme from './EzPage.theme.config';
 import {MaxWidth} from '../EzAppLayout/EzAppLayout';
 import EzHeading from '../EzHeading';
@@ -66,15 +65,13 @@ export const usePageSection = type => {
 const EzPage: React.FC<Props> = ({children}) => {
   const sectionsCounter = useRef(0);
   return (
-    <Style ruleset={theme}>
-      <SectionContext.Provider value={sectionsCounter}>
-        <div className={pageContainer()}>
-          <MaxWidth>
-            <div className={pageWrapper()}>{children}</div>
-          </MaxWidth>
-        </div>
-      </SectionContext.Provider>
-    </Style>
+    <SectionContext.Provider value={sectionsCounter}>
+      <div className={pageContainer()}>
+        <MaxWidth>
+          <div className={pageWrapper()}>{children}</div>
+        </MaxWidth>
+      </div>
+    </SectionContext.Provider>
   );
 };
 

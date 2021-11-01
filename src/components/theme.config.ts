@@ -8,7 +8,6 @@ import type {
   TStyledSheet,
   IConfig,
 } from '../../packages/@stitches/core';
-import {createRoot} from '@ezcater/snitches';
 import {PlaceItemsProperty} from 'csstype';
 
 type Globals = 'inherit' | 'initial' | 'revert' | 'unset';
@@ -16,11 +15,7 @@ type FromTheme<T> = `$${Extract<keyof T, string | number>}`;
 type Token<T> = FromTheme<T> | Globals | number | (string & {});
 type TokenValue<T extends keyof TTheme> = T;
 
-// disable stitches style insertion, Snitches is used to insert styles instead.
-const root = {root: createRoot()};
-
 const stitches = createCss({
-  ...root,
   theme: {
     borderWidths: {
       thin: '1px',

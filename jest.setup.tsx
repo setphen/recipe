@@ -3,7 +3,6 @@ import {toHaveNoViolations} from 'jest-axe';
 import {configure as configureSosia} from 'sosia';
 import {MarkdownSource} from 'sosia-markdown';
 import {RemotePuppeteerBrowserTarget} from 'sosia-remote-puppeteer';
-import Style from '@ezcater/snitches';
 import EzGlobalStyles from './src/components/EzGlobalStyles';
 import theme from './src/components/theme.config';
 import {decorate as minifyDecorator} from './MinifiedBrowserTarget';
@@ -29,11 +28,9 @@ const GlobalStylesWrapper = ({children}) => (
       href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&display=swap"
       rel="stylesheet"
     />
-    <Style ruleset={theme}>
-      <Sprites />
-      <EzGlobalStyles />
-      {children}
-    </Style>
+    <Sprites />
+    <EzGlobalStyles />
+    {children}
     <VisualRegressionOverrides />
   </>
 );

@@ -1,6 +1,5 @@
 import React, {useContext, Ref, ReactNode} from 'react';
 import {Theme} from '@react-types/provider';
-import Style from '@ezcater/snitches';
 import topLevelTheme from '../theme.config';
 
 export interface ProviderProps {
@@ -39,11 +38,7 @@ function Provider(props: ProviderProps, ref: Ref<HTMLDivElement>) {
       children
     );
 
-  return (
-    <Style ruleset={topLevelTheme}>
-      <Context.Provider value={context}>{contents}</Context.Provider>
-    </Style>
-  );
+  return <Context.Provider value={context}>{contents}</Context.Provider>;
 }
 
 const ProviderWrapper = React.forwardRef(function ProviderWrapper(

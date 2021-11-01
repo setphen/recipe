@@ -1,6 +1,5 @@
 import React from 'react';
 import dayjs from 'dayjs';
-import Style from '@ezcater/snitches';
 import theme from './EzField.theme.config';
 import en from './en';
 import {useTranslation} from '../../utils/hooks';
@@ -39,27 +38,25 @@ const EzTimeInput = ({start, end, step = 60, value, ...rest}) => {
 
   const options = useTimeRangeOptions({start, end, step});
   return (
-    <Style ruleset={theme}>
-      <div className={layout()}>
-        <InsetIcon insetY0 left0 pl3>
-          <ClockIcon />
-        </InsetIcon>
-        <EzSelect
-          id={rest.id}
-          label={rest.label}
-          {...{error, touched}}
-          placeholder={rest.placeholder}
-          options={options.map(option => ({
-            label: option,
-            value: option,
-          }))}
-          value={valueTimeString}
-          onChange={rest.onChange}
-          aria-labelledby={rest['aria-labelledby']}
-          disabled={rest.disabled}
-        />
-      </div>
-    </Style>
+    <div className={layout()}>
+      <InsetIcon insetY0 left0 pl3>
+        <ClockIcon />
+      </InsetIcon>
+      <EzSelect
+        id={rest.id}
+        label={rest.label}
+        {...{error, touched}}
+        placeholder={rest.placeholder}
+        options={options.map(option => ({
+          label: option,
+          value: option,
+        }))}
+        value={valueTimeString}
+        onChange={rest.onChange}
+        aria-labelledby={rest['aria-labelledby']}
+        disabled={rest.disabled}
+      />
+    </div>
   );
 };
 

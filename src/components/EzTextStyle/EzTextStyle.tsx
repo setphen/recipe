@@ -1,5 +1,4 @@
 import React, {forwardRef, AllHTMLAttributes} from 'react';
-import Style from '@ezcater/snitches';
 import theme from './EzTextStyle.theme.config';
 import {VariantProps} from '../../utils/responsiveProps';
 
@@ -35,11 +34,7 @@ interface Props
 const EzTextStyle = forwardRef<HTMLElement, Props>(
   ({as: Text = 'span' as any, ...initProps}, ref) => {
     const {props} = text(initProps);
-    return (
-      <Style ruleset={theme}>
-        <Text {...props} ref={ref} />
-      </Style>
-    );
+    return <Text {...props} ref={ref} />;
   }
 );
 

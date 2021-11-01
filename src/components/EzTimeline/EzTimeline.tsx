@@ -1,5 +1,4 @@
 import React from 'react';
-import Style from '@ezcater/snitches';
 import {TimelineProps} from './EzTimeline.types';
 import theme from './EzTimeline.theme.config';
 import {clsx} from '../../utils';
@@ -95,18 +94,16 @@ const timelineStem = theme.css({
 
 const EzTimeline: React.FC<TimelineProps> = ({children, expandable}) => {
   return (
-    <Style ruleset={theme}>
-      <div className={clsx(layout(), timelineStem())}>
-        {children}
-        {Boolean(expandable) && (
-          <div className={footerStem()}>
-            <button type="button" onClick={expandable.onClick} className={footerButton()}>
-              {expandable.expandLabel}
-            </button>
-          </div>
-        )}
-      </div>
-    </Style>
+    <div className={clsx(layout(), timelineStem())}>
+      {children}
+      {Boolean(expandable) && (
+        <div className={footerStem()}>
+          <button type="button" onClick={expandable.onClick} className={footerButton()}>
+            {expandable.expandLabel}
+          </button>
+        </div>
+      )}
+    </div>
   );
 };
 

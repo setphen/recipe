@@ -1,5 +1,4 @@
 import React, {forwardRef, HTMLAttributes} from 'react';
-import Style from '@ezcater/snitches';
 import theme from './CloseButton.theme.config';
 
 const button = theme.css({
@@ -45,21 +44,19 @@ export interface Props extends HTMLAttributes<HTMLElement> {
 const CloseButton = forwardRef<HTMLButtonElement, Props>(
   ({label, className, children, ...props}, ref) => {
     return (
-      <Style ruleset={theme}>
-        <button type="button" {...props} className={button({className})} ref={ref}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" aria-hidden="true">
-            <path
-              fill="currentColor"
-              fillRule="evenodd"
-              d="M8 6l5-5 2 2-5 5 5 5-2 2-5-5-5 5-2-2 5-5-5-5 2-2 5 5z"
-            />
-          </svg>
-          <span className={visuallyHidden()}>
-            {label}
-            {children}
-          </span>
-        </button>
-      </Style>
+      <button type="button" {...props} className={button({className})} ref={ref}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" aria-hidden="true">
+          <path
+            fill="currentColor"
+            fillRule="evenodd"
+            d="M8 6l5-5 2 2-5 5 5 5-2 2-5-5-5 5-2-2 5-5-5-5 2-2 5 5z"
+          />
+        </svg>
+        <span className={visuallyHidden()}>
+          {label}
+          {children}
+        </span>
+      </button>
     );
   }
 );

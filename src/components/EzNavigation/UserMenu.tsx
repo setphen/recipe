@@ -1,5 +1,4 @@
 import React, {useRef} from 'react';
-import Style from '@ezcater/snitches';
 import theme from './EzNavigation.theme.config';
 import {useMenuTrigger, useMenuTriggerState} from '../Overlays';
 import EzLink from '../EzLink';
@@ -93,7 +92,7 @@ const UserMenu: React.FC<MenuProps> = props => {
   const {menuTriggerProps, menuProps} = useMenuTrigger(menuState);
 
   return (
-    <Style ruleset={theme}>
+    <>
       {menuState.isOpen && (
         <EzPopover
           targetRef={ref}
@@ -129,7 +128,7 @@ const UserMenu: React.FC<MenuProps> = props => {
         <ProfileIcon />
         {props.name}
       </button>
-    </Style>
+    </>
   );
 };
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import Style from '@ezcater/snitches';
 import theme from './EzFlashMessage.theme.config';
 import EzLayout from '../EzLayout';
 import EzHeading from '../EzHeading';
@@ -86,24 +85,22 @@ const icons = {
 const EzFlashMessage: React.FC<FlashMessageProps> = initProps => {
   const {props} = flashMessage(initProps);
   return (
-    <Style ruleset={theme}>
-      <div className={flashMessage(initProps)}>
-        <EzLayout layout="basic" alignY="top">
-          {icons[initProps.use]}
-          <div className={text()}>
-            <EzLayout layout="stack">
-              {props.headline && <EzHeading size="3">{props.headline}</EzHeading>}
-              <div>{props.children}</div>
-            </EzLayout>
+    <div className={flashMessage(initProps)}>
+      <EzLayout layout="basic" alignY="top">
+        {icons[initProps.use]}
+        <div className={text()}>
+          <EzLayout layout="stack">
+            {props.headline && <EzHeading size="3">{props.headline}</EzHeading>}
+            <div>{props.children}</div>
+          </EzLayout>
+        </div>
+        {props.onDismiss && (
+          <div className={buttonAlignment()}>
+            <CloseButton label="Close" onClick={props.onDismiss} />
           </div>
-          {props.onDismiss && (
-            <div className={buttonAlignment()}>
-              <CloseButton label="Close" onClick={props.onDismiss} />
-            </div>
-          )}
-        </EzLayout>
-      </div>
-    </Style>
+        )}
+      </EzLayout>
+    </div>
   );
 };
 

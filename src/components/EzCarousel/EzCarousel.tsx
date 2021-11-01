@@ -1,5 +1,4 @@
 import React, {useEffect, useRef, useState, HTMLAttributes} from 'react';
-import Style from '@ezcater/snitches';
 import theme from './EzCarousel.theme.config';
 import {useUniqueId} from '../../utils/hooks';
 import {clsx, responsiveProps} from '../../utils';
@@ -199,66 +198,64 @@ const EzCarousel: React.FC<Props> = ({children, gap, peek, onPageChange, ...init
   const {isFirst, isLast} = useCurrentPage(scroller, onPageChange);
 
   return (
-    <Style ruleset={theme}>
-      <section className={containment()}>
-        <ul
-          id={id}
-          aria-roledescription="carousel"
-          // ensure that scrollable region has keyboard access
-          // see: https://dequeuniversity.com/rules/axe/3.5/scrollable-region-focusable
-          // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
-          tabIndex={0}
-          className={listStyle()}
-          ref={scroller}
+    <section className={containment()}>
+      <ul
+        id={id}
+        aria-roledescription="carousel"
+        // ensure that scrollable region has keyboard access
+        // see: https://dequeuniversity.com/rules/axe/3.5/scrollable-region-focusable
+        // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+        tabIndex={0}
+        className={listStyle()}
+        ref={scroller}
+      >
+        {React.Children.map(children, (child, index) => (
+          <li
+            key={typeof child === 'object' && 'key' in child ? child.key : index}
+            className={clsx(
+              listItemStyle({gap, peek}),
+              dynamicStyles({
+                css: slidesPerPageStyles({
+                  gap,
+                  peek,
+                  slidesPerPage,
+                  count: React.Children.count(children),
+                }),
+              })
+            )}
+          >
+            {child}
+          </li>
+        ))}
+      </ul>
+      <div>
+        <button
+          type="button"
+          tabIndex={-1}
+          aria-controls={id}
+          aria-label="Previous Page"
+          className={paginationButton({position: 'before', hidden: isFirst})}
+          onClick={nextPrevClick(-1, scroller)}
         >
-          {React.Children.map(children, (child, index) => (
-            <li
-              key={typeof child === 'object' && 'key' in child ? child.key : index}
-              className={clsx(
-                listItemStyle({gap, peek}),
-                dynamicStyles({
-                  css: slidesPerPageStyles({
-                    gap,
-                    peek,
-                    slidesPerPage,
-                    count: React.Children.count(children),
-                  }),
-                })
-              )}
-            >
-              {child}
-            </li>
-          ))}
-        </ul>
-        <div>
-          <button
-            type="button"
-            tabIndex={-1}
-            aria-controls={id}
-            aria-label="Previous Page"
-            className={paginationButton({position: 'before', hidden: isFirst})}
-            onClick={nextPrevClick(-1, scroller)}
-          >
-            <svg {...svgProps}>
-              <path d="M15 18l-6-6 6-6" />
-            </svg>
-          </button>
+          <svg {...svgProps}>
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
 
-          <button
-            type="button"
-            tabIndex={-1}
-            aria-controls={id}
-            aria-label="Next Page"
-            className={paginationButton({position: 'after', hidden: isLast})}
-            onClick={nextPrevClick(1, scroller)}
-          >
-            <svg {...svgProps}>
-              <path d="M9 18l6-6-6-6" />
-            </svg>
-          </button>
-        </div>
-      </section>
-    </Style>
+        <button
+          type="button"
+          tabIndex={-1}
+          aria-controls={id}
+          aria-label="Next Page"
+          className={paginationButton({position: 'after', hidden: isLast})}
+          onClick={nextPrevClick(1, scroller)}
+        >
+          <svg {...svgProps}>
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+      </div>
+    </section>
   );
 };
 

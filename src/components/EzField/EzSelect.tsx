@@ -1,5 +1,4 @@
 import React, {useRef, useCallback} from 'react';
-import Style from '@ezcater/snitches';
 import theme from './EzField.theme.config';
 import {TextInputWrapper} from './Picker.styles';
 import EzTextInput from './EzTextInput';
@@ -55,39 +54,37 @@ const EzSelect = props => {
   );
 
   return (
-    <Style ruleset={theme}>
-      <div ref={containerRef}>
-        <TextInputWrapper className={props.className || ''} disabled={props.disabled}>
-          <EzTextInput
-            {...domProps(inputProps, pointer())}
-            ref={triggerRef}
-            error={props.error}
-            touched={props.touched}
+    <div ref={containerRef}>
+      <TextInputWrapper className={props.className || ''} disabled={props.disabled}>
+        <EzTextInput
+          {...domProps(inputProps, pointer())}
+          ref={triggerRef}
+          error={props.error}
+          touched={props.touched}
+        />
+        <InsetIcon insetY0 right0 pr2>
+          <ChevronIcon flip={state.isOpen} />
+        </InsetIcon>
+      </TextInputWrapper>
+      {state.isOpen && (
+        <EzPopover
+          shouldCloseOnBlur
+          onClose={state.close}
+          targetRef={triggerRef}
+          placement="bottom-start"
+          matchWidth
+        >
+          <EzListBox
+            {...listBoxProps}
+            aria-labelledby={[ariaLabelledBy, props.id].join(' ')}
+            ref={listboxRef}
+            onClick={() => triggerRef.current.focus()}
+            collection={state.collection}
+            selectionManager={state.selectionManager}
           />
-          <InsetIcon insetY0 right0 pr2>
-            <ChevronIcon flip={state.isOpen} />
-          </InsetIcon>
-        </TextInputWrapper>
-        {state.isOpen && (
-          <EzPopover
-            shouldCloseOnBlur
-            onClose={state.close}
-            targetRef={triggerRef}
-            placement="bottom-start"
-            matchWidth
-          >
-            <EzListBox
-              {...listBoxProps}
-              aria-labelledby={[ariaLabelledBy, props.id].join(' ')}
-              ref={listboxRef}
-              onClick={() => triggerRef.current.focus()}
-              collection={state.collection}
-              selectionManager={state.selectionManager}
-            />
-          </EzPopover>
-        )}
-      </div>
-    </Style>
+        </EzPopover>
+      )}
+    </div>
   );
 };
 

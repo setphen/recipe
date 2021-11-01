@@ -1,5 +1,4 @@
 import React, {forwardRef, ReactElement, ReactNode} from 'react';
-import Style from '@ezcater/snitches';
 import theme from './EzLink.theme.config';
 import {Link as LinkProps} from './EzLink.types';
 import {isAnchor, isLink} from './utils';
@@ -100,15 +99,11 @@ const EzLink = forwardRef<HTMLElement, EzLinkProps>((props, ref) => {
 
   const el: any = getWrappedElement(content);
 
-  return (
-    <Style ruleset={theme}>
-      {React.cloneElement(el, {
-        ref: el.ref || ref,
-        className: clsx(styles({use}), className, el.props.className),
-        ...passThroughProps,
-      })}
-    </Style>
-  );
+  return React.cloneElement(el, {
+    ref: el.ref || ref,
+    className: clsx(styles({use}), className, el.props.className),
+    ...passThroughProps,
+  });
 });
 
 export const Link = forwardRef<HTMLElement, any>((props, ref) => {

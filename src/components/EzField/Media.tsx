@@ -49,8 +49,8 @@ const Media = ({size, children}) => {
     const frame = iframeEl.current as HTMLElement;
 
     // copy inline stitches tags inside the iframe
-    const ssrStyles = ownerDocument.querySelectorAll<HTMLStyleElement>('style[data-snitches-ssr]');
-    const frameStyles = frame.querySelectorAll<HTMLStyleElement>('style[data-snitches-ssr]');
+    const ssrStyles = ownerDocument.querySelectorAll<HTMLStyleElement>('style#stitches');
+    const frameStyles = frame.querySelectorAll<HTMLStyleElement>('style#stitches');
 
     let head = ownerDocument.head.outerHTML;
 
@@ -59,7 +59,6 @@ const Media = ({size, children}) => {
       head += tag.outerHTML;
     });
     // move inline styles from iframe into head
-    // snitches would typically do this for us, but can't reach inside the iframe
     Array.from(frameStyles).forEach(tag => {
       head += tag.outerHTML;
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import Style from '@ezcater/snitches';
 import {EzCard} from '../EzCard';
 import EzLayout from '../EzLayout';
 import EzHeading from '../EzHeading';
@@ -47,27 +46,25 @@ const EzTimelineEvent: React.FC<TimelineEventProps> = ({
   href,
 }) => {
   return (
-    <Style ruleset={theme}>
-      <EzLayout layout="basic">
-        <EzTimelineIcon icon={icon} className={arrow()} />
-        <EzCard className={cardOverrides()}>
-          <header>
-            <EzLayout layout="split" alignY="top">
-              <EzLayout layout="cluster" className={alignment()}>
-                <EzHeading size="3">
-                  {isLink({to, as, href}) ? <EzLink {...{to, as, href}}>{title}</EzLink> : title}
-                </EzHeading>
-                <EzTextStyle use="subdued">
-                  <time className={timestamp()}>{time}</time>
-                </EzTextStyle>
-              </EzLayout>
-              {status && React.cloneElement(status, {size: 'small'})}
+    <EzLayout layout="basic">
+      <EzTimelineIcon icon={icon} className={arrow()} />
+      <EzCard className={cardOverrides()}>
+        <header>
+          <EzLayout layout="split" alignY="top">
+            <EzLayout layout="cluster" className={alignment()}>
+              <EzHeading size="3">
+                {isLink({to, as, href}) ? <EzLink {...{to, as, href}}>{title}</EzLink> : title}
+              </EzHeading>
+              <EzTextStyle use="subdued">
+                <time className={timestamp()}>{time}</time>
+              </EzTextStyle>
             </EzLayout>
-          </header>
-          {children}
-        </EzCard>
-      </EzLayout>
-    </Style>
+            {status && React.cloneElement(status, {size: 'small'})}
+          </EzLayout>
+        </header>
+        {children}
+      </EzCard>
+    </EzLayout>
   );
 };
 

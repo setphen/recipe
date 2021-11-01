@@ -1,5 +1,4 @@
-import React, {useEffect} from 'react';
-import Style from '@ezcater/snitches';
+import {useEffect} from 'react';
 import theme from './EzGlobalStyles.theme.config';
 import features from './features';
 
@@ -29,7 +28,7 @@ const EzGlobalStyles = () => {
     });
   }, []);
 
-  return <Style ruleset={theme} />;
+  return null;
 };
 
 export default EzGlobalStyles;

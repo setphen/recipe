@@ -1,5 +1,4 @@
 import React, {forwardRef} from 'react';
-import Style from '@ezcater/snitches';
 import theme from './{{ name }}.theme.config';
 import {VariantProps} from '../../utils/responsiveProps';
 
@@ -12,9 +11,7 @@ type Props = VariantProps<typeof styles>;
  */
 const {{ name }} = forwardRef<HTMLDivElement, Props>((initProps, ref) => {
   return (
-    <Style ruleset={theme}>
-      <div className={styles(initProps)} ref={ref} />
-    </Style>
+    <div className={styles(initProps)} ref={ref} />
   );
 });
 

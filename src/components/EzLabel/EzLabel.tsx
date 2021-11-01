@@ -1,5 +1,4 @@
 import React, {forwardRef, LabelHTMLAttributes} from 'react';
-import Style from '@ezcater/snitches';
 import theme from './EzLabel.theme.config';
 import Slot from '../EzContent/Slot';
 import {VariantProps} from '../../utils/responsiveProps';
@@ -63,11 +62,7 @@ interface Props extends Omit<LabelHTMLAttributes<HTMLElement>, 'as' | 'css'> {
 const EzLabel = forwardRef<Ref, Props>(({as: element, ...initialProps}, ref) => {
   const {props} = styles(initialProps);
 
-  return (
-    <Style ruleset={theme}>
-      <Slot element={element} slot="label" {...props} ref={ref} />
-    </Style>
-  );
+  return <Slot element={element} slot="label" {...props} ref={ref} />;
 });
 
 /**

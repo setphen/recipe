@@ -1,7 +1,5 @@
 import React from 'react';
 import * as CSS from 'csstype';
-import Style from '@ezcater/snitches';
-import theme from './EzCard.theme.config';
 import {
   grid,
   msGrid,
@@ -77,65 +75,63 @@ const EzCard: React.FC<DOMProps & CardProps> = ({
 }) => {
   const {imagePosition = 'top'} = responsiveProps(props as any, 'imagePosition');
   return (
-    <Style ruleset={theme}>
-      <section
-        {...filterValidProps(props)}
-        className={clsx(
-          className,
-          grid({imagePosition}),
-          // dynamically generate styles for IE (which doesn't support inline CSS vars)
-          msGrid(unitlessToPx(maxWidth))({imagePosition}),
-          container({
-            accent,
-            size: size || (isQuiet ? 'small' : undefined),
-            isQuiet,
-            clickable,
-          })
-        )}
-        style={{...style, '--sizes-card-preview-max-w': unitlessToPx(maxWidth)} as any}
+    <section
+      {...filterValidProps(props)}
+      className={clsx(
+        className,
+        grid({imagePosition}),
+        // dynamically generate styles for IE (which doesn't support inline CSS vars)
+        msGrid(unitlessToPx(maxWidth))({imagePosition}),
+        container({
+          accent,
+          size: size || (isQuiet ? 'small' : undefined),
+          isQuiet,
+          clickable,
+        })
+      )}
+      style={{...style, '--sizes-card-preview-max-w': unitlessToPx(maxWidth)} as any}
+    >
+      <SlotProvider
+        slots={{
+          preview: {className: preview({position: imagePosition})},
+          header: {className: header()},
+          content: {className: content()},
+          footer: {className: footer()},
+        }}
       >
-        <SlotProvider
-          slots={{
-            preview: {className: preview({position: imagePosition})},
-            header: {className: header()},
-            content: {className: content()},
-            footer: {className: footer()},
-          }}
-        >
-          {imageSrc && (
-            <EzPreview>
-              <img src={imageSrc} alt="" style={{maxHeight, maxWidth, objectFit: 'cover'}} />
-            </EzPreview>
-          )}
-          {title && (
-            <EzHeader>
-              <EzCardHeading {...{actions, title, subtitle}} />
-            </EzHeader>
-          )}
-          {hasContentSlot(children) ? (
-            children
-          ) : (
-            <div
-              className={clsx(
-                sections(),
-                orientation({layout: isHorizontal ? 'horizontal' : 'vertical'})
-              )}
-            >
-              {hasCardSection(children) ? children : <EzCardSection>{children}</EzCardSection>}
-            </div>
-          )}
-          {expandable && (
-            <EzFooter>
-              <EzButton use="tertiary" onClick={expandable.onClick}>
-                {expandable.isExpanded && expandable.collapseLabel
-                  ? expandable.collapseLabel
-                  : expandable.expandLabel}
-              </EzButton>
-            </EzFooter>
-          )}
-        </SlotProvider>
-      </section>
-    </Style>
+        {imageSrc && (
+          <EzPreview>
+            <img src={imageSrc} alt="" style={{maxHeight, maxWidth, objectFit: 'cover'}} />
+          </EzPreview>
+        )}
+        {title && (
+          <EzHeader>
+            <EzCardHeading {...{actions, title, subtitle}} />
+          </EzHeader>
+        )}
+        {hasContentSlot(children) ? (
+          children
+        ) : (
+          <div
+            className={clsx(
+              sections(),
+              orientation({layout: isHorizontal ? 'horizontal' : 'vertical'})
+            )}
+          >
+            {hasCardSection(children) ? children : <EzCardSection>{children}</EzCardSection>}
+          </div>
+        )}
+        {expandable && (
+          <EzFooter>
+            <EzButton use="tertiary" onClick={expandable.onClick}>
+              {expandable.isExpanded && expandable.collapseLabel
+                ? expandable.collapseLabel
+                : expandable.expandLabel}
+            </EzButton>
+          </EzFooter>
+        )}
+      </SlotProvider>
+    </section>
   );
 };
 

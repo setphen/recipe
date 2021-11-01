@@ -1,5 +1,4 @@
 import React from 'react';
-import Style from '@ezcater/snitches';
 import theme from './EzField.theme.config';
 
 const picker = theme.css({
@@ -21,8 +20,4 @@ const picker = theme.css({
   },
 });
 
-export const TextInputWrapper = props => (
-  <Style ruleset={theme}>
-    <div {...picker(props).props} />
-  </Style>
-);
+export const TextInputWrapper = props => <div {...picker(props).props} />;

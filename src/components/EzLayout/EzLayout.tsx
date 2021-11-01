@@ -1,5 +1,4 @@
 import React, {HTMLAttributes} from 'react';
-import Style from '@ezcater/snitches';
 import theme from './EzLayout.theme.config';
 import {domProps, responsiveProps} from '../../utils';
 import {VariantProps} from '../../utils/responsiveProps';
@@ -111,13 +110,11 @@ const EzLayout: React.FC<Props> = ({children, className, ...initialProps}: any) 
 
   // Note: The layout component needs to the respect white space that might be applied by a parent layout component.
   // A wrapper element is included here to insulate content from the applied negative margin.
-  const el = (
+  return (
     <div {...domProps({...props, className}, box())}>
       <div className={styles(props)}>{children}</div>
     </div>
   );
-
-  return <Style ruleset={theme}>{el}</Style>;
 };
 
 /**
