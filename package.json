@@ -111,7 +111,7 @@
   },
   "dependencies": {
     "@emotion/is-prop-valid": "^0.7.3",
-    "@ezcater/snitches": "^0.2.7",
+    "@ezcater/snitches": "^0.2.8",
     "@popperjs/core": "^2.1.1",
     "@react-stately/collections": "^3.3.2",
     "@react-stately/list": "^3.2.3",
