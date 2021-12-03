@@ -2,4 +2,4 @@
 '@ezcater/recipe': patch
 ---
 
-fix(EzNavigation): fixes bug where overlay was not visible
+fix: fixes bug where overlay was not visible for EzNavigation
