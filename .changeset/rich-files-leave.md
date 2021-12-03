@@ -2,4 +2,4 @@
 '@ezcater/recipe': patch
 ---
 
-Fixes bug where the eznavigation makes an unclickable zone
+fix(EzNavigation): fixes bug where overlay was not visible
