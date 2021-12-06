@@ -68,8 +68,6 @@ The [recipe contributions docs](https://ezcater.github.io/recipe/guides/contribu
 To begin developing locally, use the following commands:
 
 - Run `npm i` in both the root dir, and `/doc-site`
-- After the modules are installed, run `npm run build` in the root dir.
-- Run `npm run gatsby:clean` in the `/doc-site` dir.
 - Run `npm run start` in the root dir
   - This will also open up the recipe-playroom: `http://localhost:9000`
   - This will also allow you to view the recipe-doc-site in the browser at `http://localhost:8000/`
