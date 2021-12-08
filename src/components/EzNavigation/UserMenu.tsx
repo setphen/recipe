@@ -147,13 +147,25 @@ const UserMenuList = ({close, isOpen, targetRef, links, sidebarToggle, ...props}
   );
 };
 
+function usePrevious<T>(value: T) {
+  const previous = useRef<T | null>(null);
+  useEffect(() => {
+    previous.current = value;
+  }, [value]);
+  return previous.current;
+}
+
 const UserMenu: React.FC<MenuProps> = ({name, links, isSidebarOpen, sidebarToggle}) => {
   const ref = useRef();
   const menuState = useMenuTriggerState();
+  const prevIsSidebarOpen = usePrevious(isSidebarOpen);
   const {menuTriggerProps, menuProps} = useMenuTrigger(menuState);
+
+  // Here we want to close the navigation bar
   useEffect(() => {
-    if (!isSidebarOpen) menuState.close();
+    if (prevIsSidebarOpen !== isSidebarOpen && !isSidebarOpen) menuState.close();
   }, [isSidebarOpen, menuState]);
+
   return (
     <Style ruleset={theme}>
       <UserMenuList
