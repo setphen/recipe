@@ -17,13 +17,19 @@ import {useRef, useEffect} from 'react';
  *   onClose(): void;
  * };
  *
- * function Example({ isOpen, onClose }) {
- *   const prevIsOpen = usePrevious(isOpen);
- *   useEffect(() => {
- *     if (prevIsOpen !== isOpen) {
- *       console.log('Should close');
- *     }
- *   }, [prevIsOpen, isOpen]);
+ * function Example({ value, onChange }) {
+ *   const previous = usePrevious(value);
+ *   return (
+ *     <div>
+ *       <input value={value} onChange={onChange} />
+ *       <pre>
+ *         <code>
+ *           Current: {value}
+ *           Previous: {previous}
+ *         </code>
+ *       </pre>
+ *     </div>
+ *   )
  * }
  * ```
  */

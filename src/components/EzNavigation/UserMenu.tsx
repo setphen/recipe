@@ -12,7 +12,7 @@ import {useMenuTrigger, useMenuTriggerState} from '../Overlays';
 import EzLink from '../EzLink';
 import {clsx, wrapEvents} from '../../utils';
 import EzPopover from '../EzPopover';
-import useOnChangeValue from '../../utils/useOnChangeValue';
+import {useOnChangeValue} from '../../utils/hooks';
 
 interface MenuProps {
   readonly name: string;
@@ -147,14 +147,6 @@ const UserMenuList = ({close, isOpen, targetRef, links, sidebarToggle, ...props}
     </EzPopover>
   );
 };
-
-function usePrevious<T>(value: T) {
-  const previous = useRef<T | null>(null);
-  useEffect(() => {
-    previous.current = value;
-  }, [value]);
-  return previous.current;
-}
 
 const UserMenu: React.FC<MenuProps> = ({name, links, isSidebarOpen, sidebarToggle}) => {
   const ref = useRef();
