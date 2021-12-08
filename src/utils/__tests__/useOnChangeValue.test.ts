@@ -1,7 +1,7 @@
 import {renderHook} from '@testing-library/react-hooks';
 import useOnChangeValue from '../useOnChangeValue';
 
-describe('usePrevious', () => {
+describe('useOnValueChange', () => {
   it('should call the watch function when change occurs.', async () => {
     const onChange = jest.fn<void, [string, string]>();
     const {rerender} = renderHook(([value, change]) => useOnChangeValue(value, change), {
