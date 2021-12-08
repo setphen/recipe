@@ -12,6 +12,7 @@ import {useMenuTrigger, useMenuTriggerState} from '../Overlays';
 import EzLink from '../EzLink';
 import {clsx, wrapEvents} from '../../utils';
 import EzPopover from '../EzPopover';
+import useOnChangeValue from '../../utils/useOnChangeValue';
 
 interface MenuProps {
   readonly name: string;
@@ -158,13 +159,11 @@ function usePrevious<T>(value: T) {
 const UserMenu: React.FC<MenuProps> = ({name, links, isSidebarOpen, sidebarToggle}) => {
   const ref = useRef();
   const menuState = useMenuTriggerState();
-  const prevIsSidebarOpen = usePrevious(isSidebarOpen);
   const {menuTriggerProps, menuProps} = useMenuTrigger(menuState);
 
-  // Here we want to close the navigation bar
-  useEffect(() => {
-    if (prevIsSidebarOpen !== isSidebarOpen && !isSidebarOpen) menuState.close();
-  }, [isSidebarOpen, menuState]);
+  useOnChangeValue(isSidebarOpen, isOpen => {
+    if (!isOpen) menuState.close();
+  });
 
   return (
     <Style ruleset={theme}>
